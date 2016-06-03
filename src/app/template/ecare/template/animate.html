@@ -1,0 +1,40 @@
+<div id="animateCont" ng-controller="ecareController">
+
+  <div id="webpagediv0" class="webpagedivseg" style="display: block;">
+				</div>
+     <div id="{{getId()}}" class="webpagedivseg" ng-init="">
+
+					<div class="welcometxt animate">{{tut.title}}</div>
+				</div>
+      <div id="{{getId()}}" class="webpagedivseg">
+
+					<div class="welcometxt animate">{{tut.title}}</div>
+					<div class="">
+						<img class="animate green bubble" src="app/template/ecare/images/green.png">
+					</div>
+					<div class="">
+						<img class="animate blue bubble" src="app/template/ecare/images/bluecircle.png">
+					</div>
+				</div>     
+		<div class="webpagedivseg" id="{{getId()}}" ng-repeat="step in tut_steps">
+
+					<div class="welcometxt1 animate" >{{tut.title}}</div>
+					<div class="">
+						<img ng-src="{{step.img}}" class="animate phone" >
+					</div>
+					<div class="stepNum hd1">
+						<h4>{{step.number}}</h4>
+					</div>
+					<div class="text">{{step.text}}</div>
+					<div class="notes">
+						<span class="title">Note:</span>{{step.notes}}
+					</div>
+					<div class="">
+						<img src="app/template/ecare/images/green.png" class="animate green" >
+					</div>
+					<div class="">
+						<img src="app/template/ecare/images/bluecircle.png" class="animate blue" >
+					</div>
+
+				</div>
+ </div>

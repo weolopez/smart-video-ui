@@ -1,0 +1,53 @@
+{
+  "id": "interactive_1500004899",
+  "articleName": "Block calls",
+  "articleDescription": "Block calls from your  device.",
+  "topicId": "tut_1",
+  "url": "http://www.att.com/devicehowto/index.jsp?id=interactive_1500004899 &make=Samsung&model=SamsungG935A",
+  "steps": {
+    "step": [
+      {
+        "stepContent": "To access the phone app, tap the&nbsp ;<strong style=\"line-height: 18.9091px;\">Phone icon</strong> from the home screen.",
+        "stepNote": "The  call blocking feature may not affect phone calls made or received via third-party apps installed on  your device. Please contact third party app developers for assistance with such applications. Turning  Call blocking on does not block text messages.",
+        "stepOrder": "1",
+        "imageLocation": "5059/9006127_01.jpg"
+      },
+      {
+        "stepContent": "To block calls, from the phone app, tap <strong>MORE</strong>.",
+        "stepOrder": "2",
+        "imageLocation": "5059/9006127_02.jpg"
+      },
+      {
+        "stepContent": "Tap <strong>Settings</strong>.",
+        "stepOrder": "3",
+        "imageLocation": "5059/9006127_03.jpg"
+      },
+      {
+        "stepContent": "Tap <strong>Call blocking.</strong>",
+        "stepOrder": "4",
+        "imageLocation": "5059/9006127_04.jpg"
+      },
+      {
+        "stepContent": "Tap<strong> Block list</strong>",
+        "stepOrder": "5",
+        "imageLocation": "5059/9006127_05.jpg"
+      },
+      {
+        "stepContent": "To turn block or unblock unknown numbers from calling, tap the  <strong>Block anonymous calls toggle</strong> on or off.",
+        "stepOrder": "6",
+        "imageLocation": "5059/9006127_06 .jpg"
+      },
+      {
+        "stepContent": "To add a number to your block list, enter the <strong>Desired phone number</strong > in the &quot;Add phone number&quot; field, then tap the <strong>+ icon </strong>next to the field.",
+        "stepNote": "You may also add a number from your call log or contacts by tapping either option under  the phone number field.",
+        "stepOrder": "7",
+        "imageLocation": "5059/9006127_07.jpg"
+      },
+      {
+        "stepContent": "To remove  a number from your block list, tap the <strong>Minus</strong> <strong>icon</strong> next to a name or  number on your block list.",
+        "stepOrder": "8",
+        "imageLocation": "5059/9006127_08.jpg"
+      }
+    ]
+  }
+}

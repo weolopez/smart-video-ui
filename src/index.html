@@ -1,0 +1,50 @@
+﻿
+<!doctype html>
+<html ng-app="smartvideo" ng-controller="SVMainController">
+<head>
+<meta charset="utf-8">
+  <title>AT&T Shipping Confirmation Video</title>
+  
+<link href="../svp/assets/css/styles.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+<div class="header">
+
+<img ng-src="{{imageUrl}}" alt="Thanks for ordering with us">
+</div>
+<div class="wrapper">
+<div id="imgdiv1" ></div>
+<div id="videoViewport" >
+<div id="template" class="template" ng-include="templateUrl"></div>
+<div id="closedCaption" class=""></div>
+<div id="playlist" ng-if="showpl" ng-show="showPlaylists">
+<a id="prevbtn" class="navBtn" href="javascript:void(0)" title="prev" ng-click="showPrev()"><span>prev</span></a>
+<div class="plitems"><ul><li class="plist" ng-repeat="plist in playlists">{{plist.name}}<a class="playBtn" href="javascript:void(0)" title="play" ng-click="playVideo(plist.type)"></a></li></ul></div>
+<a id="nextbtn" class="navBtn" href="javascript:void(0)" title="next" ng-click="showNext()"><span>next</span></a>
+</div>
+
+<div id="videodiv">
+            <audio id="ourvideo" controls  height="1px">
+               
+                <source id="audioSource" src="">
+            </audio>
+<div id="closedCaptionBtn"><a href="javascript:void(0)" title="Closed Caption">CC</a></div>
+       <div id="fullscreen"><a href="javascript:void(0)" title="screen mode" ng-click="showFullScreen()">[o]</a></div>
+       <div ng-if="showpl" id="showPlBtn"><a href="javascript:void(0)" title="Playlist" ng-click="showPlaylist()">PL</a></div>
+        </div>  
+        
+</div>
+    </div>
+	</div>
+<script src="../svp/lib/angularjs/angular.min.js"></script>
+<script src="../svp/lib/angularjs/angular-route.min.js"></script>
+<script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
+<script src="../svp/lib/script-loader/script.js"></script>
+<script src="../svp/lib/audioplayer/audioplayer.min.js"></script>
+<script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
+<script src="../svp/app/app.js"></script>
+
+</body>
+</html>
+

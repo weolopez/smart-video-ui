@@ -1,0 +1,18 @@
+[
+  {
+    "user": "Henry",
+    "data": {
+      "firstName": "Henry",
+      "lastName": "Ford",
+      "product": "U-verse",
+      "memory": "TV & Internet",
+      "scheduled": "9.00am to 11.00am",
+      "date":"May 20th",
+      "productImg": "tv.png,internet.png",
+      "audio":"vo9.mp3"
+    },
+    "template":"homesolution",
+    "caption":"assets/data/caption.json",
+     "relatedVideos":[{"type":"orderstatus","name":"Order Status","duration":"1:23"}]
+  }
+]

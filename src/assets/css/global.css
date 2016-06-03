@@ -1,0 +1,387 @@
+body {
+	background: url(../images/bg.jpg) repeat scroll 0 0 transparent;
+	color: #666666;
+	font-family: OmnesATT, Verdana, Helvetica, sans-serif;
+	background-size: cover;
+	padding: 10px;
+}
+
+#container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	padding: 20px 0;
+	width: 627px;
+	margin: 0 auto;
+}
+
+.header img {
+	width: 97%;
+}
+
+.hd1 {
+	font-family: "Omnes_ATTMedium", Arial, sans-serif;
+}
+
+.hd2 {
+	font-family: "Omnes_ATTMediumItalic", Arial, sans-serif;
+}
+
+.white {
+	color: #fff;
+}
+
+.orange {
+	color: #ef6f00;
+}
+
+.purple {
+	color: #ca0180
+}
+
+.webpagedivseg.showContent {
+	display: none;
+	visibility: visible;
+}
+
+.webpagedivseg {
+	visibility: hidden;
+	width: 100%;
+	height: 352px;
+	position: relative;
+	visibility: hidden;
+}
+
+#ourvideo {
+	position: relative;
+	width: 100%;
+	height: 28px;
+}
+
+#imgdiv1 {
+	width: 640px;
+	height: 352px;
+	background: url('../images/Loading_Darker.gif') no-repeat 0 0 scroll
+		transparent;
+	margin: 0 auto;
+	box-shadow: 0 0 5px #777777;
+}
+
+		
+#webpagediv1 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+		
+#webpagediv2 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+		
+#webpagediv3 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+		
+#webpagediv4 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+		
+#webpagediv5 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+		
+#webpagediv6 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+		
+		
+#webpagediv7 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+		
+#webpagediv8 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+		
+#webpagediv9 {background-image:url(../images/pop0.png);
+position: relative;
+background-size:100% 100%;}
+#webpagediv10 {background-image:url(../images/blank.png);
+position: relative;
+background-size:100% 100%;}
+#webpagediv24 {background-image:url(../images/blank.png);
+position: relative;
+background-size:100% 100%;}	
+#webpagediv25 {  background-image:url(../images/screen25-1.png); 
+position: relative;
+background-size:100% 100%;}	
+
+/* mobile */
+@media only screen and (min-width:320px) and (max-width:480px)  {
+	body {
+		background: url(../images/bg.jpg) repeat scroll 0 0 transparent;
+		color: #666666;
+		font-family: OmnesATT, Verdana, Helvetica, sans-serif;
+		background-size: cover;
+		padding: 3%;
+		width: 90%;
+		height: 100%;
+	}
+	#container {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+	a {
+		text-decoration: none;
+	}
+	.header {
+		padding: 3% 0;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.header img {
+		width: 100%;
+	}
+	.webpagedivseg {
+		visibility: hidden;
+		width: 100%;
+		height: 218px;
+		position: relative;
+		visibility: hidden;
+	}
+	.webpagedivseg.showContent {
+		display: none;
+		visibility: visible;
+	}
+	#imgdiv1 {
+		width: 100%;
+		height: 218px;
+		background: url('../images/Loading_Darker.gif') no-repeat 0 0 scroll
+			transparent;
+		margin: 0 auto;
+		box-shadow: 0 0 5px #777777;
+		background-size: 100% 100%;
+	}
+	#ourvideo {
+		position: relative;
+		width: 100%;
+		height: 28px;
+	}
+}
+/* mobile */
+@media only screen and (min-width:481px) and (max-width:767px)  {
+	body {
+		background: url(../images/bg.jpg) repeat scroll 0 0 transparent;
+		color: #666666;
+		font-family: OmnesATT, Verdana, Helvetica, sans-serif;
+		background-size: cover;
+		padding: 3%;
+		width: 90%;
+		height: 100%;
+	}
+	#container {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+	a {
+		text-decoration: none;
+	}
+	.header {
+		padding: 3% 0;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.header img {
+		width: 100%;
+	}
+	.webpagedivseg {
+		visibility: hidden;
+		width: 100%;
+		height: 325px;
+		position: relative;
+		visibility: hidden;
+	}
+	.webpagedivseg.showContent {
+		display: none;
+		visibility: visible;
+	}
+	#imgdiv1 {
+		width: 100%;
+		height: 325px;
+		background: url('../images/Loading_Darker.gif') no-repeat 0 0 scroll
+			transparent;
+		margin: 0 auto;
+		box-shadow: 0 0 5px #777777;
+		background-size: 100% 100%;
+	}
+	#ourvideo {
+		position: relative;
+		width: 100%;
+		height: 28px;
+	}
+}
+/* Tablet */
+@media only screen and (min-width : 768px)  {
+	body {
+		background: url(../images/bg.jpg) repeat scroll 0 0 transparent;
+		color: #666666;
+		font-family: OmnesATT, Verdana, Helvetica, sans-serif;
+		background-size: cover;
+		padding: 3%;
+		width: 90%;
+		height: 100%;
+	}
+	#container {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+	a {
+		text-decoration: none;
+	}
+	.header {
+		padding: 0% 0;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.header img {
+		width: 100%;
+	}
+	#imgdiv1 {
+		width: 90%;
+		height: 467px;
+		background: url('../images/Loading_Darker.gif') no-repeat 0 0 scroll
+			transparent;
+		margin: 0 auto;
+		box-shadow: 0 0 5px #777777;
+		background-size: 100% 100%;
+	}
+	.webpagedivseg {
+		visibility: hidden;
+		width: 100%;
+		height: 467px;
+		position: relative;
+		visibility: hidden;
+	}
+	.webpagedivseg.showContent {
+		display: none;
+		visibility: visible;
+	}
+	#ourvideo {
+		position: relative;
+		width: 100%;
+		height: 28px;
+	}
+}
+
+@media screen and (min-width:1200px) {
+	body {
+		background: url(../images/bg.jpg) repeat scroll 0 0 transparent;
+		color: #666666;
+		font-family: OmnesATT, Verdana, Helvetica, sans-serif;
+		background-size: cover;
+		padding: 0%;
+		width: 98%;
+		height: 100%;
+	}
+	#container {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+	a {
+		text-decoration: none;
+	}
+	.header {
+		padding: 0% 0;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.header img {
+		width: 100%;
+	}
+	#imgdiv1 {
+		width: 90%;
+		height: 467px;
+		background: url('../images/Loading_Darker.gif') no-repeat 0 0 scroll
+			transparent;
+		margin: 0 auto;
+		box-shadow: 0 0 5px #777777;
+		background-size: 100% 100%;
+	}
+	.webpagedivseg {
+		visibility: hidden;
+		width: 100%;
+		height: 467px;
+		position: relative;
+		visibility: hidden;
+	}
+	.webpagedivseg.showContent {
+		display: none;
+		visibility: visible;
+	}
+	#ourvideo {
+		position: relative;
+		width: 100%;
+		height: 28px;
+	}
+}
+
+@media screen and (min-width:992px) {
+	body {
+		background: url(../images/bg.jpg) repeat scroll 0 0 transparent;
+		color: #666666;
+		font-family: OmnesATT, Verdana, Helvetica, sans-serif;
+		background-size: cover;
+		padding: 0%;
+		width: 98%;
+		height: 100%;
+	}
+	#container {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+	a {
+		text-decoration: none;
+	}
+	.header {
+		padding: 0% 0;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.header img {
+		width: 100%;
+	}
+	#imgdiv1 {
+		width: 90%;
+		height: 467px;
+		background: url('../images/Loading_Darker.gif') no-repeat 0 0 scroll
+			transparent;
+		margin: 0 auto;
+		box-shadow: 0 0 5px #777777;
+		background-size: 100% 100%;
+	}
+	.webpagedivseg {
+		visibility: hidden;
+		width: 100%;
+		height: 467px;
+		position: relative;
+		visibility: hidden;
+	}
+	.webpagedivseg.showContent {
+		display: none;
+		visibility: visible;
+	}
+	#ourvideo {
+		position: relative;
+		width: 100%;
+		height: 28px;
+	}
+}
