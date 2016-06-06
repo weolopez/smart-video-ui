@@ -242,7 +242,7 @@ body {
 	top: 2%;
 }
 
-.stepTxt {
+.stepTxt, strong {
 	color: #ef6f00;
 }
 
@@ -268,4 +268,7 @@ body {
 	top: -22%;
 	right: -9%;
 	position: absolute;
+}
+.fullScreen .webpagedivseg{
+	background:#ffffff !important;
 }

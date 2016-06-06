@@ -2,11 +2,11 @@
 
   <div id="webpagediv0" class="webpagedivseg" style="display: block;">
 				</div>
-     <div id="{{getId()}}" class="webpagedivseg" ng-init="">
+     <div id="webpagediv1" class="webpagedivseg" >
 
 					<div class="welcometxt animate">{{tut.title}}</div>
 				</div>
-      <div id="{{getId()}}" class="webpagedivseg">
+      <div id="webpagediv2" class="webpagedivseg">
 
 					<div class="welcometxt animate">{{tut.title}}</div>
 					<div class="">
@@ -16,18 +16,19 @@
 						<img class="animate blue bubble" src="app/template/ecare/images/bluecircle.png">
 					</div>
 				</div>     
-		<div class="webpagedivseg" id="{{getId()}}" ng-repeat="step in tut_steps">
+		<div class="webpagedivseg" id="webpagediv{{id+$index}}" ng-repeat="step in tut.steps" ng-init="id=2+1">
 
 					<div class="welcometxt1 animate" >{{tut.title}}</div>
 					<div class="">
-						<img ng-src="{{step.img}}" class="animate phone" >
+						<img ng-src="https://www.att.com/devicehowtomedia/image/{{step.imageLocation}}" class="animate phone" >
 					</div>
 					<div class="stepNum hd1">
-						<h4>{{step.number}}</h4>
+						<h4>Step - {{step.stepOrder}}</h4>
 					</div>
-					<div class="text">{{step.text}}</div>
-					<div class="notes">
-						<span class="title">Note:</span>{{step.notes}}
+					<div class="text" ng-bind-html="step.stepContent"></div>
+					<div class="notes" ng-if="step.stepNote">
+						<span class="title" >Note:</span>
+						<span ng-bind-html="step.stepNote"></span>
 					</div>
 					<div class="">
 						<img src="app/template/ecare/images/green.png" class="animate green" >

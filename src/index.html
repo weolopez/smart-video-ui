@@ -9,9 +9,9 @@
 </head>
 <body>
 <div id="container">
-<div class="header">
+<div class="header" ng-if="showHeader">
 
-<img ng-src="{{imageUrl}}" alt="Thanks for ordering with us">
+<img ng-src="{{imageUrl}}" alt="title">
 </div>
 <div class="wrapper">
 <div id="imgdiv1" ></div>
@@ -39,10 +39,12 @@
 	</div>
 <script src="../svp/lib/angularjs/angular.min.js"></script>
 <script src="../svp/lib/angularjs/angular-route.min.js"></script>
+<script src="../svp/lib/angularjs/angular-sanitize.min.js"></script>
 <script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
 <script src="../svp/lib/script-loader/script.js"></script>
 <script src="../svp/lib/audioplayer/audioplayer.min.js"></script>
 <script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
+<script src="../svp/app/config/config.js"></script>
 <script src="../svp/app/app.js"></script>
 
 </body>

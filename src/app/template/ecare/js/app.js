@@ -63,29 +63,10 @@ function runVideo() {
 		"element" : ".stepNum",
 		"classname" : "flipInY animated"
 	} ];
-	var animate4 = [ {
-		"element" : ".phone",
-		"classname" : "flipInY animated"
-	}, {
-		"element" : ".text",
-		"classname" : "slideInRight animated"
-	}, {
-		"element" : ".stepNum",
-		"classname" : "flipInY animated"
-	} ];
-	var animate5 = [ {
-		"element" : ".phone",
-		"classname" : "flipInY animated"
-	}, {
-		"element" : ".text",
-		"classname" : "slideInRight animated"
-	}, {
-		"element" : ".stepNum",
-		"classname" : "flipInY animated"
-	}, {
-		"element" : ".notes",
-		"classname" : "flipInX animated"
-	} ];
+	
+	var items=[[ 0, 0.5 ], [ 0.5, 2, animate1 ], [ 2, 3, animate2 ]];
+	
+	
 	var items = [ [ 0, 0.5 ], [ 0.5, 2, animate1 ], [ 2, 3, animate2 ],
 			[ 3, 18, animate4 ], [ 18, 24, animate4 ], [ 24, 33, animate4 ],
 			[ 33, 37, animate4 ], [ 37, 42, animate4 ], [ 42, 47, animate4 ],
