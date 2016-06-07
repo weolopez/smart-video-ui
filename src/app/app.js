@@ -25,9 +25,9 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		$scope.videoId=id;
 		if (type != "ecare"){
 		$http.get(config.dataPath+id+'/script.json').success(function(res){
-			$rootScope.videoData=res[0];
+			$rootScope.videoData=res;
 			
-			videoData=res[0];
+			videoData=res;
 			videoData.audio=config.audioPath+id+'/output.wav';
 		});
 		}
