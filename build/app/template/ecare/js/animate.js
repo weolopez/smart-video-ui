@@ -11,25 +11,22 @@ svmodule.controllerProvider
 					$scope.tut={};
 					$scope.id=0;
 					
-					$scope.getId=function(){
-						$scope.id=$scope.id+1;
-						console.log($scope.id);
-						return "webpagediv"+$scope.id;
-					}
 var caption=[];
 $(window).ready(function() {
-	$('.webpagedivseg').addClass('showContent');
 	var data=$rootScope.videoData;
 	assignData(data);
+	
+
 });
 
 function assignData(data) {
 	var audio = $("#ourvideo");
-	$("#audioSource").attr("src", "app/template/ecare/audio/"+data.topicId);
+	$("#audioSource").attr("src", "app/template/ecare/audio/"+data.topicId+".mp3");
 	$rootScope.$broadcast("changeplayer");
 	audio[0].pause();
 	audio[0].load();
 	$scope.tut.title=data.articleName;
+	$scope.tut.steps=data.steps.step;
 		if (data.caption != undefined){
 		jQuery.get(data.caption,function(res){
 			$rootScope.showCC=true;
@@ -56,216 +53,60 @@ function assignData(data) {
 
 
 function runVideo() {
-	var animate0 = [ {
-		"element" : ".att-globe",
-		"classname" : "attGlobeAni animated"
-	} ];
+	$('.webpagedivseg').addClass('showContent');
 	var animate1 = [ {
-		"element" : ".animate",
-		"classname" : "logoanimation"
-	},{
-		"element" : ".dtv_logo",
-		"classname" : "slideInRight animated"
-	},{
-		"element" : ".orange",
+		"element" : ".welcometxt",
 		"classname" : "zoomIn animated"
-	},{
-		"element" : ".people1",
-		"classname" : "slideInLeft animated"
-	}  ];
+	} ];
 	var animate2 = [ {
-		"element" : ".people2",
-		"classname" : "people12Ani animated"
+		"element" : ".welcometxt",
+		"classname" : "welcometxtAni animated"
 	}, {
-		"element" : ".green",
-		"classname" : "zoomIn animated"
-	},
-	{
-		"element" : ".pink",
+		"element" : ".bubble",
 		"classname" : "zoomIn animated"
 	}, {
-		"element" : ".hitxt",
-		"classname" : "hitxtAni animated"
-	}];
+		"element" : ".phone",
+		"classname" : "flipInY animated"
+	}, {
+		"element" : ".text",
+		"classname" : "slideInRight animated"
+	}, {
+		"element" : ".notes",
+		"classname" : "notesAni animated"
+	}, {
+		"element" : ".stepNum",
+		"classname" : "flipInY animated"
+	} ];
 	var animate3 = [ {
-		"element" : ".hitxt",
-		"classname" : "hitxtAni animated"
-	}];
-	var animate4 = [ {
-		"element" : ".orange",
-		"classname" : "fadeOut animated"
+		"element" : ".welcometxt",
+		"classname" : "welcometxtAni animated"
 	}, {
-		"element" : ".people12",
-		"classname" : "bounceOut animated"
-	}, {
-		"element" : ".green",
-		"classname" : "zoomOut animated"
-	}, {
-		"element" : ".people1",
-		"classname" : "zoomOut animated"
-	},  {
-		"element" : ".pink",
-		"classname" : "rotateOut animated"
-	}, {
-		"element" : ".userNameFirst",
-		"classname" : "flipOutX animated"
-	} ];
-	var animate5 = [ {
-		"element" : ".tv",
-		"classname" : "zoomIn animated"
-	}, {
-		"element" : ".orderTxt",
-		"classname" : "slideInLeft animated"
-	}];
-	var animate6 = [ {
-		"element" : ".package",
-		"classname" : "flipInY animated"
-		
-	},{
-		"element" : ".plus",
-		"classname" : "zoomIn animated"
-	}, {
-		"element" : ".internet",
-		"classname" : "zoomIn animated"
-		
-	} ];
-	var animate7 = [ {
-		"element" : ".package",
-		"classname" : "flipOutY animated"
-	}, {
-		"element" : ".orderTxt",
-		"classname" : "slideOutLeft animated"
-	},{
-		"element" : ".tv",
-		"classname" : "zoomOut animated"
-	},{
-		"element" : ".plus",
-		"classname" : "zoomOut animated"
-	},{
-		"element" : ".internet",
-		"classname" : "zoomOut animated"
-	}   ];
-	var animate8 = [ {
-		"element" : ".orderText",
-		"classname" : "flipInX animated"
-	}, {
-		"element" : ".calendar",
-		"classname" : "zoomIn animated"
-	}, {
-		"element" : ".green21",
-		"classname" : "pulse animated",
-		"count":"infinite"
-	}, {
-		"element" : ".schDate",
-		"classname" : "schDateAni animated"
-	}, {
-		"element" : ".schTime",
-		"classname" : "schTimeAni animated"
-	}];
-	var animate9 = [  {
-		"element" : ".orderText",
-		"classname" : "flipOutX animated"
-	}, {
-		"element" : ".calendar",
-		"classname" : "zoomOut animated"
-	}, {
-		"element" : ".green21",
-		"classname" : "zoomOut animated"
-	}, {
-		"element" : ".schDate",
-		"classname" : "zoomOut animated"
-	}, {
-		"element" : ".schTime",
-		"classname" : "zoomOut animated"
-	} ];
-	var animate10 = [ {
-		"element" : ".orderTxt",
-		"classname" : "slideInLeft animated"
-	}, {
-		"element" : ".people_13",
-		"classname" : "zoomIn animated"
-	}, {
-		"element" : ".green31",
-		"classname" : "green31Ani animated"
-	}, {
-		"element" : ".orange31",
-		"classname" : "orange31Ani animated"
-	}, {
-		"element" : ".chklist1",
-		"classname" : "chklist1Ani animated"
-	},{
-		"element" : ".chklist2",
-		"classname" : "chklist2Ani animated"
-	},{
-		"element" : ".chklist3",
-		"classname" : "chklist3Ani animated"
-	},{
-		"element" : ".chklist4",
-		"classname" : "chklist4Ani animated"
-	} ];
-	var animate11 = [ {
-		"element" : ".orderTxt",
-		"classname" : "slideOutLeft animated"
-	}, {
-		"element" : ".people_13",
-		"classname" : "zoomOut animated"
-	}, {
-		"element" : ".green31",
-		"classname" : "zoomOut animated"
-	}, {
-		"element" : ".orange31",
-		"classname" : "zoomOut animated"
-	}, {
-		"element" : ".chklist1",
-		"classname" : "flipOutX animated"
-	},{
-		"element" : ".chklist2",
-		"classname" : "flipOutX animated"
-	},{
-		"element" : ".chklist3",
-		"classname" : "flipOutX animated"
-	},{
-		"element" : ".chklist4",
-		"classname" : "flipOutX animated"
-	} ];
-	var animate12 = [ {
-		"element" : ".orderTxt",
-		"classname" : "slideInLeft animated"
-	}, {
-		"element" : ".people_14",
+		"element" : ".phone",
 		"classname" : "flipInY animated"
 	}, {
-		"element" : ".green41",
-		"classname" : "green41Ani animated"
-	},{
-		"element" : ".orange41",
-		"classname" : "orange41Ani animated"
-	},{
-		"element" : ".btn1",
-		"classname" : "btn1Ani animated"
-	},{
-		"element" : ".btn2",
-		"classname" : "btn2Ani animated"
-	},{
-		"element" : ".btn3",
-		"classname" : "btn3Ani animated"
+		"element" : ".text",
+		"classname" : "slideInRight animated"
+	}, {
+		"element" : ".notes",
+		"classname" : "notesAni animated"
+	}, {
+		"element" : ".stepNum",
+		"classname" : "flipInY animated"
 	} ];
 	
-	var items = [ [ 0, 0.5], [ 0.5, 2.5,animate0 ],
-	  			[ 2.5, 3.5, animate1 ],
-	  			[ 3.5, 5, animate2 ],
-	  			
-	  			[ 5, 6, animate4 ],
-	  			[ 6, 7,  animate5 ],
-	  			[ 7, 24, animate6 ],
-	  			[ 24, 25, animate7 ],
-	  			[ 25, 36, animate8 ],
-	  			[ 36, 37,  animate9 ],
-	  			[ 37, 65,  animate10 ],
-	  			[ 65, 66,  animate11 ],
-	  			[ 66, 111,  animate12 ],
-	  			[111,114]
-	  			 ];
+	var items=[[ 0, 0.5 ], [ 0.5, 2, animate1 ], [ 2, 3, animate2 ]];
+	
+	var interval=5;
+	var frameDuration=5+interval;
+	var startTime=3;
+	$scope.tut.steps.forEach(function(item){
+		if (item.stepOrder != "1"){
+			startTime=frameDuration;
+			frameDuration=frameDuration+10;
+		}
+		var draft=[startTime,frameDuration,animate3];
+		items.push(draft);
+	});
 	var pop = Popcorn("#ourvideo");
 	for (var i = 0; i < items.length; i++) {
 		pop

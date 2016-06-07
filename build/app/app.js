@@ -1,11 +1,12 @@
 'use strict';
 var videoData;
-var svmodule = angular.module('smartvideo', ['ngRoute']);
-svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q',function($rootScope,$scope,$http,$q){
+var svmodule = angular.module('smartvideo', ['ngRoute','ngSanitize','com.att.controllers.config']);
+svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','config',function($rootScope,$scope,$http,$q,config){
 	$rootScope.showCC=false;
 	$scope.playlists=[];
 	$scope.showPlaylists=false;
 	$scope.fullScreenMode=false;
+	$scope.showHeader=true;
 	function getParameterByName(name) {
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex
@@ -23,18 +24,21 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q',funct
 		var id=getParameterByName('id');
 		$scope.videoId=id;
 		if (type != "ecare"){
-		$http.get('assets/data/'+type+'.json').success(function(res){
+		$http.get(config.dataPath).success(function(res){
 			$rootScope.videoData=res[0];
 			
 			videoData=res[0];
+			videoData.audio=config.audioPath;
 		});
 		}
 		else
 			{
-			$http.get('assets/data/'+type+'_'+id+'.json').success(function(res){
+			$scope.showHeader=false;
+			$http.get(config.dataPath).success(function(res){
 				$rootScope.videoData=res;
 				
 				videoData=res;
+				videoData.audio=config.audioPath;
 			});
 			}
 		var vid = document.getElementById("ourvideo");
@@ -77,12 +81,21 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q',funct
 		}
 	}
 	function customizePlayer(){
-		$('.audioplayer-bar').css('width','45%');
-		$('.audioplayer-time-duration').css('right','27%');
+		
 		if($(window).width()<480)
 		{
 			$('.audioplayer-bar').css('width','25%');
 			$('.audioplayer-time-duration').css('right','50%');
+		}
+		else if($(window).width()>481 && $(window).width()<767 )
+		{
+			$('.audioplayer-bar').css('width','32%');
+			$('.audioplayer-time-duration').css('right','44%');
+		}
+		else
+		{
+			$('.audioplayer-bar').css('width','45%');
+			$('.audioplayer-time-duration').css('right','27%');
 		}
 	}
 	$scope.$on("controllerLoaded",function(){
@@ -168,8 +181,8 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q',funct
 			$('#videodiv').removeClass('fullScreen');
 			$('#videoViewport').removeAttr('style');
 			$('#videoViewport').show();
-			var viewportht=$('#videoViewport').height();
-			$(".webpagedivseg").css('height',viewportht+'px');
+		var videoviewht=$('#videoViewport').height();
+		$('.webpagedivseg').css('height',videoviewht-27+'px');
 			$('.header').show();
 			}
 		else
