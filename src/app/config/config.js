@@ -3,6 +3,6 @@
 angular.module('com.att.controllers.config', [])
 
 .constant('config', {
-  'audioPath': '',
-  'dataPath':'rest/api/data'
+  'audioPath': 'media/audio/',
+  'dataPath':'rest/api/data/'
 });

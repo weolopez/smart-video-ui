@@ -24,21 +24,21 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		var id=getParameterByName('id');
 		$scope.videoId=id;
 		if (type != "ecare"){
-		$http.get(config.dataPath).success(function(res){
+		$http.get(config.dataPath+id+'/script.json').success(function(res){
 			$rootScope.videoData=res[0];
 			
 			videoData=res[0];
-			videoData.audio=config.audioPath;
+			videoData.audio=config.audioPath+id+'/output.wav';
 		});
 		}
 		else
 			{
 			$scope.showHeader=false;
-			$http.get(config.dataPath).success(function(res){
+			$http.get(config.dataPath+id+'/script.json').success(function(res){
 				$rootScope.videoData=res;
 				
 				videoData=res;
-				videoData.audio=config.audioPath;
+				videoData.audio=config.audioPath+id+'/output.wav';
 			});
 			}
 		var vid = document.getElementById("ourvideo");
