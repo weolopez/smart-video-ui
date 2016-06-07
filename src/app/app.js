@@ -82,12 +82,12 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 	}
 	function customizePlayer(){
 		
-		if($(window).width()<480)
+	   if($(window).width()>320 && $(window).width()<767 )
 		{
-			$('.audioplayer-bar').css('width','25%');
+			$('.audioplayer-bar').css('width','24%');
 			$('.audioplayer-time-duration').css('right','50%');
 		}
-		else if($(window).width()>481 && $(window).width()<767 )
+		else if($(window).width()>768 && $(window).width()<991 )
 		{
 			$('.audioplayer-bar').css('width','32%');
 			$('.audioplayer-time-duration').css('right','44%');

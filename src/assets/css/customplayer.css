@@ -280,6 +280,25 @@ a.playBtn {
 		top: 92%;
 		width: 100%;
 	}
+	#videodiv.fullScreen {
+	 position: absolute;
+    top: 97%;
+    width: 100%;
+	}
+	.fullScreen .frame82 img {
+		width: 160%;
+	}
+	
+	.fullScreen .un1 {font-size: 42pt;
+    position: absolute;
+    top: 42%;
+    left: 51%;
+	}
+	.fullScreen .un2 {font-size: 42pt;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+	}
 	#videoViewport {
 		overflow: hidden;
 		width: 90%;
@@ -423,7 +442,7 @@ a.playBtn {
 		right: 10.5em !important;
 	}
 	.frame82 img {
-		width: 170%;
+		width: 96%;
 	}
 
 }

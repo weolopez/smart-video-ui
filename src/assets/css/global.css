@@ -180,8 +180,8 @@ background-size:100% 100%;}
 		color: #666666;
 		font-family: OmnesATT, Verdana, Helvetica, sans-serif;
 		background-size: cover;
-		padding: 3%;
-		width: 90%;
+		padding: 1%;
+		width: 96%;
 		height: 100%;
 	}
 	#container {
@@ -236,6 +236,15 @@ background-size:100% 100%;}
 		padding: 3%;
 		width: 90%;
 		height: 100%;
+	}
+	.fullScreen .body {
+	    background: url(../images/bg.jpg) repeat scroll 0 0 transparent;
+    color: #666;
+    font-family: OmnesATT,Verdana,Helvetica,sans-serif;
+    background-size: cover;
+    padding: 0%;
+    width: 98%;
+    height: 100%;
 	}
 	#container {
 		width: 100%;

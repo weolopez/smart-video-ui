@@ -440,7 +440,7 @@
 	
 	.audioplayer
 {
-	height: 2em; /* 40 */
+	height: 2em;
 	color: #fff;
 	text-shadow: 1px 1px 0 #000;
 	border: 1px solid #222;
@@ -453,9 +453,9 @@
 	background: -ms-radial-gradient( top, #444, #222 );
 	background: -o-linear-gradient( top, #444, #222 );
 	background: linear-gradient( top, #444, #222 );
-	-webkit-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
-	-moz-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
-	box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+	-webkit-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); 
+	-moz-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); 
+	box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); 
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -496,7 +496,7 @@
 		{
 			border-left: 1px solid #111;
 			border-left-color: rgba( 0, 0, 0, .25 );
-			left: 7%; /* 40 */
+			left: 7%; 
 		}
 		.audioplayer-bar
 	{
@@ -511,15 +511,15 @@
 	}
 	.audioplayer-time-duration
 		{
-			/* border-right: 1px solid #555; */
+			border-right: 1px solid #555;
 			    border-right: 0px solid #555;
 			border-right-color: rgba( 255, 255, 255, .1 );
-			right: 2.5em; /* 40 */
+			right: 2.5em; 
 		}
 		.audioplayer-volume-button a
 			{
-				width: 0.313em; /* 5 */
-				height: 0.375em; /* 6 */
+				width: 0.313em; 
+				height: 0.375em; 
 				background-color: #fff;
 				display: block;
 				position: relative;
@@ -529,4 +529,4 @@
 				font-size:85%;
 			}
 		
-}
+} 

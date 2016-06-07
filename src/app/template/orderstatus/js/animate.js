@@ -22,7 +22,7 @@ svmodule.controllerProvider
 						$(".shippedon").html(data.data.delivery);
 						$(".productImg").attr('src', 'app/template/orderstatus/images/' + data.data.productImg);
 						var audio = $("#ourvideo");
-						$("#audioSource").attr("src", data.audio);
+					$("#audioSource").attr("src", data.audio);
 						$rootScope.$broadcast("changeplayer");
 						audio[0].pause();
 						audio[0].load();
