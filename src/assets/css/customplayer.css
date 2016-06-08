@@ -270,7 +270,7 @@ a.playBtn{
 	
 	#videodiv{
 	 position: absolute;
-    top: 89%;
+    top: 90%;
     width: 450px;
 	}
 	#videoViewport{
@@ -372,11 +372,25 @@ a.playBtn{
 	background:#dedede !important;
 }
 .fullScreen .webpagedivseg .frame82 img{
-	width:170%;
+	width:150%;
+}
+.fullScreen .attlogo img{
+	width:150%;
+}
+.fullScreen .un1 {
+    font-size: 60pt;
+    position: absolute;
+    top: 47%;
+    left: 48%;
+    z-index: 10;
 }
 
-.fullScreen .attlogo img{
-	width:170%;
+.fullScreen .un2{
+	    font-size: 38pt;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    z-index: 10;
 }
 }
 

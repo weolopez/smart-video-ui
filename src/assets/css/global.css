@@ -5,6 +5,14 @@ body{
 	background-size:cover;
 	padding:10px;
 }
+#body.fullScreen{
+	background:url(../images/bg.jpg) repeat scroll 0 0 transparent;
+	color:#666666;
+	font-family: OmnesATT,Verdana,Helvetica,sans-serif;
+	background-size:cover;
+	padding:0px;
+	margin:0px;
+}
 #container{
 	width:1024px;
 	margin:0 auto;

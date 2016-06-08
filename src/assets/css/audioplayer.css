@@ -669,7 +669,7 @@
  line-height: 2.25em;
     text-align: center;
     z-index: 2;
-    top: 3;
+    top: 3%;
     font-size: 85%;
 }
 .audioplayer-bar
@@ -707,17 +707,6 @@
 			border-right-color: rgba( 255, 255, 255, .1 );
 			right: 2.5em; 
 		}
-		.audioplayer-volume-button a
-			{
-				width: 0.313em; 
-				height: 0.375em; 
-				background-color: #fff;
-				display: block;
-				position: relative;
-				z-index: 1;
-				top: 40%;
-				left: 35%;
-				font-size:85%;
-			}
+		
 		
 } 

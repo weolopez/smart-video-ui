@@ -67,7 +67,7 @@ bottom: 20px;
 }
 
 .bulky{
-font-size: 44px;
+font-size: 35px;
 font-weight: 800;
 line-height: 41px;
 font-family:"Omnes_ATTMediumItalic",Arial,sans-serif;
@@ -198,6 +198,11 @@ height:220px;
     margin-top: 18%;
     margin-right: 16%;
 }
+.fullScreen .devicePhoto img {
+	float: right;
+    margin-top: 12%;
+    margin-right: 16%;
+}
 #webpagediv8 .headingContainer {
     position: absolute;
 	top: 25px;
@@ -248,6 +253,7 @@ img.attlogo{
     top: 36%;
     z-index:3;
 }
+
 .pink{
 	left:18%;
 	top:49%;
@@ -288,13 +294,23 @@ img.attlogo{
 	z-index:5;
 	background:url(../images/people_1.png) no-repeat scroll 0 0 transparent;
 }
+.fullScreen .people2-1{
+	    width: 13%;
+    height: 25%;
+    top: 5%;
+    left: 46%;
+    z-index: 3;
+    background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
+    background-size: 100% 100%;
+}
 .people2-1{
-	width:220px;
-	height:207px;
-	top:5%;
-	left:46%;
-	z-index:3;
-	background:url(../images/people2.png) no-repeat scroll 0 0 transparent;
+    width: 15%;
+    height: 25%;
+    top: 5%;
+    left: 46%;
+    z-index: 3;
+    background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
+    background-size: 100% auto;
 }
 .people4{
 	width:0px;
@@ -344,6 +360,15 @@ img.attlogo{
   to{top:37%; left:14%; width:100px;}
   
 }
+.fullScreen .greenAni{
+	animation-name: greenAniFull;
+}
+@keyframes greenAniFull {
+  from{ left:19%; width:190px;}
+
+  to{top:37%; left:14%; width:10%;}
+  
+}
 .pink1{
 	position:absolute;
 	left: 23%;
@@ -358,6 +383,15 @@ img.attlogo{
   from{ left:24%; width:150px;}
 
   to{top:1%; left:19%; width:220px;}
+  
+}
+.fullScreen .pinkAni{
+	animation-name: pinkAniFull;
+}
+@keyframes pinkAniFull {
+  from{ left:24%; width:150px;}
+
+  to{top:1%; left:19%; width:30%;}
   
 }
 .userNameFirst{
@@ -400,9 +434,15 @@ top:12%;left:14%;
 	 font-size: 30px;
     font-weight: bold;
 }
+
 #webpagediv9 .green1,#webpagediv10 .green1{
 	 left: 34%;
     top: 36%;
+    width: 100px;
+}
+#webpagediv9 .fullScreen .green1 ,#webpagediv10 .fullScreen .green1 {
+	 left: 34%;
+    top: 28%;
     width: 100px;
 }
 .shipTextAni{
@@ -411,7 +451,7 @@ top:12%;left:14%;
 @keyframes shipTextAni {
   from{ left:39%;}
 
-  to{top:60%; left:60%;}
+  to{top:52%; left:60%;}
  
 }
 .orange1 img{
@@ -467,10 +507,10 @@ top:12%;left:14%;
      */
 }
 @keyframes shipText1Ani {
- 0%{ left:60%; top:115px}
+ 0%{ left:60%; top:50%}
 
-  50%{top:120px; left:59%;}
-  100%{ left:60%; top:115px} 
+  50%{top:50%; left:59%;}
+  100%{ left:60%; top:50%} 
  
 }
 .tabletAni{
@@ -491,15 +531,31 @@ animation-iteration-count: 3;
 	width:180px;
 	position:absolute;
 }
+.fullScreen .green2{
+	    top: 25%;
+    left: 28%;
+    width: 15%;
+    position: absolute;
+}
 .blue2{
 	left: 54%;
     position: absolute;
     top: 43%;
     width: 90px;
 }
+.fullScreen .blue2{
+	left: 54%;
+    position: absolute;
+    top: 43%;
+    width: 8%;
+}
 .orangebase{
 	top:75%;
 	left:29%;
+}
+.fullScreen .orangebase{
+	    top: 65%;
+    left: 34%;
 }
 .phoneapp
 {
@@ -546,6 +602,15 @@ animation-iteration-count: 3;
  0%{ left:29%;}
 
   100%{left:48%;}
+ 
+}
+.fullScreen .orangebaseAni{
+	animation-name: orangebaseAniFull;
+}
+@keyframes orangebaseAniFull {
+ 0%{ left:35%;}
+
+  100%{left:54%;}
  
 }
 
@@ -679,13 +744,20 @@ animation-iteration-count: 3;
 }
 #webpagediv19 .green2,#webpagediv20 .green2{
 	width:220px;
-    left: 25%;
+    left: 29%;
     top: 19%;
 	font-size:42px;
 	text-align:center;
 	z-index:2;
 }
 .activateTxt{
+     left: 32%;
+    position: absolute;
+    text-align: center;
+    top: 29%;
+    z-index: 3;
+}
+.fullScreen .activateTxt{
  left: 29%;
     position: absolute;
     text-align: center;
@@ -712,6 +784,15 @@ animation-iteration-count: 3;
  0%{ left:25%;}
 
   100%{left:15%;width:130px;}
+ 
+}
+.fullScreen .green3Ani{
+	animation-name: green3AniFull;
+}
+@keyframes green3AniFull {
+ 0%{ left:25%;}
+
+  100%{left:15%;width:14%;}
  
 }
 .activateTxtAni{
@@ -743,7 +824,24 @@ animation-iteration-count: 3;
   100%{left: 16%; top:3%;width:80px;}
  
 }
+.fullScreen .personAni{
+	animation-name: personAniFull;
+}
+@keyframes personAniFull {
+ 0%{ top:57%; width:100px; }
+
+  50%{top:0%;width:90px;}
+  100%{left: 16%; top:3%;width:80px;}
+ 
+}
 .person1{
+	     left: 1%;
+    position: absolute;
+    top: 41%;
+    z-index: 1;
+    width: 23%;
+}
+.fullScreen .person1{
 	 left: 1%;
     position: absolute;
     top: 41%;
@@ -1072,7 +1170,10 @@ animation-iteration-count: 3;
 	padding-top:4px;
 }
 	.un1{
-	font-size: 150%; position: absolute; top: 45%; left: 50%;
+	font-size: 150%;
+    position: absolute;
+    top: 44%;
+    left: 47%;
 	}
 	.un2{
 	font-size: 150%;position: absolute;top: 48%;left: 52%;
@@ -1501,7 +1602,7 @@ position: absolute;
     background-size: 100% 100%;
     margin: -4px 0;
     height: 105px;
-    background-size: 100% 100%; !important
+    background-size: 100% auto; !important
 }
 
 .arrowAni{
@@ -1512,8 +1613,8 @@ position: absolute;
 }
 @keyframes arrowAni320 {
  0%{  right:50%;}
-  50%{top:66%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:50%;right:49%;transform:none;z-index:100;}
+  50%{top:60%;right:59%;transform:skewX(-60px);visibility:visible;}
+  100%{top:60%;right:49%;transform:none;z-index:100;}
 }
 .devicetxt {
 		color: #ff9600;
@@ -1613,7 +1714,7 @@ position: absolute;
 	.people6 {
 		left: 11%; 
 		position: absolute;
-		top: 20%;
+		top: 27%;
 		z-index: 10;
 		width: 30%;
 	}
@@ -1833,6 +1934,18 @@ position: absolute;
 	animation-name: activateTxtAni320;
 }
 
+.arrow{
+	width:28px;
+}
+#webpagediv17 .orangebase,#webpagediv16 .orangebase,#webpagediv18 .orangebase{
+	left:54%;
+}
+.arrow{
+	 
+    top: 60%;
+    width:28px;
+}
+
 } /* closed320 */
 
 
@@ -1893,8 +2006,8 @@ position: absolute;
 }
 @keyframes arrowAni320 {
  0%{  right:50%;}
-  50%{top:45%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:50%;right:49%;transform:none;z-index:100;}
+  50%{top:60%;right:59%;transform:skewX(-60px);visibility:visible;}
+  100%{top:60%;right:49%;transform:none;z-index:100;}
 }
 @keyframes green3Ani320 {
  0%{ left:25%;}
@@ -2676,7 +2789,7 @@ position: absolute;
 .myatt {
 		    left: 54%;
     position: absolute;
-    top: 0%;
+    top: 7%;
     width: 25%;
 	}
 	.myatttxt {
@@ -2708,9 +2821,9 @@ position: absolute;
 	.people6 {
 		left: 11%; 
 		position: absolute;
-		top: 20%;
+		top: 27%;
 		z-index: 10;
-		width: 40%;
+		width: 30%;
 	}
 	
 	.orange3 {
@@ -2925,7 +3038,10 @@ position: absolute;
 .activateTxtAni{
 	animation-name: activateTxtAni480;
 }
-
+.arrow{
+	width:28px;
+	top:53%;
+}
 
 } /* closed480 */
 
@@ -2985,8 +3101,8 @@ position: absolute;
 }
 @keyframes arrowAni480 {
  0%{  right:50%;}
-  50%{top:45%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:50%;right:49%;transform:none;z-index:100;}
+  50%{top:53%;right:59%;transform:skewX(-60px);visibility:visible;}
+  100%{top:53%;right:49%;transform:none;z-index:100;}
 }
 @keyframes green3Ani480 {
  0%{ left:25%;}
@@ -3078,7 +3194,7 @@ position: absolute;
 }
 @keyframes orange2Ani480 {
  0%{  top:19%;}
-  50%{top:60%;left:40%;background-size:140px auto;font-size:30px;}
+  50%{top:60%;left:40%;background-size:140px auto;font-size:30px;width: 110px;}
   100%{top: 45%;
     left: 70%;
     width: 110px;
@@ -3106,7 +3222,7 @@ position: absolute;
     position: absolute;
     border-right: 1px solid rgba(255,255,255,.1);
     right: 28%;
-    top: 0%;
+    top: -5%;
     z-index: 1;
     padding: 10px;
 }
@@ -3220,7 +3336,7 @@ top:40px;
 }
 .devicetxt1{
 	font-size: 11px;
-    left: 7%;
+    left: 6%;
     position: absolute;
     top: 56%;
 }
@@ -3277,6 +3393,13 @@ zoom:1;
     position: absolute;
     top: 20%;
     right: 2%; }
+    
+    .activateTxt{
+     left: 35%;
+}
+.arrow{
+	width:28px;
+}
 
 /* closed768 */
 }
