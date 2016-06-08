@@ -152,12 +152,27 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 			$('#showPlBtn a').addClass('active');
 			}
 	};
-	$scope.playVideo=function(type){
-		$http.get('assets/data/'+type+'.json').success(function(res){
-			$rootScope.videoData=res[0];
+	$scope.playVideo=function(type,id){
+		var url=type;
+		if (id != undefined){
+			url=type+"_"+id;
+		}
+		$http.get('assets/data/'+url+'.json').success(function(res){
 			resetPlayer();
 			$scope.videoType=type;
-			videoData=res[0];
+			if (type != "ecare"){
+				
+				$rootScope.videoData=res[0];
+				
+				videoData=res[0];
+			}
+			else
+				{
+								$rootScope.videoData=res;
+
+				videoData=res;
+				$rootScope.$broadcast("videoChanged");
+				}
 		});
 	};
 	function resetPlayer(){

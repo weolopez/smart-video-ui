@@ -18,7 +18,14 @@ $(window).ready(function() {
 	
 
 });
-
+$rootScope.$on('videoChanged',function(){
+	$scope.tut={};
+	$scope.id=0;
+	
+var caption=[];
+var data=$rootScope.videoData;
+assignData(data);
+});
 function assignData(data) {
 	var audio = $("#ourvideo");
 	$("#audioSource").attr("src", "app/template/ecare/audio/"+data.topicId+".mp3");

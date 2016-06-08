@@ -49,8 +49,8 @@ color: #fff;
 	color:#339aff;
 }
 #showPlBtn a:hover,#showPlBtn a.active{
-	background:#222;
 	color:#339aff;
+	 background-position:11px -29px;
 }
 #showPlBtn a{
 	color: #fff;
@@ -60,6 +60,11 @@ color: #fff;
     top: 3%;
     z-index: 1;
     padding:10px;
+    width:18px;
+    height:20px;
+    background:url('../images/playlist.png') no-repeat scroll 11px 10px transparent;
+    display:block;
+    text-indent:-999px;
 }
 #playlist{
 	bottom: 11%;
@@ -139,11 +144,16 @@ a.playBtn{
     top: 3%;
     z-index: 1;
     padding:10px;
+    display:block;
+    text-indent:-999px;
+    width:22px;
+    height:20px;
      border-right: 1px solid rgba(255, 255, 255, 0.1);
+     background:url('../images/expand.png')no-repeat scroll 9px 12px transparent;
 }
 #fullscreen a:hover,#fullscreen a.active{
-	background:#222;
 	color:#339aff;
+	 background-position:9px -28px;
 }
 .fullScreen{
 	width:100% !important;
@@ -300,7 +310,7 @@ a.playBtn{
 	.fullScreen .un1 {font-size: 42pt;
     position: absolute;
     top: 42%;
-    left: 51%;
+    left: 45%;
 	}
 	.fullScreen .un2 {font-size: 42pt;
     position: absolute;
@@ -381,7 +391,7 @@ a.playBtn{
     font-size: 60pt;
     position: absolute;
     top: 47%;
-    left: 48%;
+    left: 45%;
     z-index: 10;
 }
 
@@ -389,7 +399,7 @@ a.playBtn{
 	    font-size: 38pt;
     position: absolute;
     top: 40%;
-    left: 45%;
+    left: 42%;
     z-index: 10;
 }
 }

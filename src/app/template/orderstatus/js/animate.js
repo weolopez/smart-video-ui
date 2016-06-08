@@ -13,6 +13,7 @@ svmodule.controllerProvider
 						var data=$rootScope.videoData;
 					assignData(data);
 					});
+					var caption=[];
 					function assignData(data) {
 						
 						$(".userNameFirst").html(data.data.firstName);
@@ -26,6 +27,7 @@ svmodule.controllerProvider
 						$rootScope.$broadcast("changeplayer");
 						audio[0].pause();
 						audio[0].load();
+						data.caption="assets/data/os_caption.json";
 						if (data.caption != undefined){
 							jQuery.get(data.caption,function(res){
 								$rootScope.showCC=true;
