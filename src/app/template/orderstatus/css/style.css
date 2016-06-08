@@ -688,7 +688,10 @@ animation-iteration-count: 3;
     font-style: italic;
     left: 102px;
     position: absolute;
-    top: 80px;
+    top: 95px;
+}
+.fullScreen .text3{
+	top:17%;
 }
 #webpagediv17 .green2,#webpagediv16 .green2,#webpagediv18 .green2
 {
@@ -929,8 +932,9 @@ animation-iteration-count: 3;
     z-index:12;
 }
 .fullScreen .attscreen{
-	width:42%;
+	width:44%;
 	right: -600px;
+	top: 23%;
 }
 .attscreenAni{
 	animation-name: attscreenAni;
@@ -1143,7 +1147,7 @@ animation-iteration-count: 3;
 #webpagediv26 .headingContainer,#webpagediv27 .headingContainer
 {
 	float:none;
-	width:50%;
+	width:55%;
 	margin:0 auto;
 	padding-top:20px;
 }
@@ -1352,7 +1356,7 @@ animation-iteration-count: 3;
 	font-size: 150%;position: absolute;top: 48%;left: 52%;
 	}
 		#videodiv .audioplayer-bar {
-    width: 30%;
+    width: 24%;
 }
 
 
@@ -2458,7 +2462,7 @@ zoom:1;
 	font-size: 150%;position: absolute;top: 48%;left: 52%;
 	}
 		#videodiv .audioplayer-bar {
-    width: 30%;
+    width: 26%;
 }
 
 
@@ -3100,7 +3104,7 @@ position: absolute;
     position: absolute;
     border-right: 1px solid rgba(255,255,255,.1);
     right: 30%;
-    top: 3%;
+    top: -8%;
     z-index: 1;
     padding: 10px;
     line-height: 0.75em;
@@ -3110,7 +3114,7 @@ position: absolute;
     color: #fff;
     position: absolute;
     right: 22%;
-    top: 3%;
+    top: -10%;
     z-index: 1;
     padding: 5px;
     border-right: 1px solid rgba(255,255,255,.1);
@@ -3393,7 +3397,7 @@ position: absolute;
     position: absolute;
     border-right: 1px solid rgba(255,255,255,.1);
     right: 28%;
-    top: -5%;
+    top: -7%;
     z-index: 1;
     padding: 10px;
 }
@@ -3401,7 +3405,7 @@ position: absolute;
     color: #fff;
     position: absolute;
     right: 18%;
-    top: 0%;
+    top: -6%;
     z-index: 1;
     padding: 8px;
     border-right: 1px solid rgba(255,255,255,.1);

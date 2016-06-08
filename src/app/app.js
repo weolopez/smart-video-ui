@@ -82,7 +82,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 	}
 	function customizePlayer(){
 		
-	   if($(window).width()>320 && $(window).width()<767 )
+	  /* if($(window).width()>320 && $(window).width()<767 )
 		{
 			$('.audioplayer-bar').css('width','24%');
 			$('.audioplayer-time-duration').css('right','50%');
@@ -96,7 +96,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		{
 			$('.audioplayer-bar').css('width','45%');
 			$('.audioplayer-time-duration').css('right','27%');
-		}
+		}*/
 	}
 	$scope.$on("controllerLoaded",function(){
 		$scope.templateUrl="app/template/"+$scope.videoType+"/template/animate.html";

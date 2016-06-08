@@ -20,8 +20,11 @@ position:relative;
 	right:8.5em;
 }
 #videodiv .audioplayer-bar{
-	width:50%;
+	width:44%;
 }
+#videodiv .audioplayer-time-duration {
+		right: 27%;
+	}
 #closedCaptionBtn a
 {
 color: #fff;
@@ -64,7 +67,7 @@ color: #fff;
     height:20px;
     background:url('../images/playlist.png') no-repeat scroll 11px 10px transparent;
     display:block;
-    text-indent:-999px;
+    text-indent:-2000px;
 }
 #playlist{
 	bottom: 11%;
@@ -145,7 +148,7 @@ a.playBtn{
     z-index: 1;
     padding:10px;
     display:block;
-    text-indent:-999px;
+    text-indent:-2000px;
     width:22px;
     height:20px;
      border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -165,6 +168,12 @@ a.playBtn{
 		position: absolute;
 		top: 85%;
 		width: 100%;
+	}
+	#videodiv .audioplayer-bar{
+	width:24%;
+}
+#videodiv .audioplayer-time-duration {
+		right: 50%;
 	}
 	#videoViewport {
 		overflow: hidden;
@@ -191,12 +200,8 @@ a.playBtn{
 		display: none;
 		position: relative;
 	}
-	#videodiv .audioplayer-bar {
-		width: 30%;
-	}
-	#videodiv .audioplayer-time-duration {
-		right: 40%;
-	}
+	
+	
 	#closedCaptionBtn a {
 		color: #fff;
 		padding: 10px;
@@ -218,6 +223,12 @@ a.playBtn{
 		position: absolute;
 		top: 85%;
 		width: 100%;
+	}
+	#videodiv .audioplayer-bar{
+	width:24%;
+}
+#videodiv .audioplayer-time-duration {
+		right: 50%;
 	}
 	#videoViewport {
 		overflow: hidden;
@@ -244,12 +255,7 @@ a.playBtn{
 		display: none;
 		position: relative;
 	}
-	#videodiv .audioplayer-bar {
-		width: 30%;
-	}
-	#videodiv .audioplayer-time-duration {
-		right: 40%;
-	}
+
 	#closedCaptionBtn a {
 		color: #fff;
 		padding: 10px;
@@ -283,6 +289,12 @@ a.playBtn{
     top: 90%;
     width: 450px;
 	}
+	#videodiv .audioplayer-bar{
+	width:32%;
+}
+#videodiv .audioplayer-time-duration {
+		right: 44%;
+	}
 	#videoViewport{
 		overflow:hidden;
 	width: 450px;
@@ -300,11 +312,11 @@ a.playBtn{
 	
 	#videodiv.fullScreen {
 	 position: absolute;
-    top: 97%;
+    top: 94%;
     width: 100%;
 	}
 	.fullScreen .frame82 img {
-		width: 160%;
+		width: 115%;
 	}
 	
 	.fullScreen .un1 {font-size: 42pt;
@@ -365,6 +377,9 @@ a.playBtn{
 #videodiv.fullScreen .audioplayer-bar{
 	width:73% !important;
 	}
+	#videodiv .audioplayer-bar{
+	width:45%;
+}
 	
 #videodiv.fullScreen #closedCaptionBtn a{
 	right: 3% !important;
@@ -378,9 +393,9 @@ a.playBtn{
 #videodiv.fullScreen .audioplayer-time-duration{
 	right: 10.5em !important;
 }
-.fullScreen .webpagedivseg{
+/* .fullScreen .webpagedivseg{
 	background:#dedede !important;
-}
+} */
 .fullScreen .webpagedivseg .frame82 img{
 	width:150%;
 }
