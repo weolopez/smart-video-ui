@@ -1,179 +1,153 @@
-#videodiv {
-	position: absolute;
-	top: 89%;
-	width: 627px;
+#videodiv{
+	 position: absolute;
+    top: 91%;
+    width: 627px;
 }
+#videoViewport{
+	overflow:hidden;
+width: 627px; height: 470px; 
+box-shadow:0 0 5px #777777;
+margin-left:auto;
+margin-right:auto;
 
-#videoViewport {
-	overflow: hidden;
-	width: 627px;
-	height: 379px;
-	box-shadow: 0 0 5px #777777;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	position: relative;
+display:none;
+position:relative;
 }
-
-.audioplayer {
-	position: relative;
+.audioplayer{
+	position:relative;
 }
-
-#videodiv .audioplayer-time-duration {
-	right: 5.5em;
+#videodiv .audioplayer-time-duration{
+	right:8.5em;
 }
-
-#videodiv .audioplayer-bar {
-	width: 57%;
+#videodiv .audioplayer-bar{
+	width:50%;
 }
-
-#closedCaptionBtn a {
-	color: #fff;
-	position: absolute;
-	right: 7%;
-	top: 3%;
-	z-index: 1;
-	padding: 10px;
+#closedCaptionBtn a
+{
+color: #fff;
+    position: absolute;
+    right: 7%;
+    top: 3%;
+    z-index: 1;
+    padding:10px;
 }
-
-#closedCaption {
+#closedCaption{
 	background: #666 none repeat scroll 0 0;
+    color: #fff;
+    left: 5%;
+    position: absolute;
+    top: 70%;
+    max-width:81%;
+    visibility:hidden;
+    z-index:999;
+}
+#closedCaption.shown{
+	visibility:visible;
+}
+#closedCaptionBtn a:hover,#closedCaptionBtn a.active{
+	background:#222;
+	color:#339aff;
+}
+#showPlBtn a:hover,#showPlBtn a.active{
+	background:#222;
+	color:#339aff;
+}
+#showPlBtn a{
 	color: #fff;
-	left: 5%;
-	position: absolute;
-	top: 70%;
-	max-width: 81%;
-	visibility: hidden;
-	z-index: 999;
+    position: absolute;
+     border-right: 1px solid rgba(255, 255, 255, 0.1);
+    right: 21%;
+    top: 3%;
+    z-index: 1;
+    padding:10px;
 }
-
-#closedCaption.shown {
-	visibility: visible;
-}
-
-#closedCaptionBtn a:hover, #closedCaptionBtn a.active {
-	background: #222;
-	color: #339aff;
-}
-
-#showPlBtn a:hover, #showPlBtn a.active {
-	background: #222;
-	color: #339aff;
-}
-
-#showPlBtn a {
-	color: #fff;
-	position: absolute;
-	border-right: 1px solid rgba(255, 255, 255, 0.1);
-	right: 21%;
-	top: 3%;
-	z-index: 1;
-	padding: 10px;
-}
-
-#playlist {
+#playlist{
 	bottom: 11%;
-	position: absolute;
-	width: 99%;
-	background: #666 none repeat scroll 0 0;
-	padding: 5px;
-	z-index: 9;
+    position: absolute;
+    width: 99%;
+    background: #666 none repeat scroll 0 0;
+    padding:5px;
+    z-index:9;
 }
-
-#playlist li {
+#playlist li{
 	border: 1px solid #ccc;
-	float: left;
-	height: 60px;
-	list-style: outside none none;
-	width: 100px;
-	color: #ffffff;
-	font-size: 12px;
-	position: relative;
-	margin: 0 5px;
+    float: left;
+    height: 60px;
+    list-style: outside none none;
+    width: 100px;
+    color:#ffffff;
+    font-size:12px;
+    position:relative;
+    margin:0 5px;
 }
-
-#playlist ul {
-	left: 0%;
-	margin: 0;
-	padding: 0;
-	position: absolute;
+#playlist ul{
+	  left: 0%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
 }
-
-#playlist .navBtn {
-	background: #b30a3c none repeat scroll 0 0;
-	float: left;
-	padding-bottom: 21px;
-	padding-top: 21px;
-	width: 20px;
+#playlist .navBtn{
+	 background: #b30a3c none repeat scroll 0 0;
+    float: left;
+    padding-bottom: 21px;
+    padding-top: 21px;
+    width: 20px;
 }
-
-a.playBtn {
-	background: #b30a3c url("../images/playbtn.png") no-repeat scroll 6px
-		4px/57% auto;
-	border-radius: 30px;
-	display: block;
-	height: 20px;
-	left: 34%;
-	padding: 5px;
-	position: absolute;
-	top: 32%;
-	transform: rotate(90deg);
-	width: 20px;
+a.playBtn{
+	background: #b30a3c url("../images/playbtn.png") no-repeat scroll 6px 4px / 57% auto;
+    border-radius: 30px;
+    display: block;
+    height: 20px;
+    left: 34%;
+    padding: 5px;
+    position: absolute;
+    top: 32%;
+    transform: rotate(90deg);
+    width: 20px;
 }
-
-#playlist #nextbtn {
-	float: right;
-	margin-right: 3px;
+#playlist #nextbtn{
+	float:right;
+	margin-right:3px;
 }
-
-#videodiv {
-	z-index: 10;
+#videodiv{
+	z-index:10;
 }
-
-.plitems {
-	float: left;
-	height: 63px;
-	margin: 0 auto;
-	overflow: hidden;
-	position: relative;
-	width: 93%;
+.plitems{
+	  float: left;
+    height: 63px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 93%;
 }
-
-#prevbtn span {
-	transform: rotate(-90deg);
-	display: block;
-	background: url('../images/prev_next.png') no-repeat scroll 0 2px
-		transparent;
-	text-indent: -999px;
+#prevbtn span{
+	transform:rotate(-90deg);
+	display:block;
+	background:url('../images/prev_next.png')no-repeat scroll 0 2px transparent;
+	    text-indent: -999px;
 }
-
-#nextbtn span {
-	display: block;
-	transform: rotate(90deg);
-	background: url('../images/prev_next.png') no-repeat scroll 5px 2px
-		transparent;
-	text-indent: -999px;
+#nextbtn span{
+	display:block;
+	transform:rotate(90deg);
+	background:url('../images/prev_next.png')no-repeat scroll 5px 2px transparent;
+	    text-indent: -999px;
 }
-
-#fullscreen a {
+#fullscreen a{
 	color: #fff;
-	position: absolute;
-	right: 14%;
-	top: 3%;
-	z-index: 1;
-	padding: 10px;
-	border-right: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    right: 14%;
+    top: 3%;
+    z-index: 1;
+    padding:10px;
+     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-#fullscreen a:hover, #fullscreen a.active {
-	background: #222;
-	color: #339aff;
+#fullscreen a:hover,#fullscreen a.active{
+	background:#222;
+	color:#339aff;
 }
-
-.fullScreen {
-	width: 100% !important;
+.fullScreen{
+	width:100% !important;
 }
-
 
 /* mobile */
 @media only screen and (min-width:320px) and (max-width:480px) {
@@ -184,8 +158,8 @@ a.playBtn {
 	}
 	#videoViewport {
 		overflow: hidden;
-		width: 100%;
-		height: 218px; /* ch */
+		width: 270px;
+		height: 203px; /* ch */
 		box-shadow: 0 0 5px #777777;
 		margin-left: auto;
 		margin-right: auto;
@@ -220,6 +194,9 @@ a.playBtn {
 		right: 13%;
 		top: 3%;
 		z-index: 1;
+	}
+	.frame82 img {
+		width: 50%;
 	}
 }
 
@@ -234,8 +211,8 @@ a.playBtn {
 	}
 	#videoViewport {
 		overflow: hidden;
-		width: 100%;
-		height: 325px; /* ch */
+		width: 330px;
+		height: 248px; /* ch */
 		box-shadow: 0 0 5px #777777;
 		margin-left: auto;
 		margin-right: auto;
@@ -271,15 +248,46 @@ a.playBtn {
 		top: 3%;
 		z-index: 1;
 	}
+	.frame82 img {
+		width: 50%;
+	}
+	.un1 {
+		font-size: 35pt;
+		position: absolute;
+		top: 198px;
+		left: 41%;
+	}
+	.un2 {
+		font-size: 35pt;
+		position: absolute;
+		top: 198px;
+		left: 41%;
+	}
 }
 
 /* Tablet */
-@media only screen and (min-width : 768px)  {
-	#videodiv {
-		position: absolute;
-		top: 92%;
-		width: 100%;
+@media only screen and (min-width : 768px) and (max-width:991px) {
+	
+	#videodiv{
+	 position: absolute;
+    top: 89%;
+    width: 450px;
 	}
+	#videoViewport{
+		overflow:hidden;
+	width: 450px;
+	height: 338px;
+	box-shadow:0 0 5px #777777;
+	margin-left:auto;
+	margin-right:auto;
+	
+	display:none;
+	position:relative;
+	}
+	.frame82 img {
+		width: 70%;
+	}
+	
 	#videodiv.fullScreen {
 	 position: absolute;
     top: 97%;
@@ -301,8 +309,8 @@ a.playBtn {
 	}
 	#videoViewport {
 		overflow: hidden;
-		width: 90%;
-		height: 467px; /* ch */
+		width: 450px;
+		height: 338px; /* ch */
 		box-shadow: 0 0 5px #777777;
 		margin-left: auto;
 		margin-right: auto;
@@ -335,114 +343,40 @@ a.playBtn {
 		position: absolute;
 		top: 198px;
 		left: 41%;
-	}
-}
-
-
-@media screen and (min-width:992px) {
-	#videodiv.fullScreen {
-		bottom: 0% !important;
-		top: auto;
-	}
-	#videodiv.fullScreen .audioplayer-bar {
-		width: 64% !important;
-	}
-	#videodiv.fullScreen #closedCaptionBtn a {
-		right: 4% !important;
-	}
-	#videodiv.fullScreen #fullscreen a {
-		right: 8% !important;
-	}
-	#videodiv.fullScreen #showPlBtn a {
-		right: 12.6%;
-	}
-	#videodiv.fullScreen .audioplayer-time-duration {
-		right: 10.2em !important;
-	}
-	/* .fullScreen .webpagedivseg {
-		background: #dedede !important;
-	} */
-	.fullScreen .frame82 img {
-		width: 130%;
 	}
 	
-	.fullScreen .un1 {font-size: 42pt;
-    position: absolute;
-    top: 45%;
-    left: 40%;
-	}
-	.fullScreen .un2 {font-size: 42pt;
-    position: absolute;
-    top: 40%;
-    left: 35%;
-	}
-		#videodiv {
-		position: absolute;
-		top: 92%;
-		width: 100%;
-	}
-	#videoViewport {
-		overflow: hidden;
-		width: 90%;
-		height: 467px; /* ch */
-		box-shadow: 0 0 5px #777777;
-		margin-left: auto;
-		margin-right: auto;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+51,b7b7b7+100 */
-		background: rgb(255, 255, 255);
-		/* Old browsers */
-		background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1)
-			0%, rgba(246, 246, 246, 1) 51%, rgba(183, 183, 183, 1) 100%);
-		/* FF3.6-15 */
-		background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1)
-			0%, rgba(246, 246, 246, 1) 51%, rgba(183, 183, 183, 1) 100%);
-		/* Chrome10-25,Safari5.1-6 */
-		background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%,
-			rgba(246, 246, 246, 1) 51%, rgba(183, 183, 183, 1) 100%);
-		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',
-			endColorstr='#b7b7b7', GradientType=1);
-		/* IE6-9 fallback on horizontal gradient */
-		display: none;
-		position: relative;
-	}
-	.un1 {
-		font-size: 35pt;
-		position: absolute;
-		top: 198px;
-		left: 41%;
-	}
-	.un2 {
-		font-size: 35pt;
-		position: absolute;
-		top: 198px;
-		left: 41%;
-	}
 }
 
-
-@media screen and (min-width:1200px) {
-	#videodiv.fullScreen {
-		bottom: 0% !important;
-		top: auto;
+@media screen and (min-width:1200px){
+	#videodiv.fullScreen{
+	bottom:0% !important;
+	top:auto;
 	}
-	#videodiv.fullScreen .audioplayer-bar {
-		width: 73% !important;
+#videodiv.fullScreen .audioplayer-bar{
+	width:73% !important;
 	}
-	#videodiv.fullScreen #closedCaptionBtn a {
-		right: 3% !important;
-	}
-	#videodiv.fullScreen #fullscreen a {
-		right: 6% !important;
-	}
-	#videodiv.fullScreen #showPlBtn a {
-		right: 9.5%;
-	}
-	#videodiv.fullScreen .audioplayer-time-duration {
-		right: 10.5em !important;
-	}
-	.frame82 img {
-		width: 96%;
-	}
-
+	
+#videodiv.fullScreen #closedCaptionBtn a{
+	right: 3% !important;
 }
+#videodiv.fullScreen #fullscreen a{
+	right: 6% !important;
+}
+#videodiv.fullScreen #showPlBtn a{
+	right: 9.5%;
+}
+#videodiv.fullScreen .audioplayer-time-duration{
+	right: 10.5em !important;
+}
+.fullScreen .webpagedivseg{
+	background:#dedede !important;
+}
+.fullScreen .webpagedivseg .frame82 img{
+	width:170%;
+}
+
+.fullScreen .attlogo img{
+	width:170%;
+}
+}
+
