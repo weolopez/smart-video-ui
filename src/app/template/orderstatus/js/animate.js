@@ -38,7 +38,7 @@ svmodule.controllerProvider
 									if ($rootScope.datatype == "audio") {
 										$('.video-js-responsive-container')
 												.prepend(
-														' <audio id="ourvideo" class="video-js" style="display:none;" controls preload="auto"  width="auto" height="auto"> <source id="audioSource" src="" type="audio/mp3" /><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default></audio>');
+														' <audio id="ourvideo" class="video-js vjs-default-skin" style="display:none;" controls preload="auto" height="100%" width="100%" > <source id="audioSource" src="" type="audio/mp3" /><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default></audio>');
 										$("#audioSource").attr("src",
 												data.audio);
 										$("#cc").attr("src",
@@ -51,7 +51,7 @@ svmodule.controllerProvider
 									} else {
 										$('.video-js-responsive-container')
 												.prepend(
-														' <video id="newvideo" class="video-js" controls preload="auto" width="auto" height="auto"> <source id="videoSource" src="" type="video/mp4"> </video>');
+														' <video id="newvideo" class="video-js vjs-default-skin" style="display:none;" controls preload="auto" width="100%" height="100%" > <source id="videoSource" src="" type="video/mp4"> </video>');
 										$("#videoSource").attr("src",
 												data.video);
 									}
@@ -97,6 +97,7 @@ svmodule.controllerProvider
 									"controls" : true,
 									"autoplay" : true,
 									"preload" : "auto",
+									"fluid":true,
 									"html5": {
 										nativeTextTracks: false}
 								});

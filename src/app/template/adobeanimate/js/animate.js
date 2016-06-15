@@ -1,15 +1,7 @@
 'use strict';
-svmodule.controllerProvider
-		.register(
-				'adobeanimationController',
-				[
-						'$scope',
-						'$http',
-						'$rootScope',
 
-						function($scope, $http, $rootScope) {
-							
-							
+var path="app/template/adobeanimate/";
+							function init2(){
 							(function (lib, img, cjs) {
 
 								var p; // shortcut to reference prototypes
@@ -21,24 +13,24 @@ svmodule.controllerProvider
 									fps: 24,
 									color: "#FFFFFF",
 									manifest: [
-										{src:"images/ATT_Logo.png", id:"ATT_Logo"},
-										{src:"images/att_screen_body.png", id:"att_screen_body"},
-										{src:"images/iphone6plus_gold_portrait.png", id:"iphone6plus_gold_portrait"},
-										{src:"images/iphone6splusboxrosegold2015_GEO_US.jpg", id:"iphone6splusboxrosegold2015_GEO_US"},
-										{src:"images/iphone6s.png", id:"iphone6s"},
-										{src:"images/iphone6splussilver.png", id:"iphone6splussilver"},
-										{src:"images/lgGreen.png", id:"lgGreen"},
-										{src:"images/orangeCircle.png", id:"orangeCircle"},
-										{src:"images/people2.png", id:"people2"},
-										{src:"images/people4.png", id:"people4"},
-										{src:"images/people_1.png", id:"people_1"},
-										{src:"images/person.png", id:"person"},
-										{src:"images/person1.png", id:"person1"},
-										{src:"images/ph_app.png", id:"ph_app"},
-										{src:"images/pinkCircle.png", id:"pinkCircle"},
-										{src:"images/ppage.png", id:"ppage"},
-										{src:"images/tablet.png", id:"tablet"},
-										{src:"sounds/HENRY.mp3", id:"HENRY"}
+										{src:path+"images/ATT_Logo.png", id:"ATT_Logo"},
+										{src:path+"images/att_screen_body.png", id:"att_screen_body"},
+										{src:path+"images/iphone6plus_gold_portrait.png", id:"iphone6plus_gold_portrait"},
+										{src:path+"images/iphone6splusboxrosegold2015_GEO_US.jpg", id:"iphone6splusboxrosegold2015_GEO_US"},
+										{src:path+"images/iphone6s.png", id:"iphone6s"},
+										{src:path+"images/iphone6splussilver.png", id:"iphone6splussilver"},
+										{src:path+"images/lgGreen.png", id:"lgGreen"},
+										{src:path+"images/orangeCircle.png", id:"orangeCircle"},
+										{src:path+"images/people2.png", id:"people2"},
+										{src:path+"images/people4.png", id:"people4"},
+										{src:path+"images/people_1.png", id:"people_1"},
+										{src:path+"images/person.png", id:"person"},
+										{src:path+"images/person1.png", id:"person1"},
+										{src:path+"images/ph_app.png", id:"ph_app"},
+										{src:path+"images/pinkCircle.png", id:"pinkCircle"},
+										{src:path+"images/ppage.png", id:"ppage"},
+										{src:path+"images/tablet.png", id:"tablet"}
+										/*{src:path+"audio/HENRY.mp3", id:"HENRY"}*/
 									]
 								};
 
@@ -5090,45 +5082,18 @@ svmodule.controllerProvider
 								p.nominalBounds = new cjs.Rectangle(134.1,-256.5,1038.6,1029.6);
 
 								})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-								var lib, images, createjs;
+							
+							}
+								
 
 
 							
-								var canvas, stage, exportRoot;
-								//init();
-								$scope.test=function(){
-									init();
-								};
-function init() {
-	canvas = document.getElementById("canvas");
-	images = images||{};
 
-	var loader = new createjs.LoadQueue(false);
-	loader.installPlugin(createjs.Sound);
-	loader.addEventListener("fileload", handleFileLoad);
-	loader.addEventListener("complete", handleComplete);
-	loader.loadManifest(lib.properties.manifest);
-}
-
-function handleFileLoad(evt) {
-	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-}
-
-function handleComplete() {
-	exportRoot = new lib.video_001();
-
-	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);
-	stage.update();
-
-	createjs.Ticker.setFPS(lib.properties.fps);
-	createjs.Ticker.addEventListener("tick", stage);
-}
-
-function playSound(id, loop) {
-	createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
-}
+						$(document).ready(function(){
+							$('#imgdiv1').hide();
+							$('#videoViewport').show();
+							init2();
+							init();
 							
+						});
 							
-							
-						} ]);

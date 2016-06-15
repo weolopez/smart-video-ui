@@ -230,6 +230,10 @@ a.playBtn{
 #videodiv .audioplayer-time-duration {
 		right: 50%;
 	}
+	.fullScreen .frame82 img{
+	width:98%;
+	
+	}
 	#videoViewport {
 		overflow: hidden;
 		width: 330px;

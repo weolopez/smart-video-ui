@@ -46,12 +46,38 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		
 		var id=getParameterByName('id');
 		$scope.videoId=id;
+		$("#canvas").hide();
 		if (type != "ecare"){
 		$http.get(config.dataPath+id+'/script.json').success(function(res){
 			$rootScope.videoData=res;
 			
 			videoData=res;
 			videoData.audio=config.audioPath+id+'/output.wav';
+			if(type=="adobeanimate")
+				{
+				$("#canvas").show();
+				$('.video-js-responsive-container')
+				.prepend(
+						' <audio id="canvasvideo" class="video-js vjs-default-skin"  controls preload="auto" height="100%" width="100%" > <source id="CanvasaudioSource" src="" type="audio/mp3" /><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default></audio>');
+				$("#CanvasaudioSource").attr("src",
+						videoData.audio);
+				$("#cc").attr("src",
+				"assets/data/os_caption.vtt");
+		$("#subtit").attr("src",
+				"assets/data/os_subtitle.vtt");
+				videojs("canvasvideo", {
+					"controls" : true,
+					"autoplay" : true,
+					"preload" : "auto",
+					"html5": {
+					    nativeTextTracks: false
+					}
+				},function() {});
+				
+				/*$("#imgdiv1").insertBefore($(".vjs-tech"));
+				$("#videoViewport")
+						.insertBefore($(".vjs-tech"));*/
+				}
 		});
 		}
 		else
@@ -105,21 +131,33 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 	}
 	function customizePlayer(){
 		
-	  /* if($(window).width()>320 && $(window).width()<767 )
+	   if($(window).width()>320 && $(window).width()<767 )
 		{
-			$('.audioplayer-bar').css('width','24%');
-			$('.audioplayer-time-duration').css('right','50%');
+		   	  var value = $(window).width()-100;
+		      value *= 1;
+		      var valueHeight = Math.round((value/16)*9);
+		      $('#videoViewport').css('width',value + 'px').css('height',valueHeight +'px');
+		      $('#container').css('width',value + 'px');
+			
 		}
 		else if($(window).width()>768 && $(window).width()<991 )
 		{
-			$('.audioplayer-bar').css('width','32%');
-			$('.audioplayer-time-duration').css('right','44%');
+			 var value = $(window).width()-250;
+		      value *= 1;
+		      var valueHeight = Math.round((value/16)*9);
+		      $('#videoViewport').css('width',value + 'px').css('height',valueHeight +'px');
+		      $('#container').css('width',value + 'px');
 		}
 		else
 		{
-			$('.audioplayer-bar').css('width','45%');
-			$('.audioplayer-time-duration').css('right','27%');
-		}*/
+			var value = $(window).width()-350;
+		      value *= 1;
+		      var valueHeight = Math.round((value/16)*9);
+		      $('#videoViewport').css('width',value + 'px').css('height',valueHeight +'px');
+		      $('#container').css('width',value + 'px');
+		}
+		
+		
 	}
 	$scope.$on("controllerLoaded",function(){
 		$scope.templateUrl="app/template/"+$scope.videoType+"/template/animate.html";
@@ -186,7 +224,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 			resetPlayer();
 			$scope.videoType=type;
 			if (type != "ecare"){
-				
+				ga('send', 'pageview');
 				$rootScope.videoData=res[0];
 				
 				videoData=res[0];
