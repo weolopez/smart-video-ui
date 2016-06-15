@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 			},
 			data : {
 				files : [ {
-					src : [ 'assets/data/**.json'],
+					src : [ 'assets/data/**.json' , 'assets/data/**.vtt'],
 					dest : '<%= build_dir %>/',
 					cwd : 'src',
 					expand : true

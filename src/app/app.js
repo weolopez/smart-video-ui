@@ -3,6 +3,7 @@ var videoData;
 var svmodule = angular.module('smartvideo', ['ngRoute','ngSanitize','com.att.controllers.config']);
 svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','config',function($rootScope,$scope,$http,$q,config){
 	$rootScope.showCC=false;
+	$rootScope.datatype = "";
 	$scope.playlists=[];
 	$scope.showPlaylists=false;
 	$scope.fullScreenMode=false;
@@ -63,7 +64,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 				videoData.audio=config.audioPath+id+'/output.wav';
 			});
 			}
-		var vid = document.getElementById("ourvideo");
+		/*var vid = document.getElementById("ourvideo");
 		vid.onpause = function() {
 			$('.animate').css('animation-play-state', 'paused');
 		};
@@ -73,7 +74,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		vid.onseeking = function() {
 			$('.animate').css('animation-play-state', 'paused');
 			// $('.effect').css('animation-iteration-count','1');
-		};
+		};*/
 		$('#closedCaptionBtn a').click(function(){
 			if ($('#closedCaption').hasClass('shown')){
 				$('#closedCaption').removeClass('shown');
@@ -87,7 +88,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		});
 	});
 	$rootScope.$on('changeplayer',function(){
-		changePlayer();
+		//changePlayer();
 	});
 	function changePlayer(){
 		$( '#ourvideo' ).audioPlayer(
@@ -136,7 +137,9 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 			l.type="text/css";
 			l.rel="stylesheet";
 			  l.href = "app/template/"+templ+"/css/style.css";
+			  if ($scope.videoType != "adobeanimate"){
 			  document.getElementsByTagName('head')[0].appendChild(l);
+		}
 			  var deferred = $q.defer();
 			 
 			 
