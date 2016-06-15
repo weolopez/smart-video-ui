@@ -15,7 +15,7 @@ module.exports = {
 		fonts : 'assets/fonts/*.*',
 		css : 'src/assets/**/*.css',
 		animate_css : 'src/app/**/*.css',
-		audio : 'app/**/*.mp3',
+		audio : [ 'app/**/*.mp3', 'app/**/*.mp4' ],
 		app_css : 'app/**/*.css',
 		globalImg:['assets/**/*.png','assets/**/*.jpg','assets/**/*.gif'],
 		img : [ 'app/**/*.png', 'app/**/*.jpg', 'app/**/*.gif' ]
