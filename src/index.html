@@ -3,60 +3,75 @@
 <html ng-app="smartvideo" ng-controller="SVMainController">
 <head>
 <meta charset="utf-8">
-  <title>AT&T Shipping Confirmation Video</title>
-  
-<link href="../svp/assets/css/styles.min.css" rel="stylesheet" type="text/css">
+<title>AT&T Shipping Confirmation Video</title>
+
+<link href="../svp/assets/css/styles.min.css" rel="stylesheet"
+	type="text/css">
+
 </head>
 <body id="body">
-<div id="container">
-<div class="header" ng-if="showHeader">
+	<div id="container">
+		<div class="header" ng-if="showHeader">
 
-<img ng-src="{{imageUrl}}" alt="title">
-</div>
-<div class="wrapper">
-<div id="imgdiv1" ></div>
-<div id="videoViewport" >
-<div id="template" class="template" ng-include="templateUrl"></div>
-<div id="closedCaption" class=""></div>
-<div id="playlist" ng-if="showpl" ng-show="showPlaylists">
-<a id="prevbtn" class="navBtn" href="javascript:void(0)" title="prev" ng-click="showPrev()"><span>prev</span></a>
-<div class="plitems"><ul><li class="plist" ng-repeat="plist in playlists">{{plist.name}}<a class="playBtn" href="javascript:void(0)" title="play" ng-click="playVideo(plist.type,plist.id)"></a></li></ul></div>
-<a id="nextbtn" class="navBtn" href="javascript:void(0)" title="next" ng-click="showNext()"><span>next</span></a>
-</div>
+			<img ng-src="{{imageUrl}}" alt="title">
+		</div>
+		<div class="wrapper">
+			<div class="video-js-responsive-container vjs-hd">
 
-<div id="videodiv">
-            <audio id="ourvideo" controls  height="1px">
-               
-                <source id="audioSource" src="">
-            </audio>
-<div id="closedCaptionBtn"><a href="javascript:void(0)" title="Closed Caption">CC</a></div>
-       <div id="fullscreen"><a href="javascript:void(0)" title="screen mode" ng-click="showFullScreen()">[o]</a></div>
-       <div ng-if="showpl" id="showPlBtn"><a href="javascript:void(0)" title="Playlist" ng-click="showPlaylist()">PL</a></div>
-        </div>  
-        
-</div>
-    </div>
+				<div id="imgdiv1"></div>
+				<div id="videoViewport" class="video-js">
+					<div id="template" class="template" ng-include="templateUrl"></div>
+					<div id="closedCaption" class=""></div>
+					<div id="playlist" ng-if="showpl" ng-show="showPlaylists">
+						<a id="prevbtn" class="navBtn" href="javascript:void(0)"
+							title="prev" ng-click="showPrev()"><span>prev</span></a>
+						<div class="plitems">
+							<ul>
+								<li class="plist" ng-repeat="plist in playlists">{{plist.name}}<a
+									class="playBtn" href="javascript:void(0)" title="play"
+									ng-click="playVideo(plist.type,plist.id)"></a></li>
+							</ul>
+						</div>
+						<a id="nextbtn" class="navBtn" href="javascript:void(0)"
+							title="next" ng-click="showNext()"><span>next</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-<script src="../svp/lib/angularjs/angular.min.js"></script>
-<script src="../svp/lib/angularjs/angular-route.min.js"></script>
-<script src="../svp/lib/angularjs/angular-sanitize.min.js"></script>
-<script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
-<script src="../svp/lib/script-loader/script.js"></script>
-<script src="../svp/lib/audioplayer/audioplayer.min.js"></script>
-<script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
-<script src="../svp/app/config/config.js"></script>
-<script src="../svp/app/app.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	<script src="../svp/lib/angularjs/angular.min.js"></script>
+	<script src="../svp/lib/angularjs/angular-route.min.js"></script>
+	<script src="../svp/lib/angularjs/angular-sanitize.min.js"></script>
+	<script src="../svp/lib/videojs/video.min.js"></script>
+	
+	<script src="../svp/lib/videojs-ga/videojs.ga.min.js"></script>
+	<script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../svp/lib/script-loader/script.js"></script>
 
-  ga('create', 'UA-79023609-1', 'auto');
-  ga('send', 'pageview');
+	<script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
+	<script src="../svp/lib/videojs/videojs.caption.min.js"></script>
+	<script src="../svp/app/config/config.js"></script>
+	<script src="../svp/app/app.js"></script>
+	<script>
+	videojs('ourvideo', {}, function() {
+		  this.ga();
+		});
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'https://www.google-analytics.com/analytics.js', 'ga');
 
-</script>
-
+		ga('create', 'UA-79023609-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 
 </body>
 </html>
