@@ -15,28 +15,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 				" "));
 	}
 	angular.element(document).ready(function(){
-/***********************GOOGLE ANALYTICS EVENT TRACKING-START**********************************/
-        
-        //Code for Event tracking
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-52702404-1']);
-        _gaq.push(['_trackPageview']);
-                                        
-        $("a").each(function() {
-                                      var href = $(this).attr("href");
-                                      var target = $(this).attr("target");
-                                      var text = $(this).text();
-                                      $(this).click(function(event) { // when someone clicks these links
-                                                      event.preventDefault(); // don't open the link yet
-                                                      _gaq.push(["_trackPageview", href]); // create a dynamic pageview
-                                                      setTimeout(function() { // now wait 300 milliseconds...
-                                                                      window.open(href,(!target?"_self":target)); // ...and open the link as usual
-                                                      },300);
-                                      });
-                      });
-      
-/***********************GOOGLE ANALYTICS EVENT TRACKING - END**********************************/
-
+		
 		var type = getParameterByName('type');
 		if (type == ""){
 			type="orderstatus";
@@ -45,6 +24,39 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		
 		var id=getParameterByName('id');
 		$scope.videoId=id;
+		
+/***********************GOOGLE ANALYTICS EVENT TRACKING-START**********************************/
+        
+        //Code for Event tracking
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount','UA-52702404-1']);
+		_gaq.push(['_trackPageview']);
+		
+		//Tracking Id of the video
+		_gaq.push(["_trackPageview", 'videoID='+id]); 
+		
+		//Tracking the link visits
+		$("a").each(function() {
+			$(this).click(function(event) {
+				gaq(event,$(this));
+			});
+		});
+
+		function gaq(event,obj) { // when someone clicks these links
+			event.preventDefault(); // don't open the link yet
+			var href = $(obj).attr("href");
+			var target = $(obj).attr("target");
+			_gaq.push(["_trackPageview", href]); // create a dynamic pageview
+			setTimeout(function() { // now wait 300 milliseconds...
+				console.log('Event recorded');
+				window.open(href, (!target ? "_self" : target)); // ...and open the link as usual
+			}, 300);
+		}
+      
+/***********************GOOGLE ANALYTICS EVENT TRACKING - END**********************************/		
+		
+
+		
 		if (type != "ecare"){
 		$http.get(config.dataPath+id+'/script.json').success(function(res){
 			$rootScope.videoData=res;
