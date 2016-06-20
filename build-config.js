@@ -15,7 +15,7 @@ module.exports = {
 		fonts : 'assets/fonts/*.*',
 		css : 'src/assets/**/*.css',
 		animate_css : 'src/app/**/*.css',
-		audio : [ 'app/**/*.mp3', 'app/**/*.mp4' ],
+		audio : [ 'app/**/*.mp3', 'app/**/*.mp4', 'app/**/*.m4a' ],
 		app_css : 'app/**/*.css',
 		globalImg:['assets/**/*.png','assets/**/*.jpg','assets/**/*.gif'],
 		img : [ 'app/**/*.png', 'app/**/*.jpg', 'app/**/*.gif' ]
@@ -23,7 +23,7 @@ module.exports = {
 	},
 	
 	data_dest : 'assets/',
-	lib_files : 'lib/**/*.js',
+	lib_files : [ 'lib/**/*.js', 'lib/**/*.css' ],
 	css_dest : 'assets/css/styles.css',
 	files_list : {
 		css : [ '<%= build_dir %>/**/*.css',
