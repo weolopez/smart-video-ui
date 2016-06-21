@@ -3,11 +3,13 @@ var videoData;
 var svmodule = angular.module('smartvideo', ['ngRoute','ngSanitize','com.att.controllers.config']);
 svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','config',function($rootScope,$scope,$http,$q,config){
 	$rootScope.showCC=false;
+	$rootScope.seekedTime="";
 	$rootScope.datatype = "";
 	$scope.playlists=[];
 	$scope.showPlaylists=false;
 	$scope.fullScreenMode=false;
 	$scope.showHeader=true;
+	$scope.videojs="";
 	function getParameterByName(name) {
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex
@@ -64,6 +66,148 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 			
 			videoData=res;
 			videoData.audio=config.audioPath+id+'/output.wav';
+			if(type=="adobeanimate")
+				{
+				changeCSS('../svp/lib/videojs/global.css',0);
+				$("#canvas").show();
+				$('.video-js-responsive-container')
+				.prepend(
+						' <audio id="canvasvideo" class="video-js vjs-default-skin"  controls preload="auto" height="100%" width="100%" > <source id="CanvasaudioSource" src="" type="" /><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default><track id="chptr" kind="chapters" src="" srclang="en"></audio>');
+				
+				$("#CanvasaudioSource").attr("src",
+						videoData.media);
+				if(videoData.media!=undefined)
+					{
+						if(videoData.media.indexOf('.m4a')==-1)
+						{
+							$("#CanvasaudioSource").attr("type","audio/mp3");
+						}
+						else{
+							$("#CanvasaudioSource").attr("type","audio/mp4");
+						}
+					}
+					else
+					{
+						$("#CanvasaudioSource").attr("type","audio/mp3");
+					}
+				$("#cc").attr("src",
+				"assets/data/os_caption.vtt");
+				$("#subtit").attr("src",
+						"assets/data/os_subtitle.vtt");
+				$("#chptr").attr("src",
+				"assets/data/os_chapter.vtt");
+				videojs = videojs("canvasvideo", {
+					"controls" : true,
+					"autoplay" : true,
+					"preload" : "auto",
+					"html5": {
+					    nativeTextTracks: false
+					}
+				},function() {});
+				$("#videoViewport").insertBefore(
+						$(".vjs-tech"));
+				
+
+				videojs.on('play', function(e) {
+					
+					// createjs.Ticker.addEventListener("tick", stage);
+					createjs.Ticker.paused = false;
+				});
+				videojs.on('pause', function(e) {
+					createjs.Ticker.paused = true;
+					
+				});
+				videojs.on("seeked", function() {
+					seekedTime = this.currentTime();
+					
+				});
+				/*$("#imgdiv1").insertBefore($(".vjs-tech"));
+				$("#videoViewport")
+						.insertBefore($(".vjs-tech"));*/
+			}
+			else
+			{
+				if(videoData.format!=undefined)
+				{
+					$rootScope.datatype = videoData.format;
+				}
+				else
+				{
+					$rootScope.datatype="html";
+				}
+				if ($rootScope.datatype != undefined) {
+					if ($rootScope.datatype == "html") {
+						$('.video-js-responsive-container')
+								.prepend(
+' <audio id="ourvideo" class="video-js vjs-default-skin" style="display:none;" controls preload="auto" height="100%" width="100%" > <source id="audioSource" src="" type="" /><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default><track id="chptr" kind="chapters" src="" srclang="en"></audio>');
+						
+						$("#audioSource").attr("src",
+								videoData.media);
+						
+								
+						if(videoData.media!=undefined)
+						{
+							if(videoData.media.indexOf('.m4a')==-1)
+							{
+								$("#audioSource").attr("type","audio/mp3");
+							}
+							else{
+								$("#audioSource").attr("type","audio/mp4");
+							}
+						}
+						else
+						{
+							$("#audioSource").attr("type","audio/mp3");
+						}
+						$("#cc").attr("src",
+								"assets/data/os_caption.vtt");
+						$("#subtit").attr("src",
+								"assets/data/os_subtitle.vtt");
+						$("#chptr").attr("src",
+						"assets/data/os_chapter.vtt");
+						$("#videoViewport").insertBefore(
+								$(".vjs-tech"));
+						
+						
+					} else {
+						$('.video-js-responsive-container')
+								.prepend(
+										' <video id="newvideo" class="video-js vjs-default-skin"  controls preload="auto" width="100%" height="100%" > <source id="videoSource" src="" type=""><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default><track id="chptr" kind="chapters" src="" srclang="en"><button class="previous">Previous</button><button class="next">Next</button><div class="autoadvance-group"><h4>Auto-advance (in seconds)</h4><label><input type="radio" name="autoadvance" value="null" checked> No auto-advance</label><label><input type="radio" name="autoadvance" value="0"> 0</label><label><input type="radio" name="autoadvance" value="5"> 5</label><label><input type="radio" name="autoadvance" value="10"> 10</label><label><input type="radio" name="autoadvance" value="30"> 30</label></div></video>');
+						$("#videoSource").attr("src",
+								videoData.media);
+						if(videoData.media!=undefined)
+						{
+							if(videoData.media.indexOf('.m4a')==-1)
+							{
+								$("#videoSource").attr("type","video/mp4");
+							}
+							else{
+								$("#videoSource").attr("type","audio/mp4");
+							}
+						}
+						else
+						{
+							$("#videoSource").attr("type","video/mp4");
+						}
+						$("#cc").attr("src",
+						"assets/data/os_caption.vtt");
+						$("#subtit").attr("src",
+								"assets/data/os_subtitle.vtt");
+						$("#chptr").attr("src",
+						"assets/data/os_chapter.vtt");
+						videojs("newvideo", {
+							"controls" : true,
+							"autoplay" : true,
+							"preload" : "auto",
+							"fluid":true,
+							"html5": {
+								nativeTextTracks: false}
+						});
+						
+					}
+				}
+				
+			}
 		});
 		}
 		else
@@ -99,9 +243,20 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 				}
 		});
 	});
-	$rootScope.$on('changeplayer',function(){
-		//changePlayer();
+	$rootScope.$on('customizeplayer',function(){
+		//customizePlayer();
 	});
+	function changeCSS(cssFile, cssLinkIndex) {
+
+	    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+	    var newlink = document.createElement("link");
+	    newlink.setAttribute("rel", "stylesheet");
+	    newlink.setAttribute("type", "text/css");
+	    newlink.setAttribute("href", cssFile);
+
+	    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+	}
 	function changePlayer(){
 		$( '#ourvideo' ).audioPlayer(
 				{
@@ -198,7 +353,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 			resetPlayer();
 			$scope.videoType=type;
 			if (type != "ecare"){
-				
+				ga('send', 'pageview');
 				$rootScope.videoData=res[0];
 				
 				videoData=res[0];

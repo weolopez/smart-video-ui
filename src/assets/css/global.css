@@ -211,6 +211,12 @@ background-size:100% 100%;}
 		position: relative;
 		visibility: hidden;
 	}
+	.fullScreen .webpagedivseg {
+		
+		width: 100%;
+		
+		
+	}
 	.webpagedivseg.showContent {
 		display: none;
 		visibility: visible;

@@ -17,99 +17,46 @@ svmodule.controllerProvider
 							
 							function assignData(data) {
 
-								$(".userNameFirst").html(data.data.firstName);
-								$("#userNameLast").html(data.data.lastName);
-								$(".product").html(data.data.product);
-								$(".memory").html(data.data.memory);
-								$(".shippedon").html(data.data.delivery);
+								$(".userNameFirst").html(data.content.firstName);
+								$("#userNameLast").html(data.content.lastName);
+								$(".product").html(data.content.product);
+								$(".memory").html(data.content.memory);
+								$(".shippedon").html(data.content.delivery);
 								$(".productImg").attr(
 										'src',
 										'app/template/orderstatus/images/'
-												+ data.data.productImg);
-								if(data.datatype!=undefined)
-								{
-									$rootScope.datatype = data.datatype;
-								}
-								else
-									{
-									$rootScope.datatype="audio";
-									}
-								if ($rootScope.datatype != null) {
-									if ($rootScope.datatype == "audio") {
-										$('.video-js-responsive-container')
-												.prepend(
-														' <audio id="ourvideo" class="video-js" style="display:none;" controls preload="auto"  width="auto" height="auto"> <source id="audioSource" src="" type="audio/mp3" /><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default></audio>');
-										$("#audioSource").attr("src",
-												data.audio);
-										$("#cc").attr("src",
-												"assets/data/os_caption.vtt");
-										$("#subtit").attr("src",
-												"assets/data/os_subtitle.vtt");
-										var audio = $("#ourvideo");
-										audio[0].pause();
-										audio[0].load();
-									} else {
-										$('.video-js-responsive-container')
-												.prepend(
-														' <video id="newvideo" class="video-js" controls preload="auto" width="auto" height="auto"> <source id="videoSource" src="" type="video/mp4"> </video>');
-										$("#videoSource").attr("src",
-												data.video);
-									}
-								}
-								// $rootScope.$broadcast("changeplayer");
-
+												+ data.content.productImg);
+								
 								data.caption = "assets/data/os_caption.json";
 								if (data.caption != undefined) {
 									jQuery.get(data.caption, function(res) {
 										$rootScope.showCC = true;
 										caption = res;
 										setTimeout(function() {
-											if ($rootScope.datatype == "audio") {
 												runVideo();
-											} else {
-												runnewVideo();
-											}
+											
 										}, 2000);
 
 									}).fail(function(res) {
 
 										setTimeout(function() {
-											if ($rootScope.datatype == "audio") {
+											
 												runVideo();
-											} else {
-												runnewVideo();
-											}
+											
 										}, 2000);
 									});
 								} else {
 									setTimeout(function() {
-										if ($rootScope.datatype == "audio") {
+										
 											runVideo();
-										} else {
-											runnewVideo();
-										}
+										
 									}, 2000);
 								}
 							}
 							
-							function runnewVideo() {
-								videojs("newvideo", {
-									"controls" : true,
-									"autoplay" : true,
-									"preload" : "auto",
-									"html5": {
-										nativeTextTracks: false}
-								});
-								document.getElementById("newvideo").style.display = "block";
-							/*	videojs('newvideo', {}, function() {
-							        this.ga();
-							      });
-								player.ga({
-									  'eventsToTrack': ['loaded', 'percentsPlayed', 'start', 'end', 'seek', 'play', 'pause', 'resize', 'volumeChange', 'error', 'fullscreen'],
-									  'debug': true
-									});*/
-							}
+							
 							function runVideo() {
+								if ($rootScope.datatype == "html") {
 								var pop = Popcorn("#ourvideo");
 								var animate1 = [ {
 									"element" : ".animate",
@@ -728,7 +675,7 @@ svmodule.controllerProvider
 									"html5": {
 									    nativeTextTracks: false
 									}
-								},function() {this.ga();});
+								},function() {});
 								
 								$("#imgdiv1").insertBefore($(".vjs-tech"));
 								$("#videoViewport")
@@ -752,7 +699,7 @@ svmodule.controllerProvider
 								      }
 								   });*/
 								
-								 
+								}
 
 							}
 

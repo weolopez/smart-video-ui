@@ -1274,55 +1274,6 @@ video::-webkit-media-text-track-display {
   padding: 20px 24px;
   z-index: 1; }
   
- .video-js-responsive-container.vjs-hd {
-    padding-top: 0%;
-}
-.video-js-responsive-container.vjs-sd {
-    padding-top: 75%;
-}
-.video-js-responsive-container {
-    width: 100%;
-    position: relative;
-}
-.video-js-responsive-container .video-js {
-    height: 100% !important; 
-    width: 100% !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+ 
 
-
-/* li:nth-child(2) { visibility: hidden; } */
-
- .vjs-texttrack-settings {
-  display: none;
-}
-/*
-.vjs-caption-settings {
-  display: none;
-} */
-
-.video-js .vjs-captions {
-  color: #FFFFFF;
-  font-family: 'tahoma';
-  font-size: 16px;
-}
-
-.video-js .vjs-text-track {
-  background-color: transparent;
-}
-/* 
-.video-js .vjs-text-track-display{
-	bottom:3em;
-}
-.video-js .vjs-control-bar{
-	height:2.30em;
-} */
-
-.vjs-has-started .vjs-control-bar{
-	z-index:1;
-}
-.video-js.vjs-user-inactive.vjs-playing .vjs-text-track-display{
-	z-index:1;
-}
+ 

@@ -7,6 +7,8 @@
 
 <link href="../svp/assets/css/styles.min.css" rel="stylesheet"
 	type="text/css">
+<link href="../svp/lib/videojs/video-js.css" rel="stylesheet"
+	type="text/css">
 
 </head>
 <body id="body">
@@ -20,6 +22,9 @@
 
 				<div id="imgdiv1"></div>
 				<div id="videoViewport" class="video-js">
+				<div style="background-color:#D4D4D4">
+	<canvas id="canvas" width="627" height="352" style="background-color:#FFFFFF"></canvas>
+</div>
 					<div id="template" class="template" ng-include="templateUrl"></div>
 					<div id="closedCaption" class=""></div>
 					<div id="playlist" ng-if="showpl" ng-show="showPlaylists">
@@ -49,20 +54,19 @@
 	<script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
 	<script src="../svp/lib/script-loader/script.js"></script>
 	
-	<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
-	<script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
-	<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
-	<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
-	<script src="http://code.createjs.com/soundjs-0.5.2.min.js"></script>
+	<script src="../svp/lib/createjs/easeljs-0.8.2.min.js"></script>
+	<script src="../svp/lib/createjs/tweenjs-0.5.1.min.js"></script>
+	<script src="../svp/lib/createjs/movieclip-0.7.1.min.js"></script>
+	<script src="../svp/lib/createjs/preloadjs-0.4.1.min.js"></script>
+	<script src="../svp/lib/createjs/soundjs-0.5.2.min.js"></script>
 	
 	<script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
-	<script src="../svp/lib/videojs/videojs.caption.min.js"></script>
 	<script src="../svp/app/config/config.js"></script>
 	<script src="../svp/app/app.js"></script>
 	<script>
-	videojs('ourvideo', {}, function() {
-		  this.ga();
-		});
+		/* videojs('ourvideo', {}, function() {
+		  this.ga(); // "load the plugin, by defaults tracks everything!!"
+		}); */
 		(function(i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
 			i[r] = i[r] || function() {
@@ -76,7 +80,57 @@
 				'https://www.google-analytics.com/analytics.js', 'ga');
 
 		ga('create', 'UA-79023609-1', 'auto');
-		ga('send', 'pageview');
+		//ga('send', 'pageview');
+		var canvas, stage, exportRoot;
+		var lib, images, createjs, seekedTime;
+function init() {
+canvas = document.getElementById("canvas");
+images = images||{};
+
+var loader = new createjs.LoadQueue(false);
+loader.installPlugin(createjs.Sound);
+loader.addEventListener("fileload", handleFileLoad);
+loader.addEventListener("complete", handleComplete);
+loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete() {
+			exportRoot = new lib.video_canvas();
+
+stage = new createjs.Stage(canvas);
+stage.addChild(exportRoot);
+stage.update();
+
+createjs.Ticker.setFPS(lib.properties.fps);
+createjs.Ticker.addEventListener("tick", stage);
+			createjs.Ticker.addEventListener("tick", handleTick);
+}
+
+function playSound(id, loop) {
+			//createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+}
+		function handleTick(event) {
+			//console.log("TICKER TIME :" +createjs.Ticker.getTime());
+			if (createjs.Ticker.paused) {
+				// console.log("PAUSED: "+event.paused);
+				createjs.Ticker.removeEventListener("tick", stage);
+			} else {
+				//console.log("PAUSED: "+event.paused);
+				createjs.Ticker.addEventListener("tick", stage);
+			}
+			if (seekedTime != undefined) {
+
+				stage.getChildAt(0).gotoAndPlay(
+						Math.round((seekedTime * 1000) / lib.properties.fps));
+				stage.update();
+				// console.log('Moved to ' + Math.round((seekedTime*1000)/lib.properties.fps));
+				seekedTime = undefined;
+			}
+		}
 	</script>
 
 </body>
