@@ -658,7 +658,7 @@ svmodule.controllerProvider
 												}
 											})
 								}
-								if ($rootScope.showCC) {
+								/*if ($rootScope.showCC) {
 									caption.forEach(function(item) {
 										pop.footnote({
 											start : item.start,
@@ -667,7 +667,7 @@ svmodule.controllerProvider
 											target : "closedCaption"
 										});
 									});
-								}
+								}*/
 								videojs("ourvideo", {
 									"controls" : true,
 									"autoplay" : true,
