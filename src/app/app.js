@@ -57,7 +57,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		}
       
 /***********************GOOGLE ANALYTICS EVENT TRACKING - END**********************************/		
-		$("#canvas").hide();
+		
 
 		
 		if (type != "ecare"){
