@@ -65,7 +65,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 			$rootScope.videoData=res;
 			
 			videoData=res;
-			videoData.audio=config.audioPath+id+'/output.wav';
+			videoData.media=config.audioPath+id+'/'+videoData.media;
 			if(type=="adobeanimate")
 				{
 				changeCSS('../svp/lib/videojs/global.css',0);
