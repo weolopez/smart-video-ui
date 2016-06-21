@@ -25,9 +25,9 @@ var path="app/template/adobeanimate/";
 											{src:path+"images/people_14.png", id:"people_14"},
 											{src:path+"images/purple_circle.png", id:"purple_circle"},
 											{src:path+"images/tick.png", id:"tick"},
-											{src:path+"images/tv.png", id:"tv"}/*,
+											{src:path+"images/tv.png", id:"tv"},
 											{src:path+"sounds/vo2.mp3", id:"vo2"},
-											{src:path+"sounds/vo8.mp3", id:"vo8"}*/
+											{src:path+"sounds/vo8.mp3", id:"vo8"}
 										]
 									};
 
@@ -113,6 +113,20 @@ var path="app/template/adobeanimate/";
 										this.initialize(img.tv);
 									}).prototype = p = new cjs.Bitmap();
 									p.nominalBounds = new cjs.Rectangle(0,0,117,110);
+
+
+									(lib.Tween34 = function() {
+										this.initialize();
+
+										// Layer 1
+										this.text = new cjs.Text("May 20th", "bold 40px 'Myriad Pro'", "#FFFFFF");
+										this.text.textAlign = "center";
+										this.text.lineHeight = 42;
+										this.text.setTransform(-2,-26.8);
+
+										this.addChild(this.text);
+									}).prototype = p = new cjs.Container();
+									p.nominalBounds = new cjs.Rectangle(-85.3,-26.8,170.6,53.6);
 
 
 									(lib.Tween33 = function() {
@@ -480,13 +494,13 @@ var path="app/template/adobeanimate/";
 
 										// Layer 1
 										this.text = new cjs.Text("YOUR ORDER", "italic 30px 'Myriad Pro'", "#EF6F00");
-										this.text.textAlign = "center";
 										this.text.lineHeight = 32;
-										this.text.setTransform(-2,-20);
+										this.text.lineWidth = 289;
+										this.text.setTransform(-81.8,-20);
 
 										this.addChild(this.text);
 									}).prototype = p = new cjs.Container();
-									p.nominalBounds = new cjs.Rectangle(-82.2,-20,164.5,40.1);
+									p.nominalBounds = new cjs.Rectangle(-81.8,-20,292.9,40.1);
 
 
 									(lib.Tween10 = function() {
@@ -644,20 +658,6 @@ var path="app/template/adobeanimate/";
 										this.addChild(this.shape);
 									}).prototype = p = new cjs.Container();
 									p.nominalBounds = new cjs.Rectangle(0,0,61,61);
-
-
-									(lib.Symbol2 = function() {
-										this.initialize();
-
-										// Layer 1
-										this.text = new cjs.Text("May 20th", "bold 40px 'Myriad Pro'", "#FFFFFF");
-										this.text.textAlign = "center";
-										this.text.lineHeight = 42;
-										this.text.setTransform(-2,-26.8);
-
-										this.addChild(this.text);
-									}).prototype = p = new cjs.Container();
-									p.nominalBounds = new cjs.Rectangle(-85.3,-26.8,170.6,53.6);
 
 
 									(lib.Symbol1 = function() {
@@ -868,9 +868,10 @@ var path="app/template/adobeanimate/";
 
 										// Your Scheduled Installation
 										this.instance = new lib.Tween13();
-										this.instance.setTransform(0.3,0,1,1,0,0,0,-1,-53);
+										this.instance.setTransform(-122,-139,1,0.039,0,0,0,-1,-52.6);
+										this.instance.alpha = 0;
 
-										this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({regX:0.6,regY:0,x:1.9,y:53},0).wait(157).to({x:15.2},0).wait(1).to({x:28.6},0).wait(1).to({x:41.9},0).wait(1).to({x:9.9},0).wait(1).to({x:-22.1},0).wait(1).to({x:-54.1},0).wait(1).to({x:-86.1},0).wait(1).to({x:-118.1},0).wait(1).to({x:-150.1},0).wait(1).to({x:-182.1},0).wait(1).to({x:-214.1},0).wait(1).to({x:-246.1},0).wait(1).to({x:-278.1},0).to({_off:true},1).wait(2));
+										this.timeline.addTween(cjs.Tween.get(this.instance).to({regY:-52.9,scaleY:1.1,y:-139.1,alpha:1},12).to({regY:-53,scaleY:0.9,y:-138.8},5).to({scaleY:1,y:-139},5).wait(135).to({scaleY:0.08,y:-137.3,alpha:0},11).to({_off:true},3).wait(2));
 
 										// Layer 6
 										this.instance_1 = new lib.Tween18("synched",0);
@@ -895,29 +896,23 @@ var path="app/template/adobeanimate/";
 										this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(108).to({_off:false},0).to({regY:-9,scaleY:1.17},13).to({scaleY:0.83},4).to({scaleY:1},4).to({startPosition:0},28).to({regX:1.1,regY:-9.1,scaleX:0.53,scaleY:0.53,x:132.8,alpha:0},11).wait(5));
 
 										// May 20th
-										this.instance_4 = new lib.Symbol2();
-										this.instance_4.setTransform(133.1,-34.1,1,1,0,0,0,2,-12);
+										this.instance_4 = new lib.Tween34("synched",0);
+										this.instance_4.setTransform(132,-49,1,0.074,0,0,0,1,-26.9);
+										this.instance_4.alpha = 0;
 										this.instance_4._off = true;
 
-										this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(157).to({_off:false},0).wait(1).to({regX:0,regY:0,scaleX:0.93,scaleY:0.93,x:131.2,y:-22.9,alpha:0.909},0).wait(1).to({scaleX:0.86,scaleY:0.86,x:131.3,y:-23.8,alpha:0.818},0).wait(1).to({scaleX:0.79,scaleY:0.79,x:131.5,y:-24.6,alpha:0.727},0).wait(1).to({scaleX:0.72,scaleY:0.72,x:131.6,y:-25.4,alpha:0.636},0).wait(1).to({scaleX:0.65,scaleY:0.65,x:131.8,y:-26.3,alpha:0.545},0).wait(1).to({scaleX:0.58,scaleY:0.58,x:131.9,y:-27.1,alpha:0.455},0).wait(1).to({scaleX:0.51,scaleY:0.51,x:132,y:-28,alpha:0.364},0).wait(1).to({scaleX:0.44,scaleY:0.44,x:132.2,y:-28.8,alpha:0.273},0).wait(1).to({scaleX:0.37,scaleY:0.37,x:132.3,y:-29.6,alpha:0.182},0).wait(1).to({scaleX:0.3,scaleY:0.3,x:132.5,y:-30.5,alpha:0.091},0).wait(1).to({scaleX:0.23,scaleY:0.23,x:132.6,y:-31.3,alpha:0},0).to({_off:true},1).wait(4));
-
-										// May 20th
-										this.instance_5 = new lib.Symbol2();
-										this.instance_5.setTransform(0.4,0,1,1,0,0,0,2,-12);
-										this.instance_5._off = true;
-
-										this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(66).to({_off:false},0).wait(1).to({regX:0,regY:0,x:-1.6,y:12},0).wait(90).to({_off:true},1).wait(15));
+										this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(66).to({_off:false},0).to({regY:-27,scaleY:1.22,alpha:1},10).to({regY:-27.1,scaleY:0.81,y:-49.1},4).to({regY:-27,scaleY:1,y:-49},4).to({startPosition:0},73).to({regX:1.1,regY:-26.9,scaleX:0.24,scaleY:0.24,alpha:0},11).to({_off:true},1).wait(4));
 
 										// Tween 6
-										this.instance_6 = new lib.Tween19();
-										this.instance_6.setTransform(251.7,23.9);
-										this.instance_6.alpha = 0;
-										this.instance_6._off = true;
+										this.instance_5 = new lib.Tween19();
+										this.instance_5.setTransform(251.7,23.9);
+										this.instance_5.alpha = 0;
+										this.instance_5._off = true;
 
-										this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(16).to({_off:false},0).to({x:131.7,alpha:1},21).wait(120).to({scaleX:0.42,scaleY:0.42,alpha:0},11).wait(5));
+										this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(16).to({_off:false},0).to({x:131.7,alpha:1},21).wait(120).to({scaleX:0.42,scaleY:0.42,alpha:0},11).wait(5));
 
 									}).prototype = p = new cjs.MovieClip();
-									p.nominalBounds = new cjs.Rectangle(-124.7,1.9,252,102.2);
+									p.nominalBounds = new cjs.Rectangle(-247,-138.9,252,4);
 
 
 									(lib._2grap = function(mode,startPosition,loop) {
@@ -940,36 +935,29 @@ var path="app/template/adobeanimate/";
 										this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(13).to({_off:false},0).to({scaleX:1,scaleY:1,alpha:1},12,cjs.Ease.get(1)).wait(50).to({startPosition:0},0).to({scaleX:0.3,scaleY:0.3,alpha:0},12).wait(11));
 
 										// package.png
-										this.instance_2 = new lib.Symbol1();
-										this.instance_2.setTransform(0.4,0,1,1,0,0,0,196.5,111.5);
+										this.instance_2 = new lib.Symbol1("synched",0);
+										this.instance_2.setTransform(83.9,34.9,0.046,1,0,0,0,192.9,116.9);
+										this.instance_2.alpha = 0;
 										this.instance_2._off = true;
 
-										this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(75).to({_off:false},0).wait(3).to({scaleX:0.97,scaleY:0.97,y:0.1,alpha:0.856},0).wait(1).to({scaleX:0.94,scaleY:0.94,y:0,alpha:0.707},0).wait(1).to({scaleX:0.91,scaleY:0.91,alpha:0.563},0).wait(1).to({scaleX:0.89,scaleY:0.89,alpha:0.424},0).wait(1).to({scaleX:0.86,scaleY:0.86,y:0.1,alpha:0.29},0).wait(1).to({scaleX:0.83,scaleY:0.83,y:0,alpha:0.162},0).wait(1).to({scaleX:0.81,scaleY:0.81,y:0.1,alpha:0.038},0).wait(1).to({scaleX:0.8,scaleY:0.8,y:0,alpha:0},0).wait(13));
-
-										// package.png
-										this.instance_3 = new lib.Symbol1();
-										this.instance_3.setTransform(0.4,0,0.8,0.8,0,0,0,196.5,111.5);
-										this.instance_3.alpha = 0;
-										this.instance_3._off = true;
-
-										this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(39).to({_off:false},0).wait(1).to({scaleX:0.83,scaleY:0.83,alpha:0.149},0).wait(1).to({scaleX:0.86,scaleY:0.86,alpha:0.294},0).wait(1).to({scaleX:0.89,scaleY:0.89,y:0.1,alpha:0.437},0).wait(1).to({scaleX:0.92,scaleY:0.92,y:0,alpha:0.577},0).wait(1).to({scaleX:0.94,scaleY:0.94,y:0.1,alpha:0.714},0).wait(1).to({scaleX:0.97,scaleY:0.97,y:0,alpha:0.849},0).wait(1).to({scaleX:1,scaleY:1,alpha:0.98},0).wait(1).to({scaleX:1,scaleY:1,alpha:1},0).wait(27).to({_off:true},1).wait(23));
+										this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(39).to({_off:false},0).to({regX:192.8,scaleX:1.1,x:83.8,alpha:1},13).to({regX:192.9,scaleX:0.9,x:83.9},4).to({scaleX:1},4).wait(15).to({startPosition:0},0).to({regX:192.8,scaleX:0.22,scaleY:0.22,alpha:0},12).wait(11));
 
 										// Layer 5
-										this.instance_4 = new lib.Tween11("synched",0);
-										this.instance_4.setTransform(-196.5,-45,0.3,0.3);
-										this.instance_4.alpha = 0;
+										this.instance_3 = new lib.Tween11("synched",0);
+										this.instance_3.setTransform(-196.5,-45,0.3,0.3);
+										this.instance_3.alpha = 0;
 
-										this.timeline.addTween(cjs.Tween.get(this.instance_4).to({scaleX:1,scaleY:1,alpha:1},9).wait(66).to({startPosition:0},0).to({scaleX:0.3,scaleY:0.3,alpha:0},12).wait(11));
+										this.timeline.addTween(cjs.Tween.get(this.instance_3).to({scaleX:1,scaleY:1,alpha:1},9).wait(66).to({startPosition:0},0).to({scaleX:0.3,scaleY:0.3,alpha:0},12).wait(11));
 
 										// YOUR ORDER
-										this.instance_5 = new lib.Tween12("synched",0);
-										this.instance_5.setTransform(-406.5,-128.9);
-										this.instance_5.alpha = 0;
+										this.instance_4 = new lib.Tween12("synched",0);
+										this.instance_4.setTransform(-406.5,-128.9);
+										this.instance_4.alpha = 0;
 
-										this.timeline.addTween(cjs.Tween.get(this.instance_5).to({x:-196.5,alpha:1},9).wait(66).to({startPosition:0},0).to({x:-406.5,alpha:0},12).wait(11));
+										this.timeline.addTween(cjs.Tween.get(this.instance_4).to({x:-196.5,alpha:1},9).wait(66).to({startPosition:0},0).to({x:-406.5,alpha:0},12).wait(11));
 
 									}).prototype = p = new cjs.MovieClip();
-									p.nominalBounds = new cjs.Rectangle(-488.7,-148.9,306.1,117.8);
+									p.nominalBounds = new cjs.Rectangle(-488.3,-148.9,305.7,117.8);
 
 
 									(lib._1mov = function(mode,startPosition,loop) {
@@ -1029,12 +1017,9 @@ var path="app/template/adobeanimate/";
 										this.frame_51 = function() {
 											playSound("vo2");
 										}
-										this.frame_2542 = function() {
-											stop();
-										}
 
 										// actions tween:
-										this.timeline.addTween(cjs.Tween.get(this).wait(51).call(this.frame_51).wait(2491).call(this.frame_2542).wait(1));
+										this.timeline.addTween(cjs.Tween.get(this).wait(51).call(this.frame_51).wait(2492));
 
 										// Layer 3
 										this.instance = new lib._6grap("synched",0,false);
@@ -1076,7 +1061,7 @@ var path="app/template/adobeanimate/";
 										this.instance_5.setTransform(313.5,-54,0.8,0.8);
 										this.instance_5.alpha = 0;
 
-										this.timeline.addTween(cjs.Tween.get(this.instance_5).to({y:54.3,alpha:1},7).to({y:301.6},16,cjs.Ease.get(-0.44)).to({scaleX:1.05,scaleY:0.7,y:308.1},4).to({scaleX:0.8,scaleY:0.8,y:281.6},4).to({y:176},7).to({scaleX:0.35,scaleY:0.35,x:477.5,y:42},20).wait(2485));
+										this.timeline.addTween(cjs.Tween.get(this.instance_5).to({y:54.3,alpha:1},7).to({y:301.6},16,cjs.Ease.get(-0.44)).to({scaleX:1.05,scaleY:0.7,y:308.1},4).to({scaleX:0.8,scaleY:0.8,y:281.6},4).to({y:176},7).to({scaleX:0.35,scaleY:0.35,x:477.5,y:42},20).to({_off:true},2466).wait(19));
 
 										// txt
 										this.instance_6 = new lib.Tween2("synched",0);
