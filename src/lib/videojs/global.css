@@ -36,19 +36,12 @@ a {
 	box-shadow: 0 0 5px #777777
 }
 
-#ourvideo {
+#canvasvideo {
 	position: static;
 	width: 100%;
 }
 
-#canvas {
-	width: 100%;
-	height: auto;
-}
-.canvasvideo-dimensions {
-    width: 90%;
-    height: auto;
-}
+
 @media only screen and (min-width:320px) and (max-width:480px) {
 	#container {
 		width: 320px;
@@ -142,4 +135,13 @@ a {
 	.header img {
 		width: 97%;
 	}
+}
+
+.canvasvideo-dimensions {
+    width: 90%;
+    height: auto;
+}
+#canvas {
+	width: 100%;
+	height: auto;
 }

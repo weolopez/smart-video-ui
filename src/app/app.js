@@ -96,6 +96,10 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 						"assets/data/os_subtitle.vtt");
 				$("#chptr").attr("src",
 				"assets/data/os_chapter.vtt");
+				
+				$("#videoViewport").append(
+						$("#canvasvideo"));
+				
 				videojs = videojs("canvasvideo", {
 					"controls" : true,
 					"autoplay" : true,
@@ -104,7 +108,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 					    nativeTextTracks: false
 					}
 				},function() {});
-				$("#videoViewport").insertBefore(
+				$("#canvas").insertBefore(
 						$(".vjs-tech"));
 				
 
@@ -137,6 +141,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 				}
 				if ($rootScope.datatype != undefined) {
 					if ($rootScope.datatype == "html") {
+						$("#canvas").hide();
 						$('.video-js-responsive-container')
 								.prepend(
 ' <audio id="ourvideo" class="video-js vjs-default-skin" style="display:none;" controls preload="auto" height="100%" width="100%" > <source id="audioSource" src="" type="" /><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default><track id="chptr" kind="chapters" src="" srclang="en"></audio>');
@@ -170,6 +175,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 						
 						
 					} else {
+						$("#canvas").hide();
 						$('.video-js-responsive-container')
 								.prepend(
 										' <video id="newvideo" class="video-js vjs-default-skin"  controls preload="auto" width="100%" height="100%" > <source id="videoSource" src="" type=""><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default><track id="chptr" kind="chapters" src="" srclang="en"><button class="previous">Previous</button><button class="next">Next</button><div class="autoadvance-group"><h4>Auto-advance (in seconds)</h4><label><input type="radio" name="autoadvance" value="null" checked> No auto-advance</label><label><input type="radio" name="autoadvance" value="0"> 0</label><label><input type="radio" name="autoadvance" value="5"> 5</label><label><input type="radio" name="autoadvance" value="10"> 10</label><label><input type="radio" name="autoadvance" value="30"> 30</label></div></video>');
