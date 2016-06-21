@@ -1275,8 +1275,8 @@ video::-webkit-media-text-track-display {
   z-index: 1; }
   
  .video-js-responsive-container.vjs-hd {
-    padding-top: 0%;
-}
+   margin-left:19%;
+}/* 
 .video-js-responsive-container.vjs-sd {
     padding-top: 75%;
 }
@@ -1291,7 +1291,7 @@ video::-webkit-media-text-track-display {
     top: 0;
     left: 0;
 }
-
+ */
 
 /* li:nth-child(2) { visibility: hidden; } */
 

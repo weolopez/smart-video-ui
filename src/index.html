@@ -125,7 +125,7 @@ function playSound(id, loop) {
 			if (seekedTime != undefined) {
 
 				stage.getChildAt(0).gotoAndPlay(
-						Math.round((seekedTime * 1000) / lib.properties.fps));
+						Math.round((seekedTime * 1000) / 48));
 				stage.update();
 				// console.log('Moved to ' + Math.round((seekedTime*1000)/lib.properties.fps));
 				seekedTime = undefined;

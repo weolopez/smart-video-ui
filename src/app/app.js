@@ -91,11 +91,11 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 						$("#CanvasaudioSource").attr("type","audio/mp3");
 					}
 				$("#cc").attr("src",
-				"assets/data/os_caption.vtt");
+				"assets/data/hs_caption.vtt");
 				$("#subtit").attr("src",
-						"assets/data/os_subtitle.vtt");
+						"assets/data/hs_subtitle.vtt");
 				$("#chptr").attr("src",
-				"assets/data/os_chapter.vtt");
+				"assets/data/hs_chapter.vtt");
 				
 				$("#videoViewport").append(
 						$("#canvasvideo"));
