@@ -35,7 +35,7 @@ svmodule.controllerProvider
 										setTimeout(function() {
 												runVideo();
 											
-										}, 2000);
+										}, 8000);
 
 									}).fail(function(res) {
 
@@ -43,14 +43,14 @@ svmodule.controllerProvider
 											
 												runVideo();
 											
-										}, 2000);
+										}, 8000);
 									});
 								} else {
 									setTimeout(function() {
 										
 											runVideo();
 										
-									}, 2000);
+									}, 8000);
 								}
 							}
 							
