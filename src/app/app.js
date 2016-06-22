@@ -75,7 +75,7 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 						' <audio id="canvasvideo" class="video-js vjs-default-skin"  controls preload="auto" height="100%" width="100%" > <source id="CanvasaudioSource" src="" type="" /><track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default><track id="chptr" kind="chapters" src="" srclang="en"></audio>');
 				
 				$("#CanvasaudioSource").attr("src",
-						videoData.media);
+						"app/template/adobeanimate/sounds/audio.mp3"");
 				if(videoData.media!=undefined)
 					{
 						if(videoData.media.indexOf('.m4a')==-1)
