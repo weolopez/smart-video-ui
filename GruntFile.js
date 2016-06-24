@@ -111,6 +111,12 @@ module.exports = function(grunt) {
 					cwd : 'src',
 					expand : true
 				} ]
+			},
+			indexProd : {
+				files : [ {
+					src : [ 'src/index_prod.html' ],
+					dest : '<%= build_dir %>/index.html'
+				} ]
 			}
 		},
 		csslint : {
@@ -217,9 +223,21 @@ module.exports = function(grunt) {
 				dest : '<%= build_dir %>/app/template/styles.css'
 			},
 			
-			compile_js : {
+			app_js : {
 				src : [ '<%= files_list.js %>' ],
 				dest : '<%= build_dir %>/app/application_tmp.js'
+			},
+			angular_js : {
+				src : [ '<%= files_list.libJS %>' ],
+				dest : '<%= build_dir %>/lib/lib.min.js'
+			},
+			video_js : {
+				src : [ '<%= files_list.videolibJS %>' ],
+				dest : '<%= build_dir %>/lib/video.min.js'
+			},
+			adobe_js : {
+				src : [ '<%= files_list.adobelibJS %>' ],
+				dest : '<%= build_dir %>/lib/adobelib.min.js'
 			}
 			
 
@@ -255,6 +273,22 @@ module.exports = function(grunt) {
 					src : [ '<%= build_dir %>/app/application_tmp.js' ],
 					dest : '<%= build_dir %>/app/application.js'
 				} ]
+			},
+			template_js : {
+				files : [ {
+					expand : true,
+					cwd : 'src/',
+					src : [ '<%= app_files.tpljs %>' ],
+					dest : '<%= build_dir %>/'
+				} ]
+			},
+			all_js : {
+				files : [ {
+					expand : true,
+					cwd : 'src/',
+					src : [ '<%= app_files.js %>' ],
+					dest : '<%= build_dir %>/'
+				} ]
 			}
 			
 		},
@@ -263,6 +297,26 @@ module.exports = function(grunt) {
 				files : {
 					'<%= build_dir %>/app/application.min.js' : '<%= build_dir %>/app/application.js'
 				}
+			},
+			scriptjs : {
+				files : {
+					'<%= build_dir %>/lib/script-loader/script.min.js' : '<%= build_dir %>/lib/script-loader/script.js'
+				}
+			},
+			ecare_js : {
+				files : {
+					'<%= build_dir %>/app/template/ecare/js/animate.min.js' : '<%= build_dir %>/app/template/ecare/js/animate.js'
+				}
+			},
+			template_js1 : {
+				files : [ {
+					expand : true,
+					cwd : '<%= build_dir %>/',
+					src : [ '<%= app_files.tpljs %>'],
+					dest : '<%= build_dir %>/',
+					ext:'.min.js'
+					
+				} ]
 			}
 			
 		},
@@ -401,20 +455,21 @@ module.exports = function(grunt) {
 
 
 
-	grunt.registerTask('dev', [ 'clean', 'build', 'concat:compile_js',
-			'concat:vendor_js', 'concat:moment_js', 'ngmin', 'uglify', 'copy:config_js_d' ]);
-
+	
 	
 
-	grunt.registerTask('default', [ 'clean', 'build', 
-			'htmlmin']);
-
+	grunt.registerTask('default', [ 'clean', 'build', 'copy:index',
+			'htmlmin','ngmin:all_js']);
+	grunt.registerTask('dev', [ 'clean', 'build','htmlmin','copy:index','ngmin:all_js']);
+	grunt.registerTask('prod', [ 'clean', 'build','htmlmin','copy:indexProd','minify']);
+	grunt.registerTask('minify', [ 'concat:angular_js','concat:video_js','concat:adobe_js','concat:app_js',
+	                               'ngmin:app_js','uglify:app_js','ngmin:template_js','uglify:ecare_js']);
 	grunt.registerTask('buildCSS', [ 'concat:app_css' ])
 
 	grunt.registerTask('build', [ 'copySource', 'csslint', 'buildCSS',
 			'cssmin:app_css']);
 
-	grunt.registerTask('copySource', [ 'copy:build_lib','copy:index','copy:globalImg',
+	grunt.registerTask('copySource', [ 'copy:build_lib','copy:globalImg',
 			 'copy:imgs', 'copy:fonts', 'copy:data', 'copy:js','copy:css','copy:audio'
 			]);
 
