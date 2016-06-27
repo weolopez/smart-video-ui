@@ -218,10 +218,7 @@ module.exports = function(grunt) {
 				src : [ '<%= app_files.css %>' ],
 				dest : '<%= build_dir %>/assets/css/styles.css'
 			},
-			animate_css : {
-				src : [ '<%= app_files.animate_css %>' ],
-				dest : '<%= build_dir %>/app/template/styles.css'
-			},
+			
 			
 			app_js : {
 				src : [ '<%= files_list.js %>' ],
@@ -248,10 +245,18 @@ module.exports = function(grunt) {
 				dest : '<%= build_dir %>/assets/css/styles.min.css'
 			},
 			animate_css : {
-				src : '<%= build_dir %>/app/template/**/styles.css',
-				dest : '<%= build_dir %>/app/template/**/animate.css'
+				files:[{
+				cwd:	'<%= build_dir %>/',
+				expand:true,
+				src : '<%= app_files.animate_css %>',
+				dest : '<%= build_dir %>/',
+				ext:'.min.css'
+				}]
 			},
-			
+			ecare_css : {
+				src : '<%= build_dir %>/app/template/ecare/css/style.css',
+				dest : '<%= build_dir %>/app/template/ecare/css/styles.min.css'
+			}
 		},
 		htmlmin : {
 			options: {
@@ -459,15 +464,17 @@ module.exports = function(grunt) {
 	
 
 	grunt.registerTask('default', [ 'clean', 'build', 'copy:index',
-			'htmlmin','ngmin:all_js']);
-	grunt.registerTask('dev', [ 'clean', 'build','htmlmin','copy:index','ngmin:all_js']);
+			'htmlmin','ngmin:all_js','minify']);
+	grunt.registerTask('dev', [ 'clean', 'build','htmlmin','copy:index','ngmin:all_js','minify']);
 	grunt.registerTask('prod', [ 'clean', 'build','htmlmin','copy:indexProd','minify']);
+	
 	grunt.registerTask('minify', [ 'concat:angular_js','concat:video_js','concat:adobe_js','concat:app_js',
 	                               'ngmin:app_js','uglify:app_js','ngmin:template_js','uglify:ecare_js']);
+	
 	grunt.registerTask('buildCSS', [ 'concat:app_css' ])
 
 	grunt.registerTask('build', [ 'copySource', 'csslint', 'buildCSS',
-			'cssmin:app_css']);
+			'cssmin:app_css','cssmin:ecare_css']);
 
 	grunt.registerTask('copySource', [ 'copy:build_lib','copy:globalImg',
 			 'copy:imgs', 'copy:fonts', 'copy:data', 'copy:js','copy:css','copy:audio'

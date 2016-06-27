@@ -26,32 +26,19 @@
 	<canvas id="canvas" width="627" height="352" style="background-color:#FFFFFF"></canvas>
 </div>
 					<div id="template" class="template" ng-include="templateUrl"></div>
-					<div id="closedCaption" class=""></div>
-					<div id="playlist" ng-if="showpl" ng-show="showPlaylists">
-						<a id="prevbtn" class="navBtn" href="javascript:void(0)"
-							title="prev" ng-click="showPrev()"><span>prev</span></a>
-						<div class="plitems">
-							<ul>
-								<li class="plist" ng-repeat="plist in playlists">{{plist.name}}<a
-									class="playBtn" href="javascript:void(0)" title="play"
-									ng-click="playVideo(plist.type,plist.id)"></a></li>
-							</ul>
-						</div>
-						<a id="nextbtn" class="navBtn" href="javascript:void(0)"
-							title="next" ng-click="showNext()"><span>next</span></a>
-					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
 	
 	
-	<script src="../svp/lib/angularjs/angular.min.js"></script>
+	<!-- <script src="../svp/lib/angularjs/angular.min.js"></script>
 	<script src="../svp/lib/angularjs/angular-route.min.js"></script>
 	<script src="../svp/lib/angularjs/angular-sanitize.min.js"></script>
-	<script src="../svp/lib/videojs/video.min.js"></script>
+	<script src="../svp/lib/videojs/video.min.js"></script> -->
 	
-	<script src="../svp/lib/videojs/videojs.ga.min.js"></script>
+	<!-- <script src="../svp/lib/videojs/videojs.ga.min.js"></script>
 	<script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
 	<script src="../svp/lib/script-loader/script.min.js"></script>
 	
@@ -59,7 +46,10 @@
 	<script src="../svp/lib/createjs/tweenjs-0.5.1.min.js"></script>
 	<script src="../svp/lib/createjs/movieclip-0.7.1.min.js"></script>
 	<script src="../svp/lib/createjs/preloadjs-0.4.1.min.js"></script>
-	
+	 -->
+	<script src="../svp/lib/lib.min.js"></script>
+	<script src="../svp/lib/video.min.js"></script>
+	<script src="../svp/lib/adobelib.min.js"></script>	
 	
 	<script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
 	<script src="../svp/app/config/config.js"></script>
