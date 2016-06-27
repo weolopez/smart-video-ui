@@ -4,6 +4,14 @@
   "articleDescription": "Block calls from your  device.",
   "topicId": "tut_1",
   "url": "http://www.att.com/devicehowto/index.jsp?id=interactive_1500004899 &make=Samsung&model=SamsungG935A",
+  "relatedVideos": [
+    {
+      "type": "ecare",
+      "id": "tut_2",
+      "name": "Set up Visual Voicemail",
+      "duration": "1:23"
+    }
+  ],
   "steps": {
     "step": [
       {

@@ -7,9 +7,15 @@ float: right;
 text-align: center;
 width: 240px;
 position: absolute;
-top: 87px;
+top: 30%;
 right: 37px; }
 
+.fullScreen .buttonsBlock {
+	width:50%;	
+}
+
+
+.padL15 { padding-left: 15px;} 
 .btn:active,.btn:visited,.btn:link {
 	margin:10px 0;
 padding:11px 23px 13px 23px;
@@ -18,19 +24,19 @@ font-family: "Omnes_ATTMediumItalic",sans-serif; color:#FFFFFF;
 font-weight: 800;
 display:block;
 text-decoration: none;
-border-radius: 10px;
+-webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
 text-shadow: 1px 1px 2px #333;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0574ac+0,44c8f5+99 */
 background: rgb(5,116,172); /* Old browsers */
 background: -moz-linear-gradient(left,  rgba(5,116,172,1) 0%, rgba(68,200,245,1) 99%); /* FF3.6-15 */
-background: linear-gradient(left,  rgba(5,116,172,1) 0%,rgba(68,200,245,1) 99%); /* Chrome10-25,Safari5.1-6 */
+background: -webkit-linear-gradient(left,  rgba(5,116,172,1) 0%,rgba(68,200,245,1) 99%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to right,  rgba(5,116,172,1) 0%,rgba(68,200,245,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0574ac', endColorstr='#44c8f5',GradientType=1 ); /* IE6-9 */
 zoom:1;
-transition: all 200ms ease-in;
-    transform: scale(1); 
+-webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
     -ms-transition: all 200ms ease-in;
     -ms-transform: scale(1); 
     -moz-transition: all 200ms ease-in;
@@ -38,11 +44,15 @@ transition: all 200ms ease-in;
     transition: all 200ms ease-in;
     transform: scale(1);   
 }
+.fullScreen .btn:active,.fullScreen .btn:visited,.fullScreen .btn:link {
+	font-size:36px;
+	
+}
 
 .btn:hover{
     z-index: 2;
-    transition: all 200ms ease-in;
-    transform: scale(1.5);
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
     -ms-transition: all 200ms ease-in;
     -ms-transform: scale(1.5);   
     -moz-transition: all 200ms ease-in;
@@ -67,7 +77,7 @@ bottom: 20px;
 }
 
 .bulky{
-font-size: 44px;
+font-size: 35px;
 font-weight: 800;
 line-height: 41px;
 font-family:"Omnes_ATTMediumItalic",Arial,sans-serif;
@@ -78,6 +88,10 @@ font-size: 25px;
 font-weight: 800;	
 top:40px;
   font-style: italic;
+}
+
+.bulky2{
+	font-size: 34px;
 }
 
  
@@ -96,7 +110,7 @@ background-repeat: no-repeat;
 background-position: left top;
 overflow:hidden;
 }
-	/* 	
+		
 #webpagediv1 {background-image:url(../images/pop0.png);
 position: relative;}
 		
@@ -130,7 +144,7 @@ position: relative;}
 #webpagediv24 {background-image:url(../images/blank.png);
 position: relative;}	
 #webpagediv25 {  background-image:url(../images/screen25-1.png); 
-position: relative;}	 */
+position: relative;}	
 .img-container {width: 10px; height: 60px;}
 
         /* resize images */
@@ -157,7 +171,7 @@ border-radius: 111px;
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#da0081+0,81017e+100 */
 background: rgb(218,0,129); /* Old browsers */
 background: -moz-linear-gradient(left,  rgba(218,0,129,1) 0%, rgba(129,1,126,1) 100%); /* FF3.6-15 */
-background: linear-gradient(left,  rgba(218,0,129,1) 0%,rgba(129,1,126,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: -webkit-linear-gradient(left,  rgba(218,0,129,1) 0%,rgba(129,1,126,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to right,  rgba(218,0,129,1) 0%,rgba(129,1,126,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#da0081', endColorstr='#81017e',GradientType=1 ); /* IE6-9 */
 background-color: #81017e;
@@ -180,21 +194,27 @@ font-size: 39px;
     top: 34px;
 }
 #webpagediv7 .text,#webpagediv8 .text{
-	 left: 26px;
+	  left: 6px;
     position: absolute;
     top: 71px;
+    width: 200px;
 }
 #webpagediv7 .circle,#webpagediv8 .circle {
 background:url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
-font-size: 23px;
+font-size: 18px;
 line-height: 26px;
-top:68px;
+top:25%;
 width:220px;
 height:220px;
 }
 .devicePhoto img {
 	float: right;
-    margin-top: 5%;
+    margin-top: 18%;
+    margin-right: 16%;
+}
+.fullScreen .devicePhoto img {
+	float: right;
+    margin-top: 12%;
     margin-right: 16%;
 }
 #webpagediv8 .headingContainer {
@@ -237,15 +257,27 @@ img.attlogo{
 	z-index:5;
 }
 .people2{
+	 left: 40%;
+    top: 3%;
+    z-index:3;
+}
+.fullScreen .people2{
 	 left: 42%;
     top: 3%;
     z-index:3;
 }
+
 .orange{
 	left: 41%;
     top: 36%;
     z-index:3;
 }
+.fullScreen .orange{
+	left: 38%;
+    top: 36%;
+    z-index:3;
+}
+
 .pink{
 	left:18%;
 	top:49%;
@@ -286,13 +318,23 @@ img.attlogo{
 	z-index:5;
 	background:url(../images/people_1.png) no-repeat scroll 0 0 transparent;
 }
+.fullScreen .people2-1{
+	    width: 13%;
+    height: 25%;
+    top: 5%;
+    left: 46%;
+    z-index: 3;
+    background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
+    background-size: 100% 100%;
+}
 .people2-1{
-	width:220px;
-	height:207px;
-	top:5%;
-	left:46%;
-	z-index:3;
-	background:url(../images/people2.png) no-repeat scroll 0 0 transparent;
+    width: 15%;
+    height: 25%;
+    top: 5%;
+    left: 46%;
+    z-index: 3;
+    background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
+    background-size: 100% auto;
 }
 .people4{
 	width:0px;
@@ -342,6 +384,15 @@ img.attlogo{
   to{top:37%; left:14%; width:100px;}
   
 }
+.fullScreen .greenAni{
+	animation-name: greenAniFull;
+}
+@keyframes greenAniFull {
+  from{ left:19%; width:190px;}
+
+  to{top:37%; left:14%; width:10%;}
+  
+}
 .pink1{
 	position:absolute;
 	left: 23%;
@@ -356,6 +407,15 @@ img.attlogo{
   from{ left:24%; width:150px;}
 
   to{top:1%; left:19%; width:220px;}
+  
+}
+.fullScreen .pinkAni{
+	animation-name: pinkAniFull;
+}
+@keyframes pinkAniFull {
+  from{ left:24%; width:150px;}
+
+  to{top:1%; left:19%; width:27%;}
   
 }
 .userNameFirst{
@@ -378,7 +438,7 @@ top:12%;left:14%;
 	}
 #webpagediv9 .text,#webpagediv10 .text
 {
-	 height: 200px;
+	height: 200px;
     left: 39%;
     top: 30%;
     width: 180px;
@@ -389,6 +449,13 @@ top:12%;left:14%;
     color:#ffffff;
 	background:url('../images/bluecircle.png') no-repeat scroll 0 0;
 }	
+.fullScreen #webpagediv9 .text,.fullScreen #webpagediv10 .text
+{
+    padding-top:6%;
+    width: 18%;
+    background-size:100% auto;
+    
+}
 #webpagediv9 .text .shippingTxt,#webpagediv10 .text .shippingTxt,#webpagediv11 .text .shippingTxt,#webpagediv12 .text .shippingTxt
 {
 	font-size:25px;
@@ -398,18 +465,29 @@ top:12%;left:14%;
 	 font-size: 30px;
     font-weight: bold;
 }
+
 #webpagediv9 .green1,#webpagediv10 .green1{
 	 left: 34%;
-    top: 27%;
+    top: 36%;
+    width: 100px;
+}
+.fullScreen #webpagediv9 .green1,.fullScreen #webpagediv10 .green1{
+	 left: 36%;
+    top: 28%;
+    
+}
+.fullScreen #webpagediv9  .green1 ,.fullScreen #webpagediv10  .green1 {
+	 left: 34%;
+    top: 28%;
     width: 100px;
 }
 .shipTextAni{
 	animation-name: shipTextAni;
 }
 @keyframes shipTextAni {
-  from{ left:39%; top:100px}
+  from{ left:39%;}
 
-  to{top:115px; left:60%;}
+  to{top:52%; left:60%;}
  
 }
 .orange1 img{
@@ -420,12 +498,16 @@ top:12%;left:14%;
 	 left: 43%;
     top: 60%;
 }
+.fullScreen .orange1{
+	 left: 35%;
+    top: 60%;
+}
 .greenbase{
 	top:81%;
 	left:2%;
 }
 .tablet{
-	top:118px;
+	top:42%;
 	left:12%;
 	
 }
@@ -450,6 +532,12 @@ top:12%;left:14%;
     color:#ffffff;
 	background:url('../images/bluecircle.png') no-repeat scroll 0 0;
  }
+ .fullScreen #webpagediv11 .text,.fullScreen #webpagediv12 .text
+ {
+  padding-top:6%;
+    width: 18%;
+    background-size:100% auto;
+ }
  .linkTxt
  {
    font-size: 15px;
@@ -465,10 +553,10 @@ top:12%;left:14%;
      */
 }
 @keyframes shipText1Ani {
- 0%{ left:60%; top:115px}
+ 0%{ left:60%; top:50%}
 
-  50%{top:120px; left:59%;}
-  100%{ left:60%; top:115px} 
+  50%{top:50%; left:59%;}
+  100%{ left:60%; top:50%} 
  
 }
 .tabletAni{
@@ -484,10 +572,16 @@ animation-iteration-count: 3;
  
 }
 .green2{
-	top:15%;
+	top:23%;
 	left:23%;
 	width:180px;
 	position:absolute;
+}
+.fullScreen .green2{
+	    top: 25%;
+    left: 28%;
+    width: 15%;
+    position: absolute;
 }
 .blue2{
 	left: 54%;
@@ -495,14 +589,24 @@ animation-iteration-count: 3;
     top: 43%;
     width: 90px;
 }
+.fullScreen .blue2{
+	    left: 46%;
+    position: absolute;
+    top: 43%;
+    width: 8%;
+}
 .orangebase{
-	top:80%;
+	top:75%;
 	left:29%;
+}
+.fullScreen .orangebase{
+	       top: 62%;
+    left: 34%;
 }
 .phoneapp
 {
 	 position: absolute;
-	 top:14%;
+	 top:26%;
 	left:38%;
 }
 .phappAni{
@@ -546,6 +650,15 @@ animation-iteration-count: 3;
   100%{left:48%;}
  
 }
+.fullScreen .orangebaseAni{
+	animation-name: orangebaseAniFull;
+}
+@keyframes orangebaseAniFull {
+ 0%{ left:35%;}
+
+  100%{left:54%;}
+ 
+}
 
 .phoneAppAni{
 	animation-name: phoneAppAni;
@@ -575,7 +688,10 @@ animation-iteration-count: 3;
     font-style: italic;
     left: 102px;
     position: absolute;
-    top: 80px;
+    top: 95px;
+}
+.fullScreen .text3{
+	top:17%;
 }
 #webpagediv17 .green2,#webpagediv16 .green2,#webpagediv18 .green2
 {
@@ -590,6 +706,9 @@ animation-iteration-count: 3;
 }
 #webpagediv17 .orangebase,#webpagediv16 .orangebase,#webpagediv18 .orangebase{
 	left:48%;
+}
+.fullScreen #webpagediv17 .orangebase,.fullScreen #webpagediv16 .orangebase,.fullScreen #webpagediv18 .orangebase{
+	left:53%;
 }
 .mobile{
 	 position: absolute;
@@ -612,6 +731,15 @@ animation-iteration-count: 3;
  0%{ left:48%;}
 
   100%{left:58%;}
+ 
+}
+.orangebase1Ani{
+	animation-name: orangebase1AniFull;
+}
+@keyframes orangebase1AniFull {
+ 0%{ left:53%;}
+
+  100%{left:63%;}
  
 }
 .mobicon
@@ -643,7 +771,7 @@ animation-iteration-count: 3;
 @keyframes contacticonAni {
  0%{top:36%;left:47%;}
 50%{top:34%;left:48%;visibility:visible;}
-  100%{top:19%;left:62%;visibility:hidden;}
+  100%{top:22%;left:62%;visibility:hidden;}
 }
 
 .musiciconAni{
@@ -654,7 +782,7 @@ animation-iteration-count: 3;
  0%{top:36%;left:47%;}
  50%{top:34%;left:48%;visibility:visible;}
 
-  100%{top:19%;left:62%;visibility:hidden;}
+  100%{top:22%;left:62%;visibility:hidden;}
 }
 .galleryiconAni{
 	animation-name: galleryiconAni;
@@ -664,7 +792,7 @@ animation-iteration-count: 3;
 @keyframes galleryiconAni {
  50%{top:36%;left:47%;}
 50%{top:34%;left:48%;visibility:visible;}
-  100%{top:20%;left:60%;visibility:hidden;}
+  100%{top:22%;left:60%;visibility:hidden;}
 }
 .mailiconAni{
 	animation-name: mailiconAni;
@@ -673,22 +801,30 @@ animation-iteration-count: 3;
 @keyframes mailiconAni {
  50%{top:36%;left:47%;}
  50%{top:34%;left:48%;visibility:visible;}
-  100%{top:20%;left:60%;visibility:hidden;}
+  100%{top:22%;left:60%;visibility:hidden;}
 }
 #webpagediv19 .green2,#webpagediv20 .green2{
 	width:220px;
-    left: 25%;
+    left: 29%;
     top: 19%;
 	font-size:42px;
 	text-align:center;
 	z-index:2;
 }
 .activateTxt{
- left: 29%;
+      left: 31%;
     position: absolute;
     text-align: center;
-    top: 32%;
-    z-index:3;
+    top: 28%;
+    z-index: 3;
+
+}
+.fullScreen .activateTxt{
+     left: 31%;
+    position: absolute;
+    text-align: center;
+    top: 27%;
+    z-index: 3;
 }
 .person{
 	 left: 58%;
@@ -712,6 +848,15 @@ animation-iteration-count: 3;
   100%{left:15%;width:130px;}
  
 }
+.fullScreen .green3Ani{
+	animation-name: green3AniFull;
+}
+@keyframes green3AniFull {
+ 0%{ left:25%;}
+
+  100%{left:15%;width:14%;}
+ 
+}
 .activateTxtAni{
 	animation-name: activateTxtAni;
 }
@@ -725,6 +870,16 @@ animation-iteration-count: 3;
 	animation-name: pink2Ani;
 }
 @keyframes pink2Ani {
+ 0%{ top:6%; width:10%; }
+
+  50%{left:5%;top:8%;width:8%;}
+  100%{left: 6%; top:18%;width:7%;}
+ 
+}
+.pink2Ani{
+	animation-name: pink2AniFull;
+}
+@keyframes pink2AniFull {
  0%{ top:6%; width:80px; }
 
   50%{left:5%;top:8%;width:60px;}
@@ -738,13 +893,30 @@ animation-iteration-count: 3;
  0%{ top:57%; width:100px; }
 
   50%{top:0%;width:90px;}
-  100%{left: 16%; top:1%;width:80px;}
+  100%{left: 16%; top:3%;width:10%;}
+ 
+}
+.fullScreen .personAni{
+	animation-name: personAniFull;
+}
+@keyframes personAniFull {
+ 0%{ top:57%; width:12%; }
+
+  50%{top:0%;width:11%;}
+  100%{left: 16%; top:3%;width:10%;}
  
 }
 .person1{
+	     left: 1%;
+    position: absolute;
+    top: 41%;
+    z-index: 1;
+    width: 23%;
+}
+.fullScreen .person1{
 	 left: 1%;
     position: absolute;
-    top: 45%;
+    top: 41%;
     z-index:1;
 }
 .purple1{
@@ -759,12 +931,27 @@ animation-iteration-count: 3;
     top: 27%;
     z-index:12;
 }
+.fullScreen .attscreen{
+	width:44%;
+	right: -600px;
+	top: 23%;
+}
 .attscreenAni{
 	animation-name: attscreenAni;
 	animation-delay:1.5s;
 }
 @keyframes attscreenAni {
  0%{ right:-400px; }
+  100%{right:2%;}
+ 
+}
+.fullScreen .attscreenAni{
+	animation-name: attscreenAniFull;
+	animation-delay:1.5s;
+}
+
+@keyframes attscreenAniFull {
+ 0%{ right:-1200px; }
   100%{right:2%;}
  
 }
@@ -786,9 +973,16 @@ animation-iteration-count: 3;
 	background:url('../images/att_screen_body.png')no-repeat scroll 0 0 transparent;
 	margin:-4px 0;
 	height:193px;
-}
 	
-}.attscreenBodyAni{
+}
+.fullScreen .attscreenBody
+{
+    height: 370px;
+    width: 100%;
+    background-size: 100% auto;
+	
+}
+.attscreenBodyAni{
 	animation-name: attscreenBodyAni;
 	animation-delay:3s;
 	animation-duration:2s;
@@ -813,8 +1007,23 @@ animation-iteration-count: 3;
 }
 @keyframes arrowAni {
  0%{  right:50%;}
-  50%{top:66%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:68%;right:49%;transform:none;z-index:100;}
+  50%{top:60%;right:59%;transform:skewX(-60px);visibility:visible;}
+  100%{top:62%;right:49%;transform:none;z-index:100;}
+}
+.fullScreen .arrowAni{
+	animation-name: arrowAniFull;
+	animation-delay:5s;
+	animation-duration:1.5s;
+	animation-iteration-count:2;
+}
+@keyframes arrowAniFull {
+ 0%{  right:50%;}
+  50%{top:70%;right:59%;transform:skewX(-60px);visibility:visible;}
+  100%{top:72%;right:49%;transform:none;z-index:100;}
+}
+.fullScreen .arrow{
+    top: 70%;
+    width:80px;
 }
 #webpagediv21 .pink{
 	left: 6%; top:18%;width:50px;
@@ -851,6 +1060,15 @@ animation-iteration-count: 3;
     line-height: 37px;
     margin: 12% 7%;
 }
+.fullScreen .devicetxt
+{
+	  color: #ff9600;
+    float: left;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 37px;
+    margin: 12% 7%;
+}
 .orange2{
 	z-index:2;
 	 height: 200px;
@@ -870,6 +1088,12 @@ animation-iteration-count: 3;
 	 width:112px;
 	  top: 19%;
 }
+.fullScreen .phoneIcon{
+	 position: absolute;
+	 left:62%;
+	 width:13%;
+	  top: 19%;
+}
 .people5{
 	position: absolute;
 	right:0%;
@@ -879,6 +1103,12 @@ animation-iteration-count: 3;
 }
 .devicetxt1{
 	font-size: 14px;
+    left: 7%;
+    position: absolute;
+    top: 56%;
+}
+.fullScreen .devicetxt1{
+	font-size: 20px;
     left: 7%;
     position: absolute;
     top: 56%;
@@ -902,6 +1132,9 @@ animation-iteration-count: 3;
     top: 21%;
     z-index:1;
 }
+.fullScreen .att_screen1{
+	width:44%;
+}
 .orange4{
 	 left: 5%;
     position: absolute;
@@ -914,7 +1147,7 @@ animation-iteration-count: 3;
 #webpagediv26 .headingContainer,#webpagediv27 .headingContainer
 {
 	float:none;
-	width:50%;
+	width:55%;
 	margin:0 auto;
 	padding-top:20px;
 }
@@ -924,6 +1157,9 @@ animation-iteration-count: 3;
     top: 27%;
     z-index:10;
 }
+.fullScreen .people6{
+	 width:26%;
+}
 .orange3{
 	 left: 10%;
     position: absolute;
@@ -931,12 +1167,18 @@ animation-iteration-count: 3;
     width: 70px;
     z-index: 2;
 }
+.fullScreen .orange3{
+	 width:9%;
+}
 .pink3{
 	  left: 9%;
     position: absolute;
-    top: 14%;
+    top: 20%;
     width: 98px;
     z-index: 1;
+}
+.fullScreen .pink3{
+	width:12%;
 }
 .people6Ani{
 	animation-name: people6Ani;
@@ -947,6 +1189,16 @@ animation-iteration-count: 3;
  0%{   top: 27%;}
   50%{top:28%;left:16%}
   100%{top:27%;left:17%}
+}
+.fullScreen .people6Ani{
+	animation-name: people6AniFull;
+	  animation-iteration-count: infinite;
+	  animation-duration:2s;
+}
+@keyframes people6AniFull {
+ 0%{   top: 27%;width: 26%;}
+  50%{top:28%;left:16%;width: 26%;}
+  100%{top:27%;left:17%;width: 26%;}
 }
 .button1Ani{
 	animation-name: pulse;
@@ -965,11 +1217,23 @@ animation-iteration-count: 3;
     position: absolute;
     top: 7%;
 }
+.fullScreen .myatt{
+	 left: 54%;
+    position: absolute;
+    top: 7%;
+    width:23%;
+}
 .myatttxt{
 	left: 55%;
     position: absolute;
     top: 30%;
     font-size:14px;
+}
+.fullScreen .myatttxt{
+	left: 55%;
+    position: absolute;
+    top: 30%;
+    font-size:30px;
 }
 .myattlist{
 	left: 58%;
@@ -977,14 +1241,26 @@ animation-iteration-count: 3;
     top: 36%;
     font-size:20px;
 }
+.fullScreen .myattlist{
+	left: 58%;
+    position: absolute;
+    top: 36%;
+    font-size:30px;
+}
 .myattlist ul{
 	padding:0;
 }
 .myatttc{
 	left: 55%;
     position: absolute;
-    bottom: 5%;
+    bottom: 14%;
     font-size:12px;
+}
+.fullScreen .myatttc{
+	left: 55%;
+    position: absolute;
+    bottom: 14%;
+    font-size:30px;
 }
 .item1Ani{
 	animation-name: flipInX;
@@ -1053,14 +1329,9 @@ animation-iteration-count: 3;
 	animation-name: slideInLeft;
 	animation-delay:3s;
 }
-.un1{
-	font-size:35pt;  position:absolute; top: 150px; left: 312px;
-	
-}
-.un2{
-	font-size:35pt;  position:absolute; top: 150px; left: 312px;
-	
-}
+
+/* mobile */
+
 
 /* mobile */
 
@@ -1076,13 +1347,1122 @@ animation-iteration-count: 3;
 	padding-top:4px;
 }
 	.un1{
+	font-size: 150%;
+    position: absolute;
+    top: 44%;
+    left: 47%;
+	}
+	.un2{
+	font-size: 150%;position: absolute;top: 48%;left: 52%;
+	}
+		#videodiv .audioplayer-bar {
+    width: 24%;
+}
+
+
+	.people1{    top: 20%;
+    z-index: 5;
+}
+	.attlogo{
+    left: 25%;
+    position: absolute;
+    top: 25%;
+    width: 25%;
+    height: 25%;
+    /* background:url("../images/blank-att-globe.png")no-repeat scroll 0 0 transparent; */
+    
+}
+img.attlogo{
+	width:25%;
+	height:auto;
+}
+	
+	.hd1 {
+		font-family: "Omnes_ATTMedium", Arial, sans-serif;
+	}
+	.hd2 {
+		font-family: "Omnes_ATTMediumItalic", Arial, sans-serif;
+	}
+	.white {
+		color: #fff;
+	}
+	.orange {
+		color: #ef6f00;
+	}
+	.purple {
+		color: #ca0180
+	}
+	.buttonsBlock {
+		float: right;
+		text-align: center;
+		width: 45%;
+		position: absolute;
+		top: 21%;
+		right: 2%;
+	}
+	.btn:active, .btn:visited, .btn:link {
+		margin: 10px 0;
+		padding: 11px 23px 13px 23px;
+		font-size: 18px;
+		font-family: "Omnes_ATTMediumItalic", sans-serif;
+		color: #FFFFFF;
+		font-weight: 800;
+		display: block;
+		text-decoration: none;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		text-shadow: 1px 1px 2px #333;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0574ac+0,44c8f5+99 */
+		background: rgb(5, 116, 172); /* Old browsers */
+		background: -moz-linear-gradient(left, rgba(5, 116, 172, 1) 0%,
+			rgba(68, 200, 245, 1) 99%); /* FF3.6-15 */
+		background: linear-gradient(left, rgba(5, 116, 172, 1) 0%,
+			rgba(68, 200, 245, 1) 99%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgba(5, 116, 172, 1) 0%,
+			rgba(68, 200, 245, 1) 99%);
+		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0574ac',
+			endColorstr='#44c8f5', GradientType=1); /* IE6-9 */
+		zoom: 1;
+		transition: all 200ms ease-in;
+		transform: scale(1);
+		-ms-transition: all 200ms ease-in;
+		-ms-transform: scale(1);
+		-moz-transition: all 200ms ease-in;
+		-moz-transform: scale(1);
+		transition: all 200ms ease-in;
+		transform: scale(1);
+	}
+	.btn:hover {
+		z-index: 2;
+		transition: all 200ms ease-in;
+		transform: scale(1.5);
+		-ms-transition: all 200ms ease-in;
+		-ms-transform: scale(1.5);
+		-moz-transition: all 200ms ease-in;
+		-moz-transform: scale(1.5);
+		transition: all 200ms ease-in;
+		transform: scale(1.1);
+	}
+	
+	
+	.frame82 img {
+		padding-left: 5%;
+		padding-top: 3%;
+		width: 45%
+	}
+	.people4 {
+    width: 0px;
+    height: 50%;
+    top: 37%;
+    left: 18%;
+    z-index: 5;
+    background: url(../images/people4.png) no-repeat scroll 0 0 transparent;
+    background-size: 50% auto;
+}
+
+.greenAni{
+	animation-name: greenAni320;
+}
+@keyframes greenAni320 {
+  from{ left:19%; width:40%;}
+
+  to{top:37%; left:14%; width:30%;}
+  
+}
+.people2-1 {
+    width: 50%;
+    height: 60%;
+    top: 5%;
+    left: 46%;
+    z-index: 3;
+    background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
+    background-size: 50% auto;
+}
+.pinkAni{
+	animation-name: pinkAni320;
+}
+@keyframes pinkAni320 {
+  from{ left:24%; width:50%;}
+
+  to{top:1%; left:19%; width:60%;}
+  
+}
+
+#webpagediv7 .circle,#webpagediv8 .circle {
+      background: url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
+    font-size: 55%;
+    line-height: 161%;
+    top: 20%;
+    width: 86%;
+    height: 100%;
+    background-size: 50% auto;
+    left: 5%;
+    float: left;
+}
+#webpagediv7 .text,#webpagediv8 .text{
+	     left: -18%;
+    position: absolute;
+    top: 16%;
+
+}
+.devicePhoto img {
+	       float: right;
+    margin-top: 15%;
+    margin-right: 8%;
+    width: 20%;
+}
+#webpagediv9 .green1,#webpagediv10 .green1{
+left: 20%;
+    top: 16%;
+    width: 25%;
+}
+
+#webpagediv9 .text,#webpagediv10 .text
+{
+
+   height: 50%;
+    left: 32%;
+    top: 20%;
+    width: 40%;
+    z-index: 10;
+    text-align: center;
+    padding-top: 8%;
+    position: absolute;
+    color: #ffffff;
+    background: url('../images/bluecircle.png') no-repeat scroll 0 0;
+    background-size: 100% auto;
+}
+#webpagediv11 .text,#webpagediv12 .text
+ {	left: 32%;
+    top: 20%;
+    width: 40%;
+    height: 50%;
+    z-index: 10;
+    text-align: center;
+    padding-top: 8%;
+    position: absolute;
+    color: #ffffff;
+    background: url('../images/bluecircle.png') no-repeat scroll 0 0;
+    background-size: 100% auto;
+ }
+
+.shipTextAni{
+	animation-name: shipTextAni320;
+}
+@keyframes shipTextAni320 {
+  from{ left:39%; top:100px}
+
+  to{top:115px; left:60%;}
+ 
+}
+
+.hdrText
+{
+	text-align:center;
+	padding-top:10px;
+	font-weight:bold;
+	font-size:15px;
+	color:#ff9600;
+	width:100%;
+	margin:0 auto;
+}
+.orange1{    left: 39%;
+    top: 49%;
+}
+.tablet{
+	         top: 29%;
+    left: 0%;
+	
+}
+.greenbase{
+	top: 70%;
+    left: 0%;
+}
+
+#webpagediv9 .text .shippingTxt,#webpagediv10 .text .shippingTxt,#webpagediv11 .text .shippingTxt,#webpagediv12 .text .shippingTxt
+{
+	font-size:12px;
+}
+#webpagediv9 .text #shippedon,#webpagediv10 .text #shippedon,#webpagediv11 .text #shippedon,#webpagediv12 .text #shippedon
+{
+	 font-size: 25px;
+    font-weight: bold;
+}
+ .shipText1Ani{
+	animation-name: shipText1Ani320;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	/*  animation-duration: 1s;
+    animation-fill-mode: both;
+     */
+}
+@keyframes shipText1Ani320 {
+ 0%{ left:60%; top:115px}
+
+  50%{top:120px; left:59%;}
+  100%{ left:60%; top:115px} 
+ 
+}
+.green2{    top: 18%;
+    left: 23%;
+    width: 31%;
+    position: absolute;
+}
+.blue2{
+	        left: 52%;
+    position: absolute;
+    top: 34%;
+    width: 20%;
+}
+.orangebase{
+	          top: 68%;
+    left: 26%;
+    width: 80%;
+}
+.phoneapp
+{
+	  position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 26%;
+    bottom: 12%;
+}
+
+.orangebaseAni{
+	animation-name: orangebaseAni320;
+}
+@keyframes orangebaseAni320 {
+ 0%{ left:29%;}
+
+  100%{left:48%;}
+ 
+}
+	.shipText1Ani{
+	animation-name: shipText1Ani320;
+}
+	
+	@keyframes shipText1Ani320 {
+ 0%{ left:60%; top:115px}
+
+  50%{top:120px; left:59%;}
+  100%{ left:60%; top:115px} 
+}
+  
+  .phoneAppAni{
+	animation-name: phoneAppAni320;
+}
+@keyframes phoneAppAni320 {
+ 0%{ left:38%;}
+
+  100%{left:46%;}
+ 
+}
+
+.mobTransfer {
+		padding: 2% 2% 2% 2%;
+		width: 15%;
+	}
+	.transferText {
+		position: absolute;
+		top: 0%;
+		left: 17%;
+		color: #ff9600;
+	}
+	.disclaimer {
+		color: #666666;
+		font-family: "Omnes_ATTMediumItalic", Arial, sans-serif;
+		font-size: 14px;
+		position: absolute;
+		left: 182px;
+		bottom: 20px;
+	}
+	.bulky {
+		font-size: 90%;
+		font-weight: 800;
+		line-height: 30%;
+		font-family: "Omnes_ATTMediumItalic", Arial, sans-serif;
+	}
+	.bulky2 {
+		font-size: 80%;
+		font-weight: 800;
+		top: 4%;
+		font-style: italic;
+	}
+	.text3 {
+		font-size: 45%;
+		font-style: italic;
+		left: 17%;
+		position: absolute;
+		top: 12%;
+	}
+	@keyframes flipInY {
+  from {
+    transform: perspective(50%) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(50%) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(50%) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(50%) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(50%) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(50%) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(50%) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(50%) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(50%);
+    transform: perspective(50%);
+  }
+}
+
+
+
+.flipInY {
+  backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipInY;
+  animation-name: flipInY;
+}
+
+.headingContainerAni{
+		animation-name: headingContainerAni320;
+	animation-delay:1.5s;
+}
+@keyframes headingContainerAni320 {
+ 0%{  margin: -14% 23%; }
+  100%{margin: 4% 7%;}
+ 
+}
+
+.green3Ani{
+	animation-name: green3Ani320;
+}
+@keyframes green3Ani320 {
+ 0%{ left:25%;}
+
+  100%{left:12%;width:40%;}
+ 
+}
+#webpagediv19 .green2,#webpagediv20 .green2{
+	    width: 32%;
+    left: 19%;
+    top: 19%;
+    font-size: 42px;
+    text-align: center;
+    z-index: 2;
+}
+.attscreen{
+position: absolute;
+    right: -400px;
+    top: 27%;
+    z-index: 12;
+    width: 50%;
+}
+.attscreenBody {
+	    background: url('../images/att_screen_body.png') no-repeat scroll 0 0
+ transparent;
+    background-size: 100% 100%;
+    margin: -4px 0;
+    height: 105px;
+    background-size: 100% auto; !important
+}
+
+.arrowAni{
+	animation-name: arrowAni320;
+	animation-delay:5s;
+	animation-duration:1.5s;
+	animation-iteration-count:2;
+}
+@keyframes arrowAni320 {
+ 0%{  right:50%;}
+  50%{top:60%;right:59%;transform:skewX(-60px);visibility:visible;}
+  100%{top:60%;right:49%;transform:none;z-index:100;}
+}
+.devicetxt {
+		color: #ff9600;
+		float: left;
+		font-size: 110%;
+		font-weight: bold;
+		line-height: 90%;
+		margin: 12% 7%;
+	}
+	.orange2 {
+		z-index: 2;
+    height: 50%;
+    left: 35%;
+    position: absolute;
+    padding: 6% 8%;
+    top: 19%;
+    color: #ffffff;
+    width: 10%;
+    font-size: 70%;
+    align-self: center;
+    background: url('../images/orangecircle1.png') no-repeat scroll 0 0
+ transparent;
+    background-size: 100% 45%;
+	}
+	.devicetxt1 {
+		font-size: 35%;
+		left: 7%;
+		position: absolute;
+		top: 45%;
+	}
+	#videodiv{
+	 position: absolute;
+    top: 85%;
+    width: 100%;
+}
+
+.phoneIcon {
+      position: absolute;
+    left: 63%;
+    width: 17%;
+    top: 15%;
+}
+
+.people5 {
+    position: absolute;
+    right: 0%;
+    width: 20%;
+}
+.att_screen1{
+	      left: 30%;
+    position: absolute;
+    top: 17%;
+    z-index: 1;
+    width: 60%;
+}
+.orange2Ani{
+	animation-name: orange2Ani320;
+}
+@keyframes orange2Ani320 {
+ 0%{  top:19%;}
+  50%{top:60%;left:40%;background-size:140px auto;font-size:30px;}
+  100%{top:55%;left:67%;width:40%;background-size: 100% 45%;font-size:100%;padding:6% 8%;}
+}
+
+.myatt {
+		    left: 54%;
+    position: absolute;
+    top: 7%;
+    width: 25%;
+	}
+	.myatttxt {
+		   left: 58%;
+    position: absolute;
+    top: 23%;
+    font-size: 50%;
+	}
+	.myattlist {
+		    left: 58%;
+    position: absolute;
+    top: 30%;
+    font-size: 60%;
+	}
+	.myattlist ul {
+		padding: 0;
+	}
+	.myatttc {    left: 55%;
+    position: absolute;
+    bottom: 16%;
+    font-size: 9px;
+	}
+	#webpagediv26 .headingContainer, #webpagediv27 .headingContainer {
+		float: none;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 0%;
+	}
+	.people6 {
+		left: 11%; 
+		position: absolute;
+		top: 27%;
+		z-index: 10;
+		width: 30%;
+	}
+	
+	.orange3 {
+		left: 2%;
+		position: absolute;
+		top: 30%;
+		width: 20%;
+		z-index: 2;
+	}
+	.pink3 {
+		left: 0%;
+		position: absolute;
+		top: 14%;
+		width: 25%;
+		z-index: 1;
+	}
+	#webpagediv25 {
+		background-image: url(../images/screen25-1.png);
+		position: relative;
+		background-size: 100% 85%;
+	}
+	.people6Ani{
+	animation-name: people6Ani320;
+	  animation-iteration-count: infinite;
+	  animation-duration:2s;
+}
+@keyframes people6Ani320 {
+ 0%{   top: 27%;width: 30%;}
+  50%{top:28%;width: 30%;left:11%}
+  100%{top: 27%;
+    width: 30%;
+    left: 10%;}
+}
+
+
+
+
+
+.btn:active, .btn:visited, .btn:link {
+		margin: 10px 0;
+		padding: 3% 13% 7% 16%;
+    	font-size: 8px;
+		font-family: "Omnes_ATTMediumItalic", sans-serif;
+		color: #FFFFFF;
+		font-weight: 800;
+		display: block;
+		text-decoration: none;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		text-shadow: 1px 1px 2px #333;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0574ac+0,44c8f5+99 */
+		background: rgb(5, 116, 172); /* Old browsers */
+		background: -moz-linear-gradient(left, rgba(5, 116, 172, 1) 0%,
+			rgba(68, 200, 245, 1) 99%); /* FF3.6-15 */
+		background: linear-gradient(left, rgba(5, 116, 172, 1) 0%,
+			rgba(68, 200, 245, 1) 99%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgba(5, 116, 172, 1) 0%,
+			rgba(68, 200, 245, 1) 99%);
+		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0574ac',
+			endColorstr='#44c8f5', GradientType=1); /* IE6-9 */
+		zoom: 1;
+		transition: all 200ms ease-in;
+		transform: scale(1);
+		-ms-transition: all 200ms ease-in;
+		-ms-transform: scale(1);
+		-moz-transition: all 200ms ease-in;
+		-moz-transform: scale(1);
+		transition: all 200ms ease-in;
+		transform: scale(1);
+	}
+	.buttonsBlock {
+		    float: right;
+    text-align: center;
+    width: 42%;
+    /* height: 18px; */
+    position: absolute;
+    top: 23%;
+    right: 2%;
+	}
+	.activateTxt{
+ left: 23%;
+    position: absolute;
+    text-align: center;
+    top: 32%;
+    z-index:3;
+    line-height:100%;
+}
+
+#closedCaptionBtn a {
+        color: #fff;
+    padding: 10px;
+    position: absolute;
+    right: 13%;
+    top: 13%;
+    z-index: 1;
+    line-height: 0.7em;
+    font-size: 55%;
+}
+#showPlBtn a {
+       color: #fff;
+    position: absolute;
+    border-right: 1px solid rgba(255,255,255,.1);
+    right: 31%;
+    top: -9%;
+    z-index: 1;
+    padding: 10px;
+    line-height: 0.75em;
+    font-size: 55%;
+}
+#fullscreen a {
+       color: #fff;
+    position: absolute;
+    right: 22%;
+    top: -11%;
+    z-index: 1;
+    padding: 5px;
+    border-right: 1px solid rgba(255,255,255,.1);
+    font-size: 55%;
+}
+.userNameFirst{
+    display: inline-block;
+    margin: 0%;
+    position: absolute;
+}
+#userNameLast1{
+    display: inline-block;
+    margin: 0%;
+    position: inherit;
+    
+}
+.attscreenhead{
+	width:100%;
+}
+.mainDiv{
+	
+	width:100%;
+	height:100%;
+}
+
+.people4Ani{
+	animation-name: people4Ani320;
+}
+@keyframes people4Ani320 {
+  from{top:37%;}
+   to{       top: 51%;
+    left: 16%;
+    width: 65%;
+    height: 65%;}
+  
+}
+.tctxt
+{
+	        bottom: 11%;
+    color: #777777;
+    left: 23%;
+    position: absolute;
+    font-style: italic;
+    font-size: 8px;
+    font-weight: bold;
+}
+.person1{
+	    left: 1%;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    width: 27%;
+}
+ 
+ .attscreenBodyAni{
+	animation-name: attscreenBodyAni320;
+	animation-delay:3s;
+	animation-duration:2s;
+}
+@keyframes attscreenBodyAni320 {
+ 0%{  background-position:0 0}
+  100%{background-position:0 -24px;}
+}
+.orangebase1Ani{
+	animation-name: orangebase1Ani320;
+}
+@keyframes orangebase1Ani320 {
+ 0%{ left:40%;}
+
+  100%{left:49%;}
+ 
+}
+
+.person{
+	      left: 72%;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    width: 26%;
+}
+.mobile{
+	 position: absolute;
+    top: 43%;
+    left:37%;
+    width: 12%;
+}
+.orangeAni
+{
+	animation-name: orangeAni320;
+	
+}
+@keyframes orangeAni320 {
+   from{width:40%}
+   to{width:70%}
+}
+
+
+.activateTxtAni{
+	animation-name: activateTxtAni320;
+}
+
+
+#webpagediv17 .orangebase,#webpagediv16 .orangebase,#webpagediv18 .orangebase{
+	left:54%;
+}
+.arrow{
+	 
+    top: 60%;
+    width:28px;
+}
+
+} /* closed320 */
+
+
+
+@keyframes activateTxtAni320 {
+ 0%{ left:25%;}
+
+  100%{   left: 17%;
+    top: 26%;
+    font-size: 12px;
+    line-height: 14px;}
+ 
+}
+@keyframes orangeAni320 {
+   from{width:40%}
+   to{width:70%}
+}
+@keyframes people4Ani320 {
+  from{top:37%;}
+   to{             top: 48%;
+    left: 19%;
+    width: 52%;
+    height: 65%;}
+  
+}
+@keyframes orangebase1Ani320 {
+ 0%{ left:40%;}
+
+  100%{left:57%;}
+ 
+}
+@keyframes attscreenBodyAni320 {
+ 0%{  background-position:0 0}
+  100%{background-position:0 -24px;}
+}
+
+@keyframes people6Ani320 {
+   0%{   top: 27%;width: 30%;}
+  50%{top:28%;width: 30%;left:10%}
+  100%{top: 27%;
+    width: 30%;
+    left: 11%;}
+}
+
+@keyframes orange2Ani320 {
+ 0%{  top:19%;}
+  50%{    top: 43%;
+    left: 40%;
+    background-size: 100% 60%;
+    font-size: 12px;}
+  100%{       top: 50%;
+    left: 67%;
+    width: 17%;
+    height: 17%;
+    background-size: 100% 100%;
+    font-size: 100%;
+    padding: 6% 8%;}
+}
+@keyframes arrowAni320 {
+ 0%{  right:50%;}
+  50%{top:60%;right:59%;transform:skewX(-60px);visibility:visible;}
+  100%{top:60%;right:49%;transform:none;z-index:100;}
+}
+@keyframes green3Ani320 {
+ 0%{ left:25%;}
+
+  100%{left:12%;width:30%;}
+ 
+}
+@keyframes headingContainerAni320 {
+ 0%{  margin: -14% 23%; }
+  100%{margin: 4% 7%;}
+ 
+}
+
+@keyframes flipInY {
+  from {
+    transform: perspective(50%) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(50%) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(50%) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(50%) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(50%) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(50%) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(50%) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(50%) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(50%);
+    transform: perspective(50%);
+  }
+}
+@keyframes orangebaseAni320 {
+ 0%{ left:29%;}
+
+  100%{left:43%;}
+ 
+}
+@keyframes shipText1Ani320 {
+ 0%{ left:60%; top:30%}
+
+  50%{top: 30%;
+    left: 59%;}
+  100%{     left: 60%;
+    top: 30%;} 
+}
+
+@keyframes phoneAppAni320 {
+ 0%{ left:38%;}
+
+  100%{left:53%;}
+ 
+}
+	@keyframes shipTextAni320 {
+  from{     left: 39%;
+    top: 35%;}
+
+  to{    top: 30%;
+    left: 60%;}
+ 
+}
+	@keyframes pinkAni320 {
+  from{  left:24%; width:50%;}
+
+  to{top:1%; left:19%; width:43%;}
+  
+}
+
+@keyframes greenAni320 {
+  from{ left:19%; width:40%;}
+
+  to{top: 37%;
+    left: 14%;
+    width: 23%;}
+  
+}
+
+/* Mobile */
+
+@media only screen and (min-width : 481px) and (max-width:767px) {
+
+	
+#webpagediv7 .circle,#webpagediv8 .circle {
+background: url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
+    font-size: 18px;
+    line-height: 26px;
+    top: 14%;
+    width: 220px;
+    height: 220px;
+    left: 4%;
+}
+.devicePhoto img {
+	float: right;
+    margin-top: 8%;
+    margin-right: 16%;
+}
+#webpagediv9 .green1,#webpagediv10 .green1{
+	     left: 27%;
+    top: 25%;
+    width: 100px;
+}
+#webpagediv9 .text,#webpagediv10 .text
+{
+	height: 200px;
+    left: 35%;
+    top: 30%;
+    width: 180px;
+    z-index: 10;
+    text-align: center;
+    padding-top: 8%;
+    position: absolute;
+    color: #ffffff;
+    background: url('../images/bluecircle.png') no-repeat scroll 0 0;
+}
+.shipTextAni{
+	animation-name: shipTextAni480;
+}
+.tablet{
+	    top: 42%;
+    left: 8%;
+	
+}
+.phoneapp
+{
+	     position: absolute;
+    top: 8%;
+    left: 38%;
+}
+.bulky{
+font-size: 35px;
+font-weight: 800;
+line-height: 41px;
+font-family:"Omnes_ATTMediumItalic",Arial,sans-serif;
+}
+.bulky2 {
+font-size: 18px;
+font-weight: 800;	
+top:40px;
+  font-style: italic;
+}
+.text3{
+	  font-size: 10px;
+    font-style: italic;
+    left: 102px;
+    position: absolute;
+    top: 80px;
+}
+.attscreenBody
+{
+	background:url('../images/att_screen_body.png')no-repeat scroll 0 0 transparent;
+	margin:-4px 0;
+	height:193px;
+	width:100%;
+	background-size:100% 100%;
+	
+}
+.attscreen{
+	 position: absolute;
+    right: -400px;
+    top: 27%;
+    z-index:12;
+    left:45%;
+    width:50%;
+}
+.devicetxt
+{
+	  color: #ff9600;
+    float: left;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 37px;
+    margin: 12% 7%;
+}
+.devicetxt1{
+	font-size: 11px;
+    left: 7%;
+    position: absolute;
+    top: 56%;
+}
+.att_screen1{
+	 left: 35%;
+    position: absolute;
+    top: 21%;
+    z-index:1;
+}
+.orange2Ani{
+	animation-name: orange2Ani480;
+}
+
+.myattlist{
+	left: 58%;
+    position: absolute;
+    top: 36%;
+    font-size:17px;
+}
+
+.btn:active,.btn:visited,.btn:link {
+	margin:10px 0;
+padding:11px 23px 13px 23px;
+font-size:13px;
+font-family: "Omnes_ATTMediumItalic",sans-serif; color:#FFFFFF;
+font-weight: 800;
+display:block;
+text-decoration: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+text-shadow: 1px 1px 2px #333;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0574ac+0,44c8f5+99 */
+background: rgb(5,116,172); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(5,116,172,1) 0%, rgba(68,200,245,1) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(5,116,172,1) 0%,rgba(68,200,245,1) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(5,116,172,1) 0%,rgba(68,200,245,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0574ac', endColorstr='#44c8f5',GradientType=1 ); /* IE6-9 */
+zoom:1;
+-webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+}
+
+.buttonsBlock {
+    float: right;
+    text-align: center;
+    width: 35%;
+    position: absolute;
+    top: 20%;
+    right: 2%; }
+    
+    .people2-1 {
+    width: 50%;
+    height: 60%;
+    top: 5%;
+    left: 46%;
+    z-index: 3;
+    background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
+    background-size: 50% auto;
+}
+	.people4 {
+    width: 0px;
+    height: 50%;
+    top: 37%;
+    left: 18%;
+    z-index: 5;
+    background: url(../images/people4.png) no-repeat scroll 0 0 transparent;
+    background-size: 50% auto;
+}
+#webpagediv17 .phoneapp,#webpagediv16 .phoneapp,#webpagediv18 .phoneapp {
+	left: 65%;
+    width: 21%;
+}
+.frame82 img{
+	padding-left:28px;
+	padding-top:4px;
+}
+	.un1{
 	font-size: 150%; position: absolute; top: 45%; left: 50%;
 	}
 	.un2{
 	font-size: 150%;position: absolute;top: 48%;left: 52%;
 	}
 		#videodiv .audioplayer-bar {
-    width: 30%;
+    width: 26%;
 }
 
 
@@ -1185,933 +2565,7 @@ img.attlogo{
     left: 18%;
     z-index: 5;
     background: url(../images/people4.png) no-repeat scroll 0 0 transparent;
-    background-size: 50% 50%;
-}
-
-.greenAni{
-	animation-name: greenAni320;
-}
-@keyframes greenAni320 {
-  from{ left:19%; width:40%;}
-
-  to{top:37%; left:14%; width:30%;}
-  
-}
-.people2-1 {
-    width: 50%;
-    height: 60%;
-    top: 5%;
-    left: 46%;
-    z-index: 3;
-    background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
-    background-size: 50% 50%;
-}
-.pinkAni{
-	animation-name: pinkAni320;
-}
-@keyframes pinkAni320 {
-  from{ left:24%; width:50%;}
-
-  to{top:1%; left:19%; width:60%;}
-  
-}
-
-#webpagediv7 .circle,#webpagediv8 .circle {
-    background: url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
-        font-size: 58%;
-    line-height: 161%;
-    top: 20%;
-    width: 75%;
-    height: 100%;
-    background-size: 50% 50%;
-    left: 5%;
-        float: left;
-}
-#webpagediv7 .text,#webpagediv8 .text{
-	 left: 2%;
-    position: absolute;
-    top: 16%;
-}
-.devicePhoto img {
-	       float: right;
-    margin-top: 3%;
-    margin-right: 8%;
-    width: 20%;
-}
-#webpagediv9 .green1,#webpagediv10 .green1{
-left: 20%;
-    top: 16%;
-    width: 25%;
-}
-
-#webpagediv9 .text,#webpagediv10 .text
-{
-
-   height: 50%;
-    left: 32%;
-    top: 20%;
-    width: 40%;
-    z-index: 10;
-    text-align: center;
-    padding-top: 8%;
-    position: absolute;
-    color: #ffffff;
-    background: url('../images/bluecircle.png') no-repeat scroll 0 0;
-    background-size: 100% 80%;
-}
-#webpagediv11 .text,#webpagediv12 .text
- {	left: 32%;
-    top: 20%;
-    width: 40%;
-    height: 50%;
-    z-index: 10;
-    text-align: center;
-    padding-top: 8%;
-    position: absolute;
-    color: #ffffff;
-    background: url('../images/bluecircle.png') no-repeat scroll 0 0;
-    background-size: 100% 80%;
- }
-
-.shipTextAni{
-	animation-name: shipTextAni320;
-}
-@keyframes shipTextAni320 {
-  from{ left:39%; top:100px}
-
-  to{top:115px; left:60%;}
- 
-}
-
-.hdrText
-{
-	text-align:center;
-	padding-top:10px;
-	font-weight:bold;
-	font-size:15px;
-	color:#ff9600;
-	width:100%;
-	margin:0 auto;
-}
-.orange1{    left: 39%;
-    top: 49%;
-}
-.tablet{
-	      top: 25%;
-    left: 5%;
-	
-}
-.greenbase{
-	top: 70%;
-    left: 0%;
-}
-
-#webpagediv9 .text .shippingTxt,#webpagediv10 .text .shippingTxt,#webpagediv11 .text .shippingTxt,#webpagediv12 .text .shippingTxt
-{
-	font-size:12px;
-}
-#webpagediv9 .text #shippedon,#webpagediv10 .text #shippedon,#webpagediv11 .text #shippedon,#webpagediv12 .text #shippedon
-{
-	 font-size: 25px;
-    font-weight: bold;
-}
- .shipText1Ani{
-	animation-name: shipText1Ani320;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	/*  animation-duration: 1s;
-    animation-fill-mode: both;
-     */
-}
-@keyframes shipText1Ani320 {
- 0%{ left:60%; top:115px}
-
-  50%{top:120px; left:59%;}
-  100%{ left:60%; top:115px} 
- 
-}
-.green2{    top: 18%;
-    left: 23%;
-    width: 31%;
-    position: absolute;
-}
-.blue2{
-	        left: 52%;
-    position: absolute;
-    top: 34%;
-    width: 20%;
-}
-.orangebase{
-	          top: 68%;
-    left: 26%;
-    width: 80%;
-}
-.phoneapp
-{
-	     position: absolute;
-    top: 11%;
-    left: 42%;
-    width: 26%;
-    bottom: 12%;
-}
-
-.orangebaseAni{
-	animation-name: orangebaseAni320;
-}
-@keyframes orangebaseAni320 {
- 0%{ left:29%;}
-
-  100%{left:48%;}
- 
-}
-	.shipText1Ani{
-	animation-name: shipText1Ani320;
-}
-	
-	@keyframes shipText1Ani320 {
- 0%{ left:60%; top:115px}
-
-  50%{top:120px; left:59%;}
-  100%{ left:60%; top:115px} 
-}
-  
-  .phoneAppAni{
-	animation-name: phoneAppAni320;
-}
-@keyframes phoneAppAni320 {
- 0%{ left:38%;}
-
-  100%{left:46%;}
- 
-}
-
-.mobTransfer {
-		padding: 2% 2% 2% 2%;
-		width: 15%;
-	}
-	.transferText {
-		position: absolute;
-		top: 0%;
-		left: 17%;
-		color: #ff9600;
-	}
-	.disclaimer {
-		color: #666666;
-		font-family: "Omnes_ATTMediumItalic", Arial, sans-serif;
-		font-size: 14px;
-		position: absolute;
-		left: 182px;
-		bottom: 20px;
-	}
-	.bulky {
-		font-size: 115%;
-		font-weight: 800;
-		line-height: 30%;
-		font-family: "Omnes_ATTMediumItalic", Arial, sans-serif;
-	}
-	.bulky2 {
-		font-size: 80%;
-		font-weight: 800;
-		top: 4%;
-		font-style: italic;
-	}
-	.text3 {
-		font-size: 45%;
-		font-style: italic;
-		left: 17%;
-		position: absolute;
-		top: 12%;
-	}
-	@keyframes flipInY {
-  from {
-    transform: perspective(50%) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(50%) rotate3d(0, 1, 0, 90deg);
-    animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  40% {
-    transform: perspective(50%) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(50%) rotate3d(0, 1, 0, -20deg);
-    animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  60% {
-    transform: perspective(50%) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(50%) rotate3d(0, 1, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    transform: perspective(50%) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(50%) rotate3d(0, 1, 0, -5deg);
-  }
-
-  to {
-    transform: perspective(50%);
-    transform: perspective(50%);
-  }
-}
-
-
-
-.flipInY {
-  backface-visibility: visible !important;
-  backface-visibility: visible !important;
-  animation-name: flipInY;
-  animation-name: flipInY;
-}
-
-.headingContainerAni{
-		animation-name: headingContainerAni320;
-	animation-delay:1.5s;
-}
-@keyframes headingContainerAni320 {
- 0%{  margin: -14% 23%; }
-  100%{margin: 4% 7%;}
- 
-}
-
-.green3Ani{
-	animation-name: green3Ani320;
-}
-@keyframes green3Ani320 {
- 0%{ left:25%;}
-
-  100%{left:12%;width:40%;}
- 
-}
-#webpagediv19 .green2,#webpagediv20 .green2{
-	    width: 32%;
-    left: 19%;
-    top: 19%;
-    font-size: 42px;
-    text-align: center;
-    z-index: 2;
-}
-.attscreen{
-position: absolute;
-    right: -400px;
-    top: 27%;
-    z-index: 12;
-    width: 50%;
-}
-.attscreenBody {
-	    background: url('../images/att_screen_body.png') no-repeat scroll 0 0
- transparent;
-    background-size: 100% 100%;
-    margin: -4px 0;
-    height: 105px;
-    background-size: 100% 100%; !important
-}
-
-.arrowAni{
-	animation-name: arrowAni320;
-	animation-delay:5s;
-	animation-duration:1.5s;
-	animation-iteration-count:2;
-}
-@keyframes arrowAni320 {
- 0%{  right:50%;}
-  50%{top:66%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:50%;right:49%;transform:none;z-index:100;}
-}
-.devicetxt {
-		color: #ff9600;
-		float: left;
-		font-size: 110%;
-		font-weight: bold;
-		line-height: 90%;
-		margin: 12% 7%;
-	}
-	.orange2 {
-		z-index: 2;
-    height: 50%;
-    left: 35%;
-    position: absolute;
-    padding: 6% 8%;
-    top: 19%;
-    color: #ffffff;
-    width: 10%;
-    font-size: 70%;
-    align-self: center;
-    background: url('../images/orangecircle1.png') no-repeat scroll 0 0
- transparent;
-    background-size: 100% 45%;
-	}
-	.devicetxt1 {
-		font-size: 35%;
-		left: 7%;
-		position: absolute;
-		top: 45%;
-	}
-	#videodiv{
-	 position: absolute;
-    top: 85%;
-    width: 100%;
-}
-
-.phoneIcon {
-      position: absolute;
-    left: 63%;
-    width: 17%;
-    top: 15%;
-}
-
-.people5 {
-    position: absolute;
-    right: 0%;
-    width: 20%;
-}
-.att_screen1{
-	      left: 30%;
-    position: absolute;
-    top: 17%;
-    z-index: 1;
-    width: 60%;
-}
-.orange2Ani{
-	animation-name: orange2Ani320;
-}
-@keyframes orange2Ani320 {
- 0%{  top:19%;}
-  50%{top:60%;left:40%;background-size:140px auto;font-size:30px;}
-  100%{top:55%;left:67%;width:40%;background-size: 100% 45%;font-size:100%;padding:6% 8%;}
-}
-
-.myatt {
-		    left: 54%;
-    position: absolute;
-    top: 0%;
-    width: 25%;
-	}
-	.myatttxt {
-		    left: 55%;
-    position: absolute;
-    top: 22%;
-    font-size: 10px;
-	}
-	.myattlist {
-		    left: 58%;
-    position: absolute;
-    top: 30%;
-    font-size: 60%;
-	}
-	.myattlist ul {
-		padding: 0;
-	}
-	.myatttc {    left: 55%;
-    position: absolute;
-    bottom: 16%;
-    font-size: 9px;
-	}
-	#webpagediv26 .headingContainer, #webpagediv27 .headingContainer {
-		float: none;
-    width: 50%;
-    margin: 0 auto;
-    padding-top: 0%;
-	}
-	.people6 {
-		left: 13%; 
-		position: absolute;
-		top: 20%;
-		z-index: 10;
-		width: 40%;
-	}
-	
-	.orange3 {
-		left: 2%;
-		position: absolute;
-		top: 30%;
-		width: 20%;
-		z-index: 2;
-	}
-	.pink3 {
-		left: 0%;
-		position: absolute;
-		top: 14%;
-		width: 25%;
-		z-index: 1;
-	}
-	#webpagediv25 {
-		background-image: url(../images/screen25-1.png);
-		position: relative;
-		background-size: 100% 85%;
-	}
-	.people6Ani{
-	animation-name: people6Ani320;
-	  animation-iteration-count: infinite;
-	  animation-duration:2s;
-}
-@keyframes people6Ani320 {
- 0%{   top: 27%;width: 30%;}
-  50%{top:28%;width: 30%;left:11%}
-  100%{top: 27%;
-    width: 30%;
-    left: 10%;}
-}
-
-
-
-
-
-.btn:active, .btn:visited, .btn:link {
-		margin: 10px 0;
-		padding: 8% 18% 10% 18%;
-		font-size: 8px;
-		font-family: "Omnes_ATTMediumItalic", sans-serif;
-		color: #FFFFFF;
-		font-weight: 800;
-		display: block;
-		text-decoration: none;
-		border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
-		text-shadow: 1px 1px 2px #333;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0574ac+0,44c8f5+99 */
-		background: rgb(5, 116, 172); /* Old browsers */
-		background: -moz-linear-gradient(left, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%); /* FF3.6-15 */
-		background: linear-gradient(left, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to right, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%);
-		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0574ac',
-			endColorstr='#44c8f5', GradientType=1); /* IE6-9 */
-		zoom: 1;
-		transition: all 200ms ease-in;
-		transform: scale(1);
-		-ms-transition: all 200ms ease-in;
-		-ms-transform: scale(1);
-		-moz-transition: all 200ms ease-in;
-		-moz-transform: scale(1);
-		transition: all 200ms ease-in;
-		transform: scale(1);
-	}
-	.buttonsBlock {
-		float: right;
-    text-align: center;
-    width: 35%;
-    /* height: 18px; */
-    position: absolute;
-    top: 12%;
-    right: 2%;
-	}
-	.activateTxt{
- left: 29%;
-    position: absolute;
-    text-align: center;
-    top: 32%;
-    z-index:3;
-    line-height:100%;
-}
-
-#closedCaptionBtn a {
-        color: #fff;
-    padding: 10px;
-    position: absolute;
-    right: 11%;
-    top: 3%;
-    z-index: 1;
-    line-height: 0.7em;
-    font-size: 85%;
-}
-#showPlBtn a {
-    color: #fff;
-    position: absolute;
-    border-right: 1px solid rgba(255,255,255,.1);
-    right: 30%;
-    top: 3%;
-    z-index: 1;
-    padding: 10px;
-    line-height: 0.75em;
-    font-size: 85%;
-}
-#fullscreen a {
-    color: #fff;
-    position: absolute;
-    right: 22%;
-    top: 3%;
-    z-index: 1;
-    padding: 5px;
-    border-right: 1px solid rgba(255,255,255,.1);
-    font-size: 85%;
-}
-.userNameFirst{
-    display: inline-block;
-    margin: 0%;
-    position: absolute;
-}
-#userNameLast1{
-    display: inline-block;
-    margin: 0%;
-    position: inherit;
-    
-}
-.attscreenhead{
-	width:100%;
-}
-.mainDiv{
-	
-	width:100%;
-	height:100%;
-}
-
-.people4Ani{
-	animation-name: people4Ani320;
-}
-@keyframes people4Ani320 {
-  from{top:37%;}
-   to{       top: 51%;
-    left: 16%;
-    width: 65%;
-    height: 65%;}
-  
-}
-.tctxt
-{
-	        bottom: 11%;
-    color: #777777;
-    left: 23%;
-    position: absolute;
-    font-style: italic;
-    font-size: 8px;
-    font-weight: bold;
-}
-.person1{
-	    left: 1%;
-    position: absolute;
-    top: 40%;
-    z-index: 1;
-    width: 27%;
-}
- 
- .attscreenBodyAni{
-	animation-name: attscreenBodyAni320;
-	animation-delay:3s;
-	animation-duration:2s;
-}
-@keyframes attscreenBodyAni320 {
- 0%{  background-position:0 0}
-  100%{background-position:0 -24px;}
-}
-.orangebase1Ani{
-	animation-name: orangebase1Ani320;
-}
-@keyframes orangebase1Ani320 {
- 0%{ left:40%;}
-
-  100%{left:49%;}
- 
-}
-
-.person{
-	      left: 72%;
-    position: absolute;
-    top: 40%;
-    z-index: 1;
-    width: 26%;
-}
-.mobile{
-	 position: absolute;
-    top: 43%;
-    left:37%;
-    width: 12%;
-}
-.orangeAni
-{
-	animation-name: orangeAni320;
-	
-}
-@keyframes orangeAni320 {
-   from{width:40%}
-   to{width:70%}
-}
-
-} /* closed320 */
-@keyframes orangeAni320 {
-   from{width:40%}
-   to{width:70%}
-}
-@keyframes people4Ani320 {
-  from{top:37%;}
-   to{          top: 51%;
-    left: 22%;
-    width: 50%;
-    height: 65%;}
-  
-}
-@keyframes orangebase1Ani320 {
- 0%{ left:40%;}
-
-  100%{left:49%;}
- 
-}
-@keyframes attscreenBodyAni320 {
- 0%{  background-position:0 0}
-  100%{background-position:0 -24px;}
-}
-
-@keyframes people6Ani320 {
-   0%{   top: 27%;width: 30%;}
-  50%{top:28%;width: 30%;left:10%}
-  100%{top: 27%;
-    width: 30%;
-    left: 11%;}
-}
-
-@keyframes orange2Ani320 {
- 0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{       top: 50%;
-    left: 67%;
-    width: 17%;
-    height: 17%;
-    background-size: 100% 100%;
-    font-size: 100%;
-    padding: 6% 8%;}
-}
-@keyframes arrowAni320 {
- 0%{  right:50%;}
-  50%{top:45%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:50%;right:49%;transform:none;z-index:100;}
-}
-@keyframes green3Ani320 {
- 0%{ left:25%;}
-
-  100%{left:12%;width:30%;}
- 
-}
-@keyframes headingContainerAni320 {
- 0%{  margin: -14% 23%; }
-  100%{margin: 4% 7%;}
- 
-}
-
-@keyframes flipInY {
-  from {
-    transform: perspective(50%) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(50%) rotate3d(0, 1, 0, 90deg);
-    animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  40% {
-    transform: perspective(50%) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(50%) rotate3d(0, 1, 0, -20deg);
-    animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  60% {
-    transform: perspective(50%) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(50%) rotate3d(0, 1, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    transform: perspective(50%) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(50%) rotate3d(0, 1, 0, -5deg);
-  }
-
-  to {
-    transform: perspective(50%);
-    transform: perspective(50%);
-  }
-}
-@keyframes orangebaseAni320 {
- 0%{ left:29%;}
-
-  100%{left:36%;}
- 
-}
-@keyframes shipText1Ani320 {
- 0%{ left:60%; top:34%}
-
-  50%{top: 35%;
-    left: 59%;}
-  100%{     left: 60%;
-    top: 36%;} 
-}
-
-@keyframes phoneAppAni320 {
- 0%{ left:38%;}
-
-  100%{left:53%;}
- 
-}
-	@keyframes shipTextAni320 {
-  from{     left: 39%;
-    top: 35%;}
-
-  to{    top: 30%;
-    left: 60%;}
- 
-}
-	@keyframes pinkAni320 {
-  from{  left:24%; width:50%;}
-
-  to{top:1%; left:19%; width:43%;}
-  
-}
-
-@keyframes greenAni320 {
-  from{ left:19%; width:40%;}
-
-  to{top:37%; left:14%; width:30%;}
-  
-}
-
-
-@media only screen  and (min-width:481px) and (max-width:767px)  {
-	
-	#webpagediv17 .phoneapp,#webpagediv16 .phoneapp,#webpagediv18 .phoneapp {
-	left: 65%;
-    width: 21%;
-}
-.frame82 img{
-	padding-left:28px;
-	padding-top:4px;
-	
-}
-.orange{
-	           left: 45%;
-    top: 34%;
-    z-index: 3;
-}
-.pink{
-	   left: 18%;
-    top: 38%;
-}
-.people2{
-	    left: 36%;
-    top: 3%;
-    z-index: 3;
-}
-	.un1{
-	       font-size: 150%;
-    position: absolute;
-    top: 45%;
-    left: 57%;
-	}
-	.un2{
-	  font-size: 150%;
-    position: absolute;
-    top: 45%;
-    left: 52%;
-	}
-		#videodiv .audioplayer-bar {
-    width: 30%;
-}
-
-
-	.people1{    top: 20%;
-    z-index: 5;
-}
-	.attlogo{
-    left: 25%;
-    position: absolute;
-    top: 25%;
-    width: 25%;
-    height: 25%;
-    /* background:url("../images/blank-att-globe.png")no-repeat scroll 0 0 transparent; */
-    
-}
-img.attlogo{
-	width:25%;
-	height:auto;
-}
-	
-	.hd1 {
-		font-family: "Omnes_ATTMedium", Arial, sans-serif;
-	}
-	.hd2 {
-		font-family: "Omnes_ATTMediumItalic", Arial, sans-serif;
-	}
-	.white {
-		color: #fff;
-	}
-	.orange {
-		color: #ef6f00;
-	}
-	.purple {
-		color: #ca0180
-	}
-	.buttonsBlock {
-		float: right;
-		text-align: center;
-		width: 45%;
-		position: absolute;
-		top: 21%;
-		right: 2%;
-	}
-	.btn:active, .btn:visited, .btn:link {
-		margin: 10px 0;
-		padding: 11px 23px 13px 23px;
-		font-size: 18px;
-		font-family: "Omnes_ATTMediumItalic", sans-serif;
-		color: #FFFFFF;
-		font-weight: 800;
-		display: block;
-		text-decoration: none;
-		border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
-		text-shadow: 1px 1px 2px #333;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0574ac+0,44c8f5+99 */
-		background: rgb(5, 116, 172); /* Old browsers */
-		background: -moz-linear-gradient(left, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%); /* FF3.6-15 */
-		background: linear-gradient(left, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to right, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%);
-		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0574ac',
-			endColorstr='#44c8f5', GradientType=1); /* IE6-9 */
-		zoom: 1;
-		transition: all 200ms ease-in;
-		transform: scale(1);
-		-ms-transition: all 200ms ease-in;
-		-ms-transform: scale(1);
-		-moz-transition: all 200ms ease-in;
-		-moz-transform: scale(1);
-		transition: all 200ms ease-in;
-		transform: scale(1);
-	}
-	.btn:hover {
-		z-index: 2;
-		transition: all 200ms ease-in;
-		transform: scale(1.5);
-		-ms-transition: all 200ms ease-in;
-		-ms-transform: scale(1.5);
-		-moz-transition: all 200ms ease-in;
-		-moz-transform: scale(1.5);
-		transition: all 200ms ease-in;
-		transform: scale(1.1);
-	}
-	
-	
-	.frame82 img {
-		padding-left: 5%;
-		padding-top: 3%;
-		width: 90%
-	}
-	.people4 {
-    width: 0px;
-    height: 50%;
-    top: 37%;
-    left: 18%;
-    z-index: 5;
-    background: url(../images/people4.png) no-repeat scroll 0 0 transparent;
-    background-size: 50% 50%;
+    background-size: 50% auto;
 }
 
 .greenAni{
@@ -2130,7 +2584,7 @@ img.attlogo{
     left: 46%;
     z-index: 3;
     background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
-    background-size: 50% 50%;
+    background-size: 50% auto;
 }
 .pinkAni{
 	animation-name: pinkAni480;
@@ -2143,24 +2597,24 @@ img.attlogo{
 }
 
 #webpagediv7 .circle,#webpagediv8 .circle {
-      background: url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
-    font-size: 58%;
+    background: url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
+        font-size: 58%;
     line-height: 161%;
     top: 20%;
-    width: 55%;
+    width: 75%;
     height: 100%;
-    background-size: 50% 50%;
+    background-size: 50% auto;
     left: 5%;
-    float: left;
+        float: left;
 }
 #webpagediv7 .text,#webpagediv8 .text{
-	 left: 2%;
+	 left: -15%;
     position: absolute;
     top: 16%;
 }
 .devicePhoto img {
-	     float: right;
-    margin-top: 8%;
+	       float: right;
+    margin-top: 15%;
     margin-right: 8%;
     width: 20%;
 }
@@ -2176,14 +2630,14 @@ left: 20%;
    height: 50%;
     left: 32%;
     top: 20%;
-    width: 30%;
+    width: 40%;
     z-index: 10;
     text-align: center;
     padding-top: 8%;
     position: absolute;
     color: #ffffff;
     background: url('../images/bluecircle.png') no-repeat scroll 0 0;
-    background-size: 100% 80%;
+    background-size: 100% auto;
 }
 #webpagediv11 .text,#webpagediv12 .text
  {	left: 32%;
@@ -2196,7 +2650,7 @@ left: 20%;
     position: absolute;
     color: #ffffff;
     background: url('../images/bluecircle.png') no-repeat scroll 0 0;
-    background-size: 100% 80%;
+    background-size: 100% auto;
  }
 
 .shipTextAni{
@@ -2268,14 +2722,14 @@ left: 20%;
     width: 20%;
 }
 .orangebase{
-	          top: 64%;
-    left: 27%;
-    width: 60%;
+	          top: 68%;
+    left: 26%;
+    width: 80%;
 }
 .phoneapp
 {
 	     position: absolute;
-    top: 11%;
+    top: 20%;
     left: 42%;
     width: 26%;
     bottom: 12%;
@@ -2432,14 +2886,7 @@ position: absolute;
     height: 105px;
     background-size: 100% 100%; !important
 }
-.fullScreen .attscreenBody {
-	    background: url('../images/att_screen_body.png') no-repeat scroll 0 0
- transparent;
-    background-size: 100% 100%;
-    margin: -4px 0;
-    height: 100%;
-    background-size: 100% 100%; !important
-}
+
 .arrowAni{
 	animation-name: arrowAni480;
 	animation-delay:5s;
@@ -2481,13 +2928,8 @@ position: absolute;
 		top: 45%;
 	}
 	#videodiv{
-	 position: absolute;
-    top: 90%;
-    width: 100%;
-}
-#videodiv.fullScreen{
-	 position: absolute;
-    top: 95%;
+	     position: absolute;
+    top: 87%;
     width: 100%;
 }
 
@@ -2522,7 +2964,7 @@ position: absolute;
 .myatt {
 		    left: 54%;
     position: absolute;
-    top: 0%;
+    top: 7%;
     width: 25%;
 	}
 	.myatttxt {
@@ -2552,11 +2994,11 @@ position: absolute;
     padding-top: 0%;
 	}
 	.people6 {
-		left: 13%; 
+		left: 11%; 
 		position: absolute;
-		top: 20%;
+		top: 27%;
 		z-index: 10;
-		width: 40%;
+		width: 30%;
 	}
 	
 	.orange3 {
@@ -2594,10 +3036,11 @@ position: absolute;
 
 
 
+
 .btn:active, .btn:visited, .btn:link {
 		margin: 10px 0;
 		padding: 8% 18% 10% 18%;
-		font-size: 12px;
+		font-size: 8px;
 		font-family: "Omnes_ATTMediumItalic", sans-serif;
 		color: #FFFFFF;
 		font-weight: 800;
@@ -2638,7 +3081,7 @@ position: absolute;
     right: 2%;
 	}
 	.activateTxt{
- left: 29%;
+ left: 23%;
     position: absolute;
     text-align: center;
     top: 32%;
@@ -2661,7 +3104,7 @@ position: absolute;
     position: absolute;
     border-right: 1px solid rgba(255,255,255,.1);
     right: 30%;
-    top: 3%;
+    top: -8%;
     z-index: 1;
     padding: 10px;
     line-height: 0.75em;
@@ -2671,7 +3114,7 @@ position: absolute;
     color: #fff;
     position: absolute;
     right: 22%;
-    top: 3%;
+    top: -10%;
     z-index: 1;
     padding: 5px;
     border-right: 1px solid rgba(255,255,255,.1);
@@ -2710,7 +3153,7 @@ position: absolute;
 }
 .tctxt
 {
-	        bottom: 11%;
+	     bottom: 14%;
     color: #777777;
     left: 23%;
     position: absolute;
@@ -2767,57 +3210,34 @@ position: absolute;
    from{width:40%}
    to{width:70%}
 }
-.people2-1Ani{
-	animation-name: people2-1Ani;
+.activateTxtAni{
+	animation-name: activateTxtAni480;
 }
-@keyframes people2-1Ani {
-  from{top:4%;}
-   to{top:12%;left:14%;}
-  
-}
-.green1{
-	position:absolute;
-	left: 21%;
-    top: 1%;
-    z-index:2;
-    width:219px;
-}
-.greenAni{
-	animation-name: greenAni;
-}
-@keyframes greenAni {
-  from{ left:19%; width:190px;}
-
-  to{top:37%; left:14%; width:100px;}
-  
-}
-.pink1{
-	position:absolute;
-	left: 23%;
-    top: 51%;
-    z-index:1;
-    
-}
-.pinkAni{
-	animation-name: pinkAni;
-}
-@keyframes pinkAni {
-  from{ left:24%; width:150px;}
-
-  to{top:1%; left:19%; width:220px;}
-  
+.arrow{
+	width:28px;
+	top:53%;
 }
 
 } /* closed480 */
+
+@keyframes activateTxtAni480 {
+ 0%{ left:25%;}
+
+  100%{    left: 18%;
+    top: 26%;
+    font-size: 14px;
+    line-height: 19px;}
+ 
+}
 @keyframes orangeAni480 {
    from{width:40%}
    to{width:70%}
 }
 @keyframes people4Ani480 {
   from{top:37%;}
-   to{       top: 51%;
-    left: 16%;
-    width: 65%;
+   to{             top: 48%;
+    left: 19%;
+    width: 52%;
     height: 65%;}
   
 }
@@ -2856,8 +3276,8 @@ position: absolute;
 }
 @keyframes arrowAni480 {
  0%{  right:50%;}
-  50%{top:45%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:50%;right:49%;transform:none;z-index:100;}
+  50%{top:53%;right:59%;transform:skewX(-60px);visibility:visible;}
+  100%{top:53%;right:49%;transform:none;z-index:100;}
 }
 @keyframes green3Ani480 {
  0%{ left:25%;}
@@ -2910,12 +3330,12 @@ position: absolute;
  
 }
 @keyframes shipText1Ani480 {
- 0%{ left:60%; top:34%}
+ 0%{ left:60%; top:30%}
 
-  50%{top: 35%;
+  50%{top: 30%;
     left: 59%;}
   100%{     left: 60%;
-    top: 36%;} 
+    top: 30%;} 
 }
 
 @keyframes phoneAppAni480 {
@@ -2942,1401 +3362,232 @@ position: absolute;
 @keyframes greenAni480 {
   from{ left:19%; width:40%;}
 
-  to{top:37%; left:14%; width:30%;}
+  to{top: 37%;
+    left: 14%;
+    width: 23%;}
   
 }
+@keyframes orange2Ani480 {
+ 0%{  top:19%;}
+  50%{top:60%;left:40%;background-size:140px auto;font-size:30px;width: 110px;}
+  100%{top: 45%;
+    left: 70%;
+    width: 110px;
+    background-size: 100px auto;
+    font-size: 20px;
+    padding: 20px 16px;}
+}
+@keyframes shipTextAni480 {
+  from{ left:39%; top:36%}
+
+  to{top: 30%;
+    left: 60%;}
+ 
+}
+
+
+
+
 
 /* Tablet */
-
-
-@media only screen  and (min-width : 768px)  {
+@media only screen and (min-width : 768px) and (max-width:991px) {
 	
-	
-
-	
-	.people1{    top: 20%;
-    z-index: 5;
-}
-	.attlogo{
-    left: 25%;
+	#showPlBtn a {
+    color: #fff;
     position: absolute;
-    top: 25%;
-    width: 25%;
-    height: 25%;
-    /* background:url("../images/blank-att-globe.png")no-repeat scroll 0 0 transparent; */
-    
-}
-img.attlogo{
-	width:25%;
-	height:auto;
-}
-	
-	.hd1 {
-		font-family: "Omnes_ATTMedium", Arial, sans-serif;
-	}
-	.hd2 {
-		font-family: "Omnes_ATTMediumItalic", Arial, sans-serif;
-	}
-	.white {
-		color: #fff;
-	}
-	.orange {
-		color: #ef6f00;
-	}
-	.purple {
-		color: #ca0180
-	}
-	.buttonsBlock {
-		float: right;
-		text-align: center;
-		width: 45%;
-		position: absolute;
-		top: 21%;
-		right: 2%;
-	}
-	.btn:active, .btn:visited, .btn:link {
-		margin: 10px 0;
-		padding: 11px 23px 13px 23px;
-		font-size: 18px;
-		font-family: "Omnes_ATTMediumItalic", sans-serif;
-		color: #FFFFFF;
-		font-weight: 800;
-		display: block;
-		text-decoration: none;
-		border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
-		text-shadow: 1px 1px 2px #333;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0574ac+0,44c8f5+99 */
-		background: rgb(5, 116, 172); /* Old browsers */
-		background: -moz-linear-gradient(left, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%); /* FF3.6-15 */
-		background: linear-gradient(left, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to right, rgba(5, 116, 172, 1) 0%,
-			rgba(68, 200, 245, 1) 99%);
-		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0574ac',
-			endColorstr='#44c8f5', GradientType=1); /* IE6-9 */
-		zoom: 1;
-		transition: all 200ms ease-in;
-		transform: scale(1);
-		-ms-transition: all 200ms ease-in;
-		-ms-transform: scale(1);
-		-moz-transition: all 200ms ease-in;
-		-moz-transform: scale(1);
-		transition: all 200ms ease-in;
-		transform: scale(1);
-	}
-	.btn:hover {
-		z-index: 2;
-		transition: all 200ms ease-in;
-		transform: scale(1.5);
-		-ms-transition: all 200ms ease-in;
-		-ms-transform: scale(1.5);
-		-moz-transition: all 200ms ease-in;
-		-moz-transform: scale(1.5);
-		transition: all 200ms ease-in;
-		transform: scale(1.1);
-	}
-	#videoViewport {
-		overflow: hidden;
-		width: 90%;
-		height: 467px; /* ch */
-		box-shadow: 0 0 5px #777777;
-		margin-left: auto;
-		margin-right: auto;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+51,b7b7b7+100 */
-		background: rgb(255, 255, 255);
-		/* Old browsers */
-		background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1)
-			0%, rgba(246, 246, 246, 1) 51%, rgba(183, 183, 183, 1) 100%);
-		/* FF3.6-15 */
-		background: radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1)
-			0%, rgba(246, 246, 246, 1) 51%, rgba(183, 183, 183, 1) 100%);
-		/* Chrome10-25,Safari5.1-6 */
-		background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%,
-			rgba(246, 246, 246, 1) 51%, rgba(183, 183, 183, 1) 100%);
-		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',
-			endColorstr='#b7b7b7', GradientType=1);
-		/* IE6-9 fallback on horizontal gradient */
-		display: none;
-		position: relative;
-	}
-	
-	.webpagedivseg.showContent {
-		display: none;
-		visibility: visible;
-	}
-	#webpagediv0 {
-background-image: url(../images/pop0.png);
-back
-position: relative;
-width: 100%;
-background-repeat: no-repeat;
-background-position: left top;
-overflow:hidden;
-background-size:100% 100%;
-}
-.pop0img
-{
-	position: relative; top: 0; left: 0; height:100%;
-}
-.tablet{
-	top:44%;
-	left:12%;
-	
-}
-.shipTextAni{
-	animation-name: shipTextAni;
-}
-@keyframes shipTextAni {
-  from{ left:39%; top:44%}
-
-  to{top:44%; left:60%;}
- 
-}
-
-.shipText1Ani{
-	animation-name: shipText1Ani;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	/*  animation-duration: 1s;
-    animation-fill-mode: both;
-     */
-}
-@keyframes shipText1Ani {
- 0%{ left:60%; top:43%}
-
-  50%{top:44%; left:59%;}
-  100%{ left:60%; top:43%} 
- 
-}
-.fullScreen .orangebase{
-	      display: block;
-    top: 56%;
-    left: 26%;
-    position: absolute;
-}
-#webpagediv17 .phoneapp,#webpagediv16 .phoneapp,#webpagediv18 .phoneapp {
-    left: 59%;
-    width: 14.5%;
-}
-.tctxt
-{
-	    bottom: 13%;
-    color: #777777;
-    left: 23%;
-    position: absolute;
-    font-style:italic;
-    font-size:14px;
-    font-weight:bold;
-}
-#videodiv{
-	 position: absolute;
-    top: 92%;
-    width: 100%;
-}
-.activateTxtAni{
-	animation-name: activateTxtAni;
-}
-@keyframes activateTxtAni {
- 0%{ left:25%;}
-
-  100%{    left: 21%;
-    top: 26%;
-    font-size: 12px;
-    line-height: 13px;}
- 
-}
-
-.devicetxt1{
-	font-size: 14px;
-    left: 7%;
-    position: absolute;
-    top: 41%;
-}
-#webpagediv25 {  background-image:url(../images/screen25-1.png); 
-position: relative;
-background-size: 100% 95%;}
-
-.myatttxt{
-	left: 55%;
-    position: absolute;
-    top: 23%;
-    font-size:14px;
-}
-.myatttc{
-	left: 55%;
-    position: absolute;
-    bottom: 12%;
-    font-size:12px;
-}
-.pink3{
-	  left: 9%;
-    position: absolute;
-    top: 20%;
-    width: 98px;
+    border-right: 1px solid rgba(255,255,255,.1);
+    right: 28%;
+    top: -7%;
     z-index: 1;
+    padding: 10px;
 }
-.userNameFirst{
-    display: inline-block;
-    margin: 0%;
-    position: inherit;
-}
-.people6{
-	 left: 17%;
+#fullscreen a {
+    color: #fff;
     position: absolute;
-    top: 30%;
-    z-index:10;
+    right: 18%;
+    top: -6%;
+    z-index: 1;
+    padding: 8px;
+    border-right: 1px solid rgba(255,255,255,.1);
 }
-.greenAni{
-	animation-name: greenAni768;
-}
-.fullScreen .greenAni{
-	animation-name: greenAni768Full;
-}
-@keyframes greenAni768 {
-  from{ left:19%; width:190px;}
-
-  to{     top: 27%;
-    left: 14%;
-    width: 20%;}
-  
-}
-.pinkAni{
-	animation-name: pinkAni768;
-}
-.fullScreen .pinkAni{
-	animation-name: pinkAni768Full;
-}
-@keyframes pinkAni768 {
-  from{ left:24%; width:50%;}
-
-  to{   top: 1%;
-    left: 19%;
-    width: 33%;}
-  
-}
-@keyframes pinkAni768Full {
-  from{ left:24%; width:50%;}
-
-  to{   top: 1%;
-    left: 19%;
-    width: 33%;}
-  
-}
-.orange {
-    left: 35%;
-    top: 36%;
-    z-index: 3;
-}
-.pink {
-    left: 18%;
-    top: 40%;
-}
-.un1{
-	font-size: 35pt;
+#closedCaptionBtn a {
+    color: #fff;
     position: absolute;
-    top: 198px;
-    left: 42%;
-	
+    right: 10%;
+    top: 0%;
+    z-index: 1;
+    padding: 10px;
 }
-.un2{
-	font-size:35pt;  position:absolute; top: 198px; left: 42%;
-	
-}
-.orange1{
-	 left: 34%;
-    top: 63%;
-}
-.fullScreen orange1{
-	 left: 40%;
-    top: 63%;
-}
-.blue2{
-	 left: 47%;
-    position: absolute;
-    top: 33%;
-    width: 10%;
-}
-.phoneapp
-{
-	    position: absolute;
-    top: 14%;
-    left: 36%;
-    width: 14%;
-}
-.fullScreen .orangebaseAni{
-	animation-name: orangebaseAni768Full;
-}
-
-.orangebaseAni{
-	animation-name: orangebaseAni768;
-}
-
-@keyframes orangebaseAni768Full {
- 0%{ left:29%;}
-
-  100%{left:50%;}
- 
-}
-@keyframes orangebaseAni768 {
- 0%{ left:29%;}
-
-  100%{left:45%;}
- 
-}
-.phapp1Ani{
-	animation-name: phapp1Ani768;
-}
-@keyframes phapp1Ani768 {
- 0%{ left:58%;}
-
-  100%{left:68%;}
- 
-}
-.orangebase1Ani{
-	animation-name: orangebase1Ani768;
-}
-@keyframes orangebase1Ani768 {
- 0%{ left:41%;}
-
-  100%{left:50%;}
- 
-}
-.activateTxtAni{
-	animation-name: activateTxtAni768;
-}
-@keyframes activateTxtAni768 {
- 0%{ left:25%;}
-
-  100%{       left: 15%;
-    top: 26%;
-    font-size: 23px;
-    line-height: 22px;
-}
-}
-#webpagediv19 .green2,#webpagediv20 .green2{
-	width:220px;
-    left: 25%;
-    top: 10%;
-	font-size:42px;
-	text-align:center;
-	z-index:2;
-}
-.green3Ani{
-	animation-name: green3Ani768;
-}
-@keyframes green3Ani768 {
- 0%{ left:25%;}
-
-  100%{left: 12%;
-    width: 22%;}
- 
-}
-
-.activateTxt{
-     left: 26%;
-    position: absolute;
-    text-align: center;
-    top: 22%;
-    z-index: 3;
-}
-
-.attscreenBody
-{
-	background:url('../images/att_screen_body.png')no-repeat scroll 0 0 transparent;
-	margin:-4px 0;
-	height:233px;
-}
-.arrowAni{
-	animation-name: arrowAni768;
-	animation-delay:5s;
-	animation-duration:1.5s;
-	animation-iteration-count:2;
-}
-@keyframes arrowAni768 {
-
- 0%{  right:50%;}
-  50%{top:66%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:68%;right:49%;transform:none;z-index:100;}
-}
-
-.orange2Ani{
-	animation-name: orange2Ani768;
-}
-@keyframes orange2Ani768 {
-  0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-.att_screen1{
-	 left: 45%;
-    position: absolute;
-    top: 21%;
-    z-index:1;
-    width:40%
-} 
-.devicetxt
-{
-	  color: #ff9600;
-    float: left;
-    font-size: 42px;
-    font-weight: bold;
-    line-height: 37px;
-    margin: 8% 7%;
-}
-.people6{
-	 left: 10%;
-    position: absolute;
-    top: 30%;
-    z-index:10;
-}
-.people6Ani{
-	animation-name: people6Ani768;
-	  animation-iteration-count: infinite;
-	  animation-duration:2s;
-}
-@keyframes people6Ani768 {
- 0%{   top: 27%;
-    width: 30%;}
-  50%{top: 28%;
-    width: 30%;
-    left: 11%;}
-  100%{    top: 27%;
-    width: 30%;
-    left: 10%;}
-}
-.attscreenBodyAni{
-	animation-name: attscreenBodyAni768;
-	animation-delay:3s;
-	animation-duration:2s;
-}
-@keyframes attscreenBodyAni768 {
- 0%{  background-position:0 0}
-  100%{background-position:0 -24px;}
-}
-#webpagediv17 .orangebase,#webpagediv16 .orangebase,#webpagediv18 .orangebase{
-	    left: 55%;
-    top: 58%;
-}
-.orangebase {
-    top: 66%;
-    left: 31%;
-}
-.fullScreen .people2-1{
-	    width: 26%;
-    height: 20%;
-    top: 5%;
-    left: 46%;
-    z-index: 3;
-    background: url(../images/people2.png) no-repeat scroll 0 0 transparent;
-    background-size: 100% 100%;
-    }
-    
-  .fullScreen  .people4Ani{
-	animation-name: people4AniFull;
-}
-@keyframes people4AniFull {
-  from{top:37%;}
-   to{top:45%;left:22%;width:220px;}
-  
-}
- /* closed768 */	
-}
-
-@keyframes people4AniFull {
-  from{top:37%;}
-   to{top: 36%;
-    left: 22%;
-    width: 29%;
-}}
-  
-}
-
-@keyframes orangebaseAni768Full {
- 0%{ left:29%;}
-
-  100%{left:50%;}
- 
-}
-
-@keyframes attscreenBodyAni768 {
- 0%{  background-position:0 0}
-  100%{background-position:0 -24px;}
-}
-@keyframes people6Ani768 {
- 0%{   top: 27%;
-    width: 30%;}
-  50%{top: 28%;
-    width: 30%;
-    left: 11%;}
-  100%{    top: 27%;
-    width: 30%;
-    left: 10%;}
-}
-@keyframes orange2Ani768 {
- 0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{       top: 50%;
-    left: 67%;
-    width: 17%;
-    height: 17%;
-    background-size: 100% 100%;
-    font-size: 100%;
-    padding: 6% 8%;}
- }
-@keyframes arrowAni768 {
-  0%{  right:50%;}
-  50%{top:66%;right:59%;transform:skewX(-60px);visibility:visible;}
-  100%{top:68%;right:49%;transform:none;z-index:100;}
-}
-@keyframes activateTxtAni768 {
- 0%{ left:25%;}
-
-  100%{        left: 15%;
-    top: 20%;
-    font-size: 23px;
-    line-height: 22px;
-}
- 
-}
-@keyframes orangebase1Ani768 {
- 0%{ left:41%;}
-
-  100%{left:50%;}
- 
-}
-@keyframes phapp1Ani768 {
- 0%{ left:46%;}
-
-  100%{left:56%;}
- 
-}
-@keyframes orangebaseAni768 {
- 0%{ left:29%;}
-
-  100%{left:45%;}
- 
-}
-
-@keyframes pinkAni768 {
-  from{  left:24%; width:50%;}
-
-  to{   
-    top: 1%;
-    left: 19%;
-    width: 33%;}
-  
-}
-@keyframes pinkAni768Full {
-  from{  left:24%; width:50%;}
-
-  to{   
-       top: 1%;
-    left: 19%;
-    width: 60%;}
-  
-}
-@keyframes greenAni768 {
-  from{ left:19%; width:190px;}
-
-  to{     top: 27%;
-    left: 14%;
-    width: 20%;}
-  
-}
-@keyframes greenAni768Full {
-  from{ left:19%; width:190px;}
-
-  to{     top: 27%;
-    left: 14%;
-    width: 20%;}
-  
-}
-
-@keyframes activateTxtAni {
- 0%{ left:25%;}
-
-  100%{    left: 21%;
-    top: 26%;
-    font-size: 12px;
-    line-height: 13px;}
- 
-}
-@keyframes shipText1Ani {
- 0%{ left:60%; top:43%}
-
-  50%{top:44%; left:59%;}
-  100%{ left:60%; top:43%} 
- 
-}
-@keyframes shipTextAni {
-  from{ left:39%; top:44%}
-
-  to{top:44%; left:60%;}
- 
-}
-
-
-@media screen and (min-width:992px) {
-
-	#webpagediv7 .circle,#webpagediv8 .circle {
-background:url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
-font-size: 23px;
-line-height: 26px;
-top:27%;
-width:220px;
-height:220px;
-}
-.devicePhoto img {
-	float: right;
-    margin-top: 16%;
-    margin-right: 16%;
-}
-.pink{
-	left: 13%;
-    top: 40%;
-
-}
-.people2{
-	     left: 36%;
-    top: 3%;
-    z-index: 3;
-}
-.orange{
-	left: 30%;
-    top: 36%;
-    z-index:3;
-}
-.un1 {
-		    font-size: 35pt;
-    position: absolute;
-    top: 43%;
-    left: 36%;
-	}
-	.un2 {
-		    font-size: 35pt;
-    position: absolute;
-    top: 40%;
-    left: 36%;
-	}
-	
-	
-.greenAni{
-	animation-name: greenAni992;
-}
-@keyframes greenAni992 {
-  from{ left:19%; width:190px;}
-
-  to{     top: 27%;
-    left: 14%;
-    width: 20%;}
-  
-}
-.pinkAni{
-	animation-name: pinkAni992;
-}
-@keyframes pinkAni992 {
-  from{ left:24%; width:50%;}
-
-  to{   top: 1%;
-    left: 19%;
-    width: 27%;}
-  
-}
-@-moz-keyframes pinkAni992 {
-  from{ left:24%; width:50%;}
-
-  to{   top: 1%;
-    left: 19%;
-    width: 27%;}
-  
-}
-.orange1{
-	 left: 35%;
-    top: 63%;
-}
-.green2{
-    top: 15%;
-    left: 23%;
-    width: 20%;
-    position: absolute;
-}
-.blue2{
-	 left: 47%;
-    position: absolute;
-    top: 40%;
-    width: 10%;
-}
-.orangebase{
-	          display: block;
-    top: 64%;
-    left: 30%;
-    position: absolute;
-}
-.orangebaseAni{
-	animation-name: orangebaseAni992;
-}
-
-@keyframes orangebaseAni992 {
- 0%{ left:29%;}
-
-  100%{ left: 50%;}
- 
-}
-.phapp1Ani{
-	animation-name: phapp1Ani992;
-}
-@keyframes phapp1Ani992 {
- 0%{ left:58%;}
-
-  100%{left:68%;}
- 
-}
-#webpagediv17 .phoneapp,#webpagediv16 .phoneapp,#webpagediv18 .phoneapp {
-        left: 56%;
-    width: 13.5%;
-}
-.orangebase1Ani{
-	animation-name: orangebase1Ani992;
-}
-@keyframes orangebase1Ani992 {
- 0%{ left:54%;}
-
-  100%{left:63%;}
- 
-}
-.activateTxtAni{
-	animation-name: activateTxtAni992;
-}
-@keyframes activateTxtAni992 {
- 0%{ left:25%;}
-
-  100%{ left: 17%;
-    top: 30%;
-    font-size: 23px;
-    line-height: 22px;
-}
-#webpagediv19 .green2,#webpagediv20 .green2{
-	width:220px; !important;
-    left: 25%; !important;
-    top: 10%; !important;
-	font-size:42px; !important;
-	text-align:center; !important;
-	z-index:2; !important;
-}
-.activateTxt{
-     left: 26%;
-    position: absolute;
-    text-align: center;
-    top: 22%;
-    z-index: 3;
-}
-.attscreenBody
-{
-	background:url('../images/att_screen_body.png')no-repeat scroll 0 0 transparent;
-	margin:-4px 0;
-	height:233px;
-}
-.arrowAni{
-	animation-name: arrowAni992;
-	animation-delay:5s;
-	animation-duration:1.5s;
-	animation-iteration-count:2;
-}
-@keyframes arrowAni992 {
-
-0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-
-.orange2Ani{
-	animation-name: orange2Ani992;
-}
-@keyframes orange2Ani992 {
-  0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-.att_screen1{
-	 left: 45%;
-    position: absolute;
-    top: 21%;
-    z-index:1;
-    width:40%
-} 
-.devicetxt
-{
-	  color: #ff9600;
-    float: left;
-    font-size: 42px;
-    font-weight: bold;
-    line-height: 37px;
-    margin: 8% 7%;
-}
-.people6{
-	 left: 10%;
-    position: absolute;
-    top: 30%;
-    z-index:10;
-}
-.people6Ani{
-	animation-name: people6Ani992;
-	  animation-iteration-count: infinite;
-	  animation-duration:2s;
-}
-@keyframes people6Ani992 {
- 0%{   top: 27%;
-    width: 30%;}
-  50%{top: 28%;
-    width: 30%;
-    left: 11%;}
-  100%{    top: 27%;
-    width: 30%;
-    left: 10%;}
-}
-.attscreenBodyAni{
-	animation-name: attscreenBodyAni992;
-	animation-delay:3s;
-	animation-duration:2s;
-}
-@keyframes attscreenBodyAni992 {
- 0%{  background-position:0 0}
-  100%{background-position:0 -24px;}
-}
-.green3Ani{
-	animation-name: green3Ani992;
-}
-@keyframes green3Ani992 {
- 0%{ left:25%;}
-
-  100%{left: 12%;
-    width: 22%;}
- 
-}
-.orangebase{
-	      display: block;
-    top: 66%;
-    left: 26%;
-    position: absolute;
-}
-
-	/* closed992 */
-}
-@keyframes green3Ani992 {
- 0%{ left:25%;}
-
-  100%{left: 12%;
-    width: 22%;}
- 
-}
-@keyframes attscreenBodyAni992 {
- 0%{  background-position:0 0}
-  100%{background-position:0 -24px;}
-}
-@keyframes people6Ani992 {
- 0%{   top: 27%;
-    width: 30%;}
-  50%{top: 28%;
-    width: 30%;
-    left: 11%;}
-  100%{    top: 27%;
-    width: 30%;
-    left: 10%;}
-}
-
-@keyframes orange2Ani992 {
-  0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-@keyframes arrowAni992 {
-
-0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-
-@keyframes activateTxtAni992 {
- 0%{ left:25%;}
-
-  100%{ left: 17%;
-    top: 25%;
-    font-size: 23px;
-    line-height: 22px;
-}
-@keyframes orangebase1Ani992 {
- 0%{ left:54%;}
-
-  100%{left:63%;}
- 
-}
-@keyframes orangebaseAni992 {
- 0%{ left:29%;}
-
-  100%{left:50%;}
- 
-}
-@keyframes pinkAni992 {
-  from{  left:24%; width:50%;}
-
-  to{   
-    top: 1%;
-    left: 19%;
-    width: 27%;}
-  
-}
-@keyframes greenAni992 {
-  from{ left:19%; width:190px;}
-
-  to{     top: 27%;
-    left: 14%;
-    width: 20%;}
-  
-}
-
-
-@media screen and (min-width:1200px){
-	
-		/* .un1 {
-		font-size: 35pt;
-		position: absolute;
-		top: 198px;
-		left: 50%;
-	}
-	.un2 {
-		font-size: 35pt;
-		position: absolute;
-		top: 198px;
-		left: 50%;
-	}
-	#webpagediv7 .circle,#webpagediv8 .circle {
-background:url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
-font-size: 23px;
-line-height: 26px;
-top:27%;
-width:220px;
-height:220px;
-}
-.devicePhoto img {
-	float: right;
-    margin-top: 16%;
-    margin-right: 16%;
-} */
-
 #webpagediv7 .circle,#webpagediv8 .circle {
-background:url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
-font-size: 23px;
-line-height: 26px;
-top:27%;
-width:220px;
-height:220px;
+background: url('../images/purple_circle.png')no-repeat scroll 0 0 transparent;
+    font-size: 18px;
+    line-height: 26px;
+    top: 14%;
+    width: 220px;
+    height: 220px;
+    left: 4%;
 }
 .devicePhoto img {
 	float: right;
-    margin-top: 16%;
+    margin-top: 8%;
     margin-right: 16%;
 }
-.pink{
-	left: 13%;
-    top: 40%;
-
-}
-.people2{
-	     left: 36%;
-    top: 3%;
-    z-index: 3;
-}
-.orange{
-	left: 30%;
-    top: 36%;
-    z-index:3;
-}
-.un1 {
-		    font-size: 35pt;
-    position: absolute;
-    top: 43%;
-    left: 36%;
-	}
-	.un2 {
-		    font-size: 35pt;
-    position: absolute;
-    top: 40%;
-    left: 36%;
-	}
-	
-	
-.greenAni{
-	animation-name: greenAni1200;
-}
-@keyframes greenAni1200 {
-  from{ left:19%; width:190px;}
-
-  to{     top: 27%;
-    left: 14%;
-    width: 20%;}
-  
-}
-.pinkAni{
-	animation-name: pinkAni1200;
-}
-@keyframes pinkAni1200 {
-  from{ left:24%; width:50%;}
-
-  to{   top: 1%;
-    left: 19%;
-    width: 27%;}
-  
-}
-
-.orange1{
-	 left: 35%;
-    top: 63%;
-}
-.green2{
-    top: 15%;
-    left: 23%;
-    width: 20%;
-    position: absolute;
-}
-.blue2{
-	 left: 47%;
-    position: absolute;
-    top: 40%;
-    width: 10%;
-}
-.orangebase{
-	          display: block;
-    top: 64%;
-    left: 30%;
-    position: absolute;
-}
-.orangebaseAni{
-	animation-name: orangebaseAni1200;
-}
-
-@keyframes orangebaseAni1200 {
- 0%{ left:29%;}
-
-  100%{ left: 50%;}
- 
-}
-.phapp1Ani{
-	animation-name: phapp1Ani1200;
-}
-@keyframes phapp1Ani1200 {
- 0%{ left:58%;}
-
-  100%{left:68%;}
- 
-}
-#webpagediv17 .phoneapp,#webpagediv16 .phoneapp,#webpagediv18 .phoneapp {
-        left: 56%;
-    width: 13.5%;
-}
-.orangebase1Ani{
-	animation-name: orangebase1Ani1200;
-}
-@keyframes orangebase1Ani1200 {
- 0%{ left:54%;}
-
-  100%{left:63%;}
- 
-}
-.activateTxtAni{
-	animation-name: activateTxtAni1200;
-}
-@keyframes activateTxtAni1200 {
- 0%{ left:25%;}
-
-  100%{ left: 17%;
-    top: 30%;
-    font-size: 23px;
-    line-height: 22px;
-}
-#webpagediv19 .green2,#webpagediv20 .green2{
-	width:220px; !important;
-    left: 25%; !important;
-    top: 10%; !important;
-	font-size:42px; !important;
-	text-align:center; !important;
-	z-index:2; !important;
-}
-.activateTxt{
-     left: 26%;
-    position: absolute;
-    text-align: center;
-    top: 22%;
-    z-index: 3;
-}
-.attscreenBody
-{
-	background:url('../images/att_screen_body.png')no-repeat scroll 0 0 transparent;
-	margin:-4px 0;
-	height:233px;
-}
-.arrowAni{
-	animation-name: arrowAni1200;
-	animation-delay:5s;
-	animation-duration:1.5s;
-	animation-iteration-count:2;
-}
-@keyframes arrowAni1200 {
-
-0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-
-.orange2Ani{
-	animation-name: orange2Ani1200;
-}
-@keyframes orange2Ani1200 {
-  0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-.att_screen1{
-	 left: 45%;
-    position: absolute;
-    top: 21%;
-    z-index:1;
-    width:40%
-} 
-.devicetxt
-{
-	  color: #ff9600;
-    float: left;
-    font-size: 42px;
-    font-weight: bold;
-    line-height: 37px;
-    margin: 8% 7%;
-}
-.people6{
-	 left: 10%;
-    position: absolute;
-    top: 30%;
-    z-index:10;
-}
-.people6Ani{
-	animation-name: people6Ani1200;
-	  animation-iteration-count: infinite;
-	  animation-duration:2s;
-}
-@keyframes people6Ani1200 {
- 0%{   top: 27%;
-    width: 30%;}
-  50%{top: 28%;
-    width: 30%;
-    left: 11%;}
-  100%{    top: 27%;
-    width: 30%;
-    left: 10%;}
-}
-.attscreenBodyAni{
-	animation-name: attscreenBodyAni1200;
-	animation-delay:3s;
-	animation-duration:2s;
-}
-@keyframes attscreenBodyAni1200 {
- 0%{  background-position:0 0}
-  100%{background-position:0 -24px;}
-}
-.green3Ani{
-	animation-name: green3Ani1200;
-}
-@keyframes green3Ani1200 {
- 0%{ left:25%;}
-
-  100%{left: 12%;
-    width: 22%;}
- 
+#webpagediv9 .green1,#webpagediv10 .green1{
+	     left: 27%;
+    top: 25%;
+    width: 100px;
 }
 #webpagediv9 .text,#webpagediv10 .text
 {
-	 height: 200px;
-    left: 39%;
+	height: 200px;
+    left: 35%;
     top: 30%;
     width: 180px;
     z-index: 10;
-    text-align:center;
-    padding-top:6%;
-    position:absolute;
-    color:#ffffff;
-	background:url('../images/bluecircle.png') no-repeat scroll 0 0;
-}	
-#webpagediv11 .text,#webpagediv12 .text
- {top:115px; left:60%;
- height: 200px;
-    width: 180px;
-    z-index: 10;
-    text-align:center;
-    padding-top:6%;
-    position:absolute;
-    color:#ffffff;
-	background:url('../images/bluecircle.png') no-repeat scroll 0 0;
- }
-	/* closed1200 */
+    text-align: center;
+    padding-top: 8%;
+    position: absolute;
+    color: #ffffff;
+    background: url('../images/bluecircle.png') no-repeat scroll 0 0;
 }
-@keyframes greenAni1200 {
-  from{ left:19%; width:190px;}
-
-  to{     top: 27%;
-    left: 14%;
-    width: 20%;}
-  
+.shipTextAni{
+	animation-name: shipTextAni768;
 }
-@keyframes pinkAni1200 {
-  from{ left:24%; width:50%;}
-
-  to{   top: 1%;
-    left: 19%;
-    width: 27%;}
-  
+.tablet{
+	    top: 42%;
+    left: 8%;
+	
 }
-@keyframes orangebaseAni1200 {
- 0%{ left:29%;}
+.phoneapp
+{
+	     position: absolute;
+    top: 8%;
+    left: 38%;
+}
+.bulky{
+font-size: 35px;
+font-weight: 800;
+line-height: 41px;
+font-family:"Omnes_ATTMediumItalic",Arial,sans-serif;
+}
+.bulky2 {
+font-size: 18px;
+font-weight: 800;	
+top:40px;
+  font-style: italic;
+}
+.text3{
+	  font-size: 10px;
+    font-style: italic;
+    left: 102px;
+    position: absolute;
+    top: 80px;
+}
+.attscreenBody
+{
+	background:url('../images/att_screen_body.png')no-repeat scroll 0 0 transparent;
+	margin:-4px 0;
+	height:193px;
+	width:100%;
+	background-size:100% 100%;
+	
+}
+.attscreen{
+	 position: absolute;
+    right: -400px;
+    top: 27%;
+    z-index:12;
+    left:45%;
+    width:50%;
+}
+.devicetxt
+{
+	  color: #ff9600;
+    float: left;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 37px;
+    margin: 12% 7%;
+}
+.devicetxt1{
+	font-size: 11px;
+    left: 6%;
+    position: absolute;
+    top: 56%;
+}
+.att_screen1{
+	 left: 35%;
+    position: absolute;
+    top: 21%;
+    z-index:1;
+}
+.orange2Ani{
+	animation-name: orange2Ani768;
+}
 
-  100%{ left: 50%;}
+.myattlist{
+	left: 58%;
+    position: absolute;
+    top: 36%;
+    font-size:17px;
+}
+
+.btn:active,.btn:visited,.btn:link {
+	margin:10px 0;
+padding:11px 23px 13px 23px;
+font-size:13px;
+font-family: "Omnes_ATTMediumItalic",sans-serif; color:#FFFFFF;
+font-weight: 800;
+display:block;
+text-decoration: none;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+text-shadow: 1px 1px 2px #333;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0574ac+0,44c8f5+99 */
+background: rgb(5,116,172); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(5,116,172,1) 0%, rgba(68,200,245,1) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(5,116,172,1) 0%,rgba(68,200,245,1) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(5,116,172,1) 0%,rgba(68,200,245,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0574ac', endColorstr='#44c8f5',GradientType=1 ); /* IE6-9 */
+zoom:1;
+-webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+}
+
+.buttonsBlock {
+    float: right;
+    text-align: center;
+    width: 35%;
+    position: absolute;
+    top: 20%;
+    right: 2%; }
+    
+    .activateTxt{
+     left: 35%;
+}
+.arrow{
+	width:28px;
+}
+
+/* closed768 */
+}
+@keyframes orange2Ani768 {
+ 0%{  top:19%;}
+  50%{top:60%;left:40%;background-size:140px auto;font-size:30px;}
+  100%{top:55%;left:77%;width:110px;background-size:100px auto;font-size:20px;padding:20px 16px;}
+}
+@keyframes shipTextAni768 {
+  from{ left:39%; top:36%}
+
+  to{top: 36%;
+    left: 60%;}
  
 }
-@keyframes phapp1Ani1200 {
- 0%{ left:58%;}
 
-  100%{left:68%;}
- 
-}
-@keyframes orangebase1Ani1200 {
- 0%{ left:54%;}
-
-  100%{left:63%;}
- 
-}
-@keyframes activateTxtAni1200 {
- 0%{ left:25%;}
-
-  100%{ left: 17%;
-    top: 30%;
-    font-size: 23px;
-    line-height: 22px;
-}
-@keyframes arrowAni1200 {
-
-0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-@keyframes orange2Ani1200 {
-  0%{  top:19%;}
-  50%{    top: 43%;
-    left: 40%;
-    background-size: 100% 60%;
-    font-size: 12px;}
-  100%{          top: 50%;
-    left: 67%;
-    width: 7%;
-    height: 14%;
-    background-size: 100% 100%;
-    font-size: 150%;
-    padding: 6% 8%;}
-}
-@keyframes people6Ani1200 {
- 0%{   top: 27%;
-    width: 30%;}
-  50%{top: 28%;
-    width: 30%;
-    left: 11%;}
-  100%{    top: 27%;
-    width: 30%;
-    left: 10%;}
-}
-@keyframes green3Ani1200 {
- 0%{ left:25%;}
-
-  100%{left: 12%;
-    width: 22%;}
- 
-}
-@keyframes attscreenBodyAni1200 {
- 0%{  background-position:0 0}
-  100%{background-position:0 -24px;}
-}

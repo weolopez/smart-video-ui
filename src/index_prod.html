@@ -26,20 +26,7 @@
 	<canvas id="canvas" width="627" height="352" style="background-color:#FFFFFF"></canvas>
 </div>
 					<div id="template" class="template" ng-include="templateUrl"></div>
-					<div id="closedCaption" class=""></div>
-					<div id="playlist" ng-if="showpl" ng-show="showPlaylists">
-						<a id="prevbtn" class="navBtn" href="javascript:void(0)"
-							title="prev" ng-click="showPrev()"><span>prev</span></a>
-						<div class="plitems">
-							<ul>
-								<li class="plist" ng-repeat="plist in playlists">{{plist.name}}<a
-									class="playBtn" href="javascript:void(0)" title="play"
-									ng-click="playVideo(plist.type,plist.id)"></a></li>
-							</ul>
-						</div>
-						<a id="nextbtn" class="navBtn" href="javascript:void(0)"
-							title="next" ng-click="showNext()"><span>next</span></a>
-					</div>
+					
 				</div>
 			</div>
 		</div>
