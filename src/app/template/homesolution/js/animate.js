@@ -1,6 +1,12 @@
 'use strict';
 
 var path="app/template/homesolution/";
+var schDate=videoData.schDate;
+var startTime=videoData.startTime;
+var endTime=videoData.endTime;
+		schDate="May 20th";
+		startTime="9.00am"
+			endTime="11.00am";
 							function init2(){
 								(function (lib, img, cjs) {
 
@@ -13,7 +19,7 @@ var path="app/template/homesolution/";
 										fps: 24,
 										color: "#FFFFFF",
 										manifest: [
-											{src:path+"images/ATT_Logo.png", id:"ATT_Logo"},
+											{src:path+"images/att_logo.png", id:"ATT_Logo"},
 											{src:path+"images/calendar.png", id:"calendar"},
 											{src:path+"images/green2.png", id:"green2"},
 											{src:path+"images/internet.png", id:"internet"},
@@ -118,7 +124,7 @@ var path="app/template/homesolution/";
 										this.initialize();
 
 										// Layer 1
-										this.text = new cjs.Text("May 20th", "bold 40px 'Myriad Pro'", "#FFFFFF");
+										this.text = new cjs.Text(schDate, "bold 40px 'Myriad Pro'", "#FFFFFF");
 										this.text.textAlign = "center";
 										this.text.lineHeight = 42;
 										this.text.setTransform(-2,-26.8);
@@ -334,7 +340,7 @@ var path="app/template/homesolution/";
 										this.initialize();
 
 										// Layer 1
-										this.text = new cjs.Text("9:00am to", "bold 30px 'Myriad Pro'", "#FFFFFF");
+										this.text = new cjs.Text(startTime+" to", "bold 30px 'Myriad Pro'", "#FFFFFF");
 										this.text.textAlign = "center";
 										this.text.lineHeight = 32;
 										this.text.setTransform(-2,-20.5);
@@ -464,7 +470,7 @@ var path="app/template/homesolution/";
 										this.initialize();
 
 										// Layer 1
-										this.text = new cjs.Text("11:00am", "bold 30px 'Myriad Pro'", "#FFFFFF");
+										this.text = new cjs.Text(endTime, "bold 30px 'Myriad Pro'", "#FFFFFF");
 										this.text.textAlign = "center";
 										this.text.lineHeight = 32;
 										this.text.setTransform(-2,-20.5);

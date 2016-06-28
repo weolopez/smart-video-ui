@@ -1,12 +1,11 @@
 ﻿<!doctype html>
-<html ng-app="smartvideo" ng-controller="SVMainController">
+<html ng-app="smartvideo">
    <head>
       <meta charset="utf-8">
       <title>AT&T Shipping Confirmation Video</title>
       <link href="../svp/assets/css/styles.min.css" rel="stylesheet"
          type="text/css">
-      <!-- <link href="../svp/lib/videojs/video-js.css" rel="stylesheet"
-         type="text/css"> -->
+      
    </head>
    <body id="body" class="ge5p-tesla-theme">
       <div class="container">
@@ -24,12 +23,11 @@
                <div style="background-color:#D4D4D4">
                   <canvas id="canvas" width="627" height="352" style="background-color:#FFFFFF"></canvas>
                </div>
-               <div id="template" class="template" ng-include="templateUrl"></div>
+               <div id="template" class="template"></div>
             </div>
          </div>
       </div>
-      <!-- </div> -->
-      <script src="../svp/lib/lib.min.js"></script>
+      <script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
       <script src="../svp/lib/video.min.js"></script>
       <script src="../svp/lib/adobelib.min.js"></script>	
       <script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
@@ -87,7 +85,9 @@
          "html5": {
              nativeTextTracks: false
          }
-         },function() {});
+         },function() {
+        	 this.ga();
+         });
          $("#canvas").insertBefore(
          	$(".vjs-tech"));
          
