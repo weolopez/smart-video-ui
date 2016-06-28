@@ -14,7 +14,7 @@ module.exports = {
 		js : [ 'app/**/*.js' ],
 		tpljs : [ 'app/template/**/*.js' ],
 		fonts : 'assets/fonts/*.*',
-		css : 'src/assets/**/*.css',
+		css : ['src/assets/css/animate.css','src/assets/css/global.css','src/assets/css/video-js.css'],
 		animate_css : 'app/**/*.css',
 		audio : [ 'app/**/*.mp3', 'app/**/*.mp4', 'app/**/*.m4a' ],
 		app_css : 'app/**/*.css',

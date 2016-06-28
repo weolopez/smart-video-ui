@@ -1274,9 +1274,9 @@ video::-webkit-media-text-track-display {
   padding: 20px 24px;
   z-index: 1; }
   
- .video-js-responsive-container.vjs-hd {
+ /* .video-js-responsive-container.vjs-hd {
    margin-left:19%;
-}/* 
+}
 .video-js-responsive-container.vjs-sd {
     padding-top: 75%;
 }
