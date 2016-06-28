@@ -1,16 +1,8 @@
 'use strict';
-svmodule.controllerProvider
-		.register(
-				'animationController',
-				[
-						'$scope',
-						'$http',
-						'$rootScope',
 
-						function($scope, $http, $rootScope) {
 							$(window).ready(function() {
 								$('.webpagedivseg').addClass('showContent');
-								var data = $rootScope.videoData;
+								var data = videoData;
 								assignData(data);
 							});
 							var caption = [];
@@ -27,36 +19,18 @@ svmodule.controllerProvider
 										'app/template/orderstatus/images/'
 												+ data.content.productImg);
 								
-								data.caption = "assets/data/os_caption.json";
-								if (data.caption != undefined) {
-									jQuery.get(data.caption, function(res) {
-										$rootScope.showCC = true;
-										caption = res;
-										setTimeout(function() {
-												runVideo();
-											
-										}, 8000);
-
-									}).fail(function(res) {
-
-										setTimeout(function() {
-											
-												runVideo();
-											
-										}, 8000);
-									});
-								} else {
+								 
 									setTimeout(function() {
 										
 											runVideo();
 										
 									}, 8000);
-								}
+								
 							}
 							
 							
 							function runVideo() {
-								if ($rootScope.datatype == "html") {
+								if (videoData.format == "html") {
 								var pop = Popcorn("#ourvideo");
 								var animate1 = [ {
 									"element" : ".animate",
@@ -658,16 +632,7 @@ svmodule.controllerProvider
 												}
 											})
 								}
-								/*if ($rootScope.showCC) {
-									caption.forEach(function(item) {
-										pop.footnote({
-											start : item.start,
-											end : item.end,
-											text : item.text,
-											target : "closedCaption"
-										});
-									});
-								}*/
+								
 								videojs("ourvideo", {
 									"controls" : true,
 									"autoplay" : true,
@@ -685,22 +650,13 @@ svmodule.controllerProvider
 								var player = videojs('ourvideo');
 								player.ga({
 									  'eventsToTrack': ['loaded', 'percentsPlayed', 'start', 'end', 'seek', 'play', 'pause', 'resize', 'volumeChange', 'error', 'fullscreen'],
-									  'debug': true
+									  'debug': false
 									});
 								
 								
-								/* var video = videojs('ourvideo');
-								 var video_wrapper = video.caption({
-								      data: "assets/data/os_caption.json", 
-								      setting:{
-								         onCaptionChange: function(num_c){
-								            console.log("playing: " + num_c + " caption");
-								         }
-								      }
-								   });*/
+								
 								
 								}
 
 							}
 
-						} ]);

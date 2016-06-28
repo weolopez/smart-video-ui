@@ -13,7 +13,7 @@
     "productImg" : "phone.png"
   },
   "id" : "a0",
-  "videoType" : "homesolution",
-  "format" : "html",
+  "videoType" : "orderstatus",
+  "format" : "css",
   "media" : "vo9.mp3"
 }

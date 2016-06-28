@@ -12,9 +12,8 @@
     "delivery" : "April 11th",
     "productImg" : "phone.png"
   },
-  "id" : "a15",
+  "id" : "a0",
   "videoType" : "orderstatus",
-  "format" : "html",
-  "media" : "output.m4a"
+  "format" : "css",
+  "media" : "vo9.mp3"
 }
-

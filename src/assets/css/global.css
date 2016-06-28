@@ -148,3 +148,10 @@ a {
 	width: 100%;
 	height: auto;
 }
+
+.video-js .vjs-control-bar{
+	background-color:#0574ac !important;
+}
+.video-js .vjs-slider{
+	background-color:#44c8f5 !important;
+}

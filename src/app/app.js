@@ -1,11 +1,10 @@
 'use strict';
 var videoData;
-var svmodule = angular.module('smartvideo', ['ngRoute','ngSanitize','com.att.controllers.config']);
-svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','config',function($rootScope,$scope,$http,$q,config){
-	$rootScope.seekedTime="";
-	$rootScope.datatype = "";
+var videoType,videoId;
+	/*$rootScope.seekedTime="";
+	$rootScope.datatype = "";*/
 	
-	$scope.videojs="";
+
 	
 	function getParameterByName(name) {
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -14,15 +13,10 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g,
 				" "));
 	}
-	angular.element(document).ready(function(){
-		
-		/*var type = getParameterByName('type');
-		if (type == ""){
-			type="orderstatus";
-		}*/
+	$(document).ready(function(){
 		
 		var id=getParameterByName('id');
-		$scope.videoId=id;
+		videoId=id;
 		
 /***********************GOOGLE ANALYTICS EVENT TRACKING-START**********************************/
         
@@ -54,14 +48,15 @@ svmodule.controller("SVMainController",['$rootScope','$scope','$http','$q','conf
       
 /***********************GOOGLE ANALYTICS EVENT TRACKING - END**********************************/		
 		
-var url=config.dataPath+id+'/script.json';
+var url=dataPath+id+'/script.json';
 url="assets/data/script.json";
-		$http.get(url).success(function(res){
-			$rootScope.videoData=res;
-			$scope.videoType=res.videoType;
+$.get(url,function(res){
+			
+			videoType=res.videoType;
 			videoData=res;
 			
 			getVideo(res);
+			ga('send', 'pageview');
 			setPlayerReady(res);
 
 		});
@@ -84,7 +79,7 @@ url="assets/data/script.json";
 	
 function setPlayerReady(data){
 	$("#canvas").show();
-	var audioPath=config.audioPath+$scope.videoId+'/'+data.media;
+	var audioPath=audioPath+videoId+'/'+data.media;
 	var audioType="audio/mp3";
 	
 	audioPath="app/template/homesolution/audio/vo9.mp3";
@@ -100,7 +95,7 @@ function setPlayerReady(data){
 	$('#canvasAudio').append('<source id="CanvasaudioSource" src="'+audioPath+'" type="'+audioType+'" />');
 	if ((data.closedCaption != undefined)&&(data.closedCaption != ""))
 		{
-		var ccpath=config.audioPath+$scope.videoId+'/'+data.closedCaption;
+		var ccpath=audioPath+videoId+'/'+data.closedCaption;
 		$('#canvasAudio').append('<track id="cc" kind="captions" src="'+ccpath+'" srclang="en" label="Caption" default/>');
 		}
 	/*.append(
@@ -109,9 +104,9 @@ function setPlayerReady(data){
 			$("#canvasvideo"));*/
 }
 
-	$scope.$on("controllerLoaded",function(){
+	/*$scope.$on("controllerLoaded",function(){
 		$scope.templateUrl="app/template/"+$scope.videoType+"/template/animate.html";
-	});
+	});*/
 function getVideo(data){
 
 
@@ -128,22 +123,21 @@ function getVideo(data){
 			  
 			  document.getElementsByTagName('head')[0].appendChild(l);
 		}
-			  var deferred = $q.defer();
 			 
-			 
-				  var jsUrl="app/template/"+templ+"/js/animate.js";
-				  $script(
-							jsUrl,
-							function() {
-								$rootScope.$apply(function() {
-									
-									deferred.resolve();
-									if (data.format == "css"){
-									$scope.$broadcast("controllerLoaded");
-									}
-								});
-																
+			var tplUrl="app/template/"+templ+"/template/animate.html";
+				  var j = document.createElement('script');
+					j.type="text/javascript";
+					  j.src = "app/template/"+templ+"/js/animate.js";
+					  if (data.format == "css"){
+						  $('#template').load(tplUrl,function(){
+								 document.getElementsByTagName('head')[0].appendChild(j);
 							});
+					  }
+					  else if (data.format == "html")
+						  {
+						  document.getElementsByTagName('head')[0].appendChild(j);
+						  }
+				
 			
 
 		}
@@ -152,10 +146,5 @@ function getVideo(data){
 	
 	
 	
-}]);
-svmodule
-.config([
-			'$routeProvider','$controllerProvider',function($routeProvider,$controllerProvider) {
-				svmodule.controllerProvider = $controllerProvider;
-			}]);
+
 			
