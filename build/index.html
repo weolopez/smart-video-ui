@@ -36,11 +36,8 @@
       <script src="../svp/app/app.js"></script>
       <script>
       
-      $(document).ready(function(){getWindowSize();}); 
-	    
-	   	function getWindowSize(){
-	        setImage($(window).width());	       
-	    }
+      $(document).ready(function(){setImage($(window).width());}); 
+	   
 	    $(window).resize(function(){
 	    	setImage($(window).width());
 		});
@@ -98,8 +95,8 @@
          },function() {
         	 this.ga();
          });
-         $("#canvas").insertBefore(
-         	$(".vjs-tech"));
+         $('#canvas').insertBefore($('.vjs-tech')); 
+      
          
          
          videojs.on('play', function(e) {
@@ -141,17 +138,17 @@
      	
  		function setImage(size){
  			if (size <= 768){	
- 				$('#imgHeader').attr('src','/svp/app/template/homesolution/images/background_mobile_header.png');
- 				$('#imgFooter').attr('src','/svp/app/template/homesolution/images/background_mobile_footer.png');
+ 				$('#imgHeader').attr('src','/svp/assets/images/background_mobile_header.png');
+ 				$('#imgFooter').attr('src','/svp/assets/images/background_mobile_footer.png');
  			}else if (size >= 769 && size <= 992){	
- 				$('#imgHeader').attr('src','/svp/app/template/homesolution/images/background_769_header.png');
- 				$('#imgFooter').attr('src','/svp/app/template/homesolution/images/background_769_footer.png');
+ 				$('#imgHeader').attr('src','/svp/assets/images/background_769_header.png');
+ 				$('#imgFooter').attr('src','/svp/assets/images/background_769_footer.png');
  			}else if (size >= 991 && size <= 1199){	
- 				$('#imgHeader').attr('src','/svp/app/template/homesolution/images/background_992_header.png');
- 				$('#imgFooter').attr('src','/svp/app/template/homesolution/images/background_992_footer.png');
+ 				$('#imgHeader').attr('src','/svp/assets/images/background_992_header.png');
+ 				$('#imgFooter').attr('src','/svp/assets/images/background_992_footer.png');
  			}else{
- 				$('#imgHeader').attr('src','/svp/app/template/homesolution/images/background_1280_header.png');
- 				$('#imgFooter').attr('src','/svp/app/template/homesolution/images/background_1280_footer.png');
+ 				$('#imgHeader').attr('src','/svp/assets/images/background_1280_header.png');
+ 				$('#imgFooter').attr('src','/svp/assets/images/background_1280_footer.png');
  			}
  		}
       </script>

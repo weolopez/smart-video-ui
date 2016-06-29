@@ -115,9 +115,7 @@ a {
 .videoHolder {
     background-color: #333;
     height: 100%;
-    margin: 0 5%;
     position: relative;
-    width: 90%;
 }
 
 .video-js .vjs-control-bar{
