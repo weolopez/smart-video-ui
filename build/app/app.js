@@ -20,7 +20,11 @@ $(document).ready(function () {
   });
 });
 function setPlayerReady(data) {
-  $('#canvas').show();
+  if (data.format == 'html') {
+    $('#canvas').show();
+  } else {
+    $('#canvas').hide();
+  }
   var audioPath = audioPath + videoId + '/' + data.media;
   var audioType = 'audio/mp3';
   audioPath = 'app/template/homesolution/audio/vo9.mp3';
@@ -30,10 +34,10 @@ function setPlayerReady(data) {
     }
   }
   $('#videoViewport').append('<audio id="canvasAudio" class="video-js vjs-default-skin"  controls preload="auto" ></audio>');
-  $('#canvasAudio').append('<source id="CanvasaudioSource" src="' + audioPath + '" type="' + audioType + '" />');
+  $('audio').append('<source id="audioSource" src="' + audioPath + '" type="' + audioType + '" />');
   if (data.closedCaption != undefined && data.closedCaption != '') {
     var ccpath = audioPath + videoId + '/' + data.closedCaption;
-    $('#canvasAudio').append('<track id="cc" kind="captions" src="' + ccpath + '" srclang="en" label="Caption" default/>');
+    $('audio').append('<track id="cc" kind="captions" src="' + ccpath + '" srclang="en" label="Caption" default/>');
   }
 }
 function getVideo(data) {
