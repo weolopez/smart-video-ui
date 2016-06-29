@@ -10,15 +10,6 @@ a {
 	text-decoration: none;
 }
 
-.header {
-	padding: 20px 0;
-	width: 1080px;
-	margin: 0 auto;
-}
-
-.header img {
-	width: 97%;
-}
 
 #container {
 	width: 1200px;
@@ -30,8 +21,8 @@ a {
 }
 #videoViewport {
 	overflow: hidden;
-	width: 1080px;
-	height: 608px;
+	width: 856px;
+	height: 482px;
 	box-shadow: 0 0 5px #777777;
 	margin-left: auto;
 	margin-right: auto;
@@ -52,21 +43,14 @@ a {
 	}
 	#videoViewport {
 		overflow: hidden;
-		width: 288px;
-		height: 162px;
+		width: 230px;
+		height: 129px;
 		box-shadow: 0 0 5px #777777;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
 	}
-	.header {
-		padding: 20px 0;
-		width: 288px;
-		margin: 0 auto;
-	}
-	.header img {
-		width: 97%;
-	}
+
 }
 
 @media only screen and (min-width:481px) and (max-width:767px) {
@@ -76,21 +60,14 @@ a {
 	}
 	#videoViewport {
 		overflow: hidden;
-		width: 432px;
-		height: 243px;
+		width: 399px;
+		height: 224px;
 		box-shadow: 0 0 5px #777777;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
 	}
-	.header {
-		padding: 20px 0;
-		width: 432px;
-		margin: 0 auto;
-	}
-	.header img {
-		width: 97%;
-	}
+
 }
 
 @media only screen and (min-width : 768px) and (max-width:989px) {
@@ -100,21 +77,14 @@ a {
 	}
 	#videoViewport {
 		overflow: hidden;
-		width: 692px;
-		height: 389px;
+		width: 657px;
+		height: 370px;
 		box-shadow: 0 0 5px #777777;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
 	}
-	.header {
-		padding: 20px 0;
-		width: 692px;
-		margin: 0 auto;
-	}
-	.header img {
-		width: 97%;
-	}
+
 }
 @media only screen and (min-width : 990px) and (max-width:1199px) {
 	#container {
@@ -123,30 +93,31 @@ a {
 	}
 	#videoViewport {
 		overflow: hidden;
-		width: 891px;
-		height: 501px;
+		width: 856px;
+		height: 482px;
 		box-shadow: 0 0 5px #777777;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
 	}
-	.header {
-		padding: 20px 0;
-		width: 891px;
-		margin: 0 auto;
-	}
-	.header img {
-		width: 97%;
-	}
+
 }
 
 .canvasvideo-dimensions {
     width: 90%;
     height: auto;
 }
-#canvas {
+#canvas,#imgHeader,#imgFooter {
 	width: 100%;
 	height: auto;
+}
+
+.videoHolder {
+    background-color: #333;
+    height: 100%;
+    margin: 0 5%;
+    position: relative;
+    width: 90%;
 }
 
 .video-js .vjs-control-bar{

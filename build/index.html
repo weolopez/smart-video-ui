@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html ng-app="smartvideo">
+<html>
    <head>
       <meta charset="utf-8">
       <title>AT&T Shipping Confirmation Video</title>
@@ -9,14 +9,10 @@
    </head>
    <body id="body" class="ge5p-tesla-theme">
       <div class="container">
-         <!-- <div id="wrapper">
-            start page content
-            <h1>Thanks for ordering with us!</h1>
-            <br>
-            <p>We have Created this personalized video to help you track your
-            	order and get your setup.</p>
-            </div> -->
-         <!-- <div class="wrapper videoHolder">-->
+        <div class="header">
+			<img id="imgHeader">
+		</div>
+        <div class="wrapper videoHolder">
          <div class="video-js-responsive-container vjs-hd">
             <div id="imgdiv1"></div>
             <div id="videoViewport" class="video-js">
@@ -26,6 +22,11 @@
                <div id="template" class="template"></div>
             </div>
          </div>
+         </div>
+         
+         <div class="footer">
+			<img id="imgFooter" />
+		</div>
       </div>
       <script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
       <script src="../svp/lib/video.min.js"></script>
@@ -34,6 +35,15 @@
       <script src="../svp/app/config/config.js"></script>
       <script src="../svp/app/app.js"></script>
       <script>
+      
+      $(document).ready(function(){getWindowSize();}); 
+	    
+	   	function getWindowSize(){
+	        setImage($(window).width());	       
+	    }
+	    $(window).resize(function(){
+	    	setImage($(window).width());
+		});
          (function(i, s, o, g, r, a, m) {
          	i['GoogleAnalyticsObject'] = r;
          	i[r] = i[r] || function() {
@@ -127,6 +137,23 @@
          		seekedTime = undefined;
          	}
          }
+         
+     	
+ 		function setImage(size){
+ 			if (size <= 768){	
+ 				$('#imgHeader').attr('src','/svp/app/template/homesolution/images/background_mobile_header.png');
+ 				$('#imgFooter').attr('src','/svp/app/template/homesolution/images/background_mobile_footer.png');
+ 			}else if (size >= 769 && size <= 992){	
+ 				$('#imgHeader').attr('src','/svp/app/template/homesolution/images/background_769_header.png');
+ 				$('#imgFooter').attr('src','/svp/app/template/homesolution/images/background_769_footer.png');
+ 			}else if (size >= 991 && size <= 1199){	
+ 				$('#imgHeader').attr('src','/svp/app/template/homesolution/images/background_992_header.png');
+ 				$('#imgFooter').attr('src','/svp/app/template/homesolution/images/background_992_footer.png');
+ 			}else{
+ 				$('#imgHeader').attr('src','/svp/app/template/homesolution/images/background_1280_header.png');
+ 				$('#imgFooter').attr('src','/svp/app/template/homesolution/images/background_1280_footer.png');
+ 			}
+ 		}
       </script>
    </body>
 </html>
