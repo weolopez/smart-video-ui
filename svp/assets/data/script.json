@@ -1,0 +1,19 @@
+{
+  "variables" : {
+    "variable0" : "henry",
+    "variable1" : "samsung",
+    "variable2" : "11th"
+  },
+  "content" : {
+    "firstName" : "Henry",
+    "lastName" : "Smith",
+    "product" : "Samsung Galaxy S7",
+    "memory" : "16 GB Gold",
+    "delivery" : "April 11th",
+    "productImg" : "phone.png"
+  },
+  "id" : "a0",
+  "videoType" : "homesolution",
+  "format" : "html",
+  "media" : "vo9.mp3"
+}

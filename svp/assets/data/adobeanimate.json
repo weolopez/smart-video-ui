@@ -1,0 +1,18 @@
+[
+  {
+    "user": "John",
+    "data": {
+      "firstName": "John",
+      "lastName": "Ford",
+      "product" : "Samsung Galaxy S 6 Edge",
+		"productImg" : "galaxys6edgeplus.png",
+		"memory" : "16 GB Gold",
+		"delivery" : "Feb 16th"
+    },
+    "template":"orderstatus",
+    "audio":"app/template/orderstatus/audio/HENRY.mp3",
+    "relatedVideos":[{"type":"homesolution","name":"Home Solution","duration":"1:23"}],
+    "datatype":"audio",
+    "video":"app/template/orderstatus/audio/small.mp4"
+  }
+]
