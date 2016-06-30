@@ -75,14 +75,18 @@ function setPlayerReady(data){
 	
 	audioPath="app/template/homesolution/audio/output.m4a";
 	var audioType="audio/mp4";
-	var audioPath1="app/template/homesolution/audio/vo9.mp3";
-	var audioType1="audio/mp3";
+	/*var audioPath1="app/template/homesolution/audio/vo9.mp3";
+	var audioType1="audio/mp3";*/
 	
-	$('#videoViewport').append('<audio id="canvasAudio" class="video-js vjs-default-skin"  controls preload="auto" ></audio>');
-	
+	$('#videoViewport').append('<audio id="canvasAudio" class="video-js vjs-default-skin"  controls preload="auto"></audio>');
+	if (navigator.userAgent.indexOf('safari') != -1)
+		{
+		audioPath="app/template/homesolution/audio/vo9.mp3";
+		audioType1="audio/mp3";
+		}
 	
 	$('audio').append('<source id="audioSource" src="'+audioPath+'" type="'+audioType+'" />');
-	$('audio').append('<source id="audioSource1" src="'+audioPath1+'" type="'+audioType1+'" />');
+	//$('audio').append('<source id="audioSource1" src="'+audioPath1+'" type="'+audioType1+'" />');
 	$('audio').load();
 	if ((data.closedCaption != undefined)&&(data.closedCaption != ""))
 		{
