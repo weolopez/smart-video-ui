@@ -1,111 +1,156 @@
-﻿
-<!doctype html>
-<html ng-app="smartvideo" ng-controller="SVMainController">
-<head>
-<meta charset="utf-8">
-<title>AT&T Shipping Confirmation Video</title>
-
-<link href="../svp/assets/css/styles.min.css" rel="stylesheet"
-	type="text/css">
-<link href="../svp/lib/videojs/video-js.css" rel="stylesheet"
-	type="text/css">
-
-</head>
-<body id="body">
-	<div id="container"> 
-		<div class="header" ng-if="showHeader">
-
-			<img ng-src="{{imageUrl}}" alt="title">
+﻿<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>AT&T Shipping Confirmation Video</title>
+      <link href="../svp/assets/css/styles.min.css" rel="stylesheet"
+         type="text/css">
+      
+   </head>
+   <body id="body" class="ge5p-tesla-theme">
+      <div class="container">
+        <div class="header">
+			<img id="imgHeader">
 		</div>
-		<div class="wrapper">
-			<div class="video-js-responsive-container vjs-hd">
-
-				<div id="imgdiv1"></div>
-				<div id="videoViewport" class="video-js">
-				<div style="background-color:#D4D4D4">
-	<canvas id="canvas" width="627" height="352" style="background-color:#FFFFFF"></canvas>
-</div>
-					<div id="template" class="template" ng-include="templateUrl"></div>
-					
-				</div>
-			</div>
+        <div class="wrapper videoHolder">
+         <div class="video-js-responsive-container vjs-hd">
+            <div id="imgdiv1"></div>
+            <div id="videoViewport" class="video-js">
+               <div style="background-color:#D4D4D4">
+                  <canvas id="canvas" width="627" height="352" style="background-color:#FFFFFF"></canvas>
+               </div>
+               <div id="template" class="template"></div>
+            </div>
+         </div>
+         </div>
+         
+         <div class="footer">
+			<img id="imgFooter" />
 		</div>
-	</div>
-	
-	
-	<script src="../svp/lib/lib.min.js"></script>
-	<script src="../svp/lib/video.min.js"></script>
-	<script src="../svp/lib/adobelib.min.js"></script>	
-	<script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
-	<script src="../svp/app/application.min.js"></script>
-	<script>
-		
-		(function(i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function() {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script',
-				'https://www.google-analytics.com/analytics.js', 'ga');
-
-		ga('create', 'UA-79023609-1', 'auto');
-		//ga('send', 'pageview');
-		var canvas, stage, exportRoot;
-		var lib, images, createjs, seekedTime;
-function init() {
-canvas = document.getElementById("canvas");
-images = images||{};
-
-var loader = new createjs.LoadQueue(false);
-loader.installPlugin(createjs.Sound);
-loader.addEventListener("fileload", handleFileLoad);
-loader.addEventListener("complete", handleComplete);
-loader.loadManifest(lib.properties.manifest);
-}
-
-function handleFileLoad(evt) {
-if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-}
-
-function handleComplete() {
-			exportRoot = new lib.video_canvas();
-
-stage = new createjs.Stage(canvas);
-stage.addChild(exportRoot);
-stage.update();
-
-createjs.Ticker.setFPS(lib.properties.fps);
-createjs.Ticker.addEventListener("tick", stage);
-			createjs.Ticker.addEventListener("tick", handleTick);
-}
-
-function playSound(id, loop) {
-			//createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
-}
-		function handleTick(event) {
-			//console.log("TICKER TIME :" +createjs.Ticker.getTime());
-			if (createjs.Ticker.paused) {
-				// console.log("PAUSED: "+event.paused);
-				createjs.Ticker.removeEventListener("tick", stage);
-			} else {
-				//console.log("PAUSED: "+event.paused);
-				createjs.Ticker.addEventListener("tick", stage);
-			}
-			if (seekedTime != undefined) {
-
-				stage.getChildAt(0).gotoAndPlay(
-						Math.round((seekedTime * 1000) / 48));
-				stage.update();
-				// console.log('Moved to ' + Math.round((seekedTime*1000)/lib.properties.fps));
-				seekedTime = undefined;
-			}
-		}
-	</script>
-
-</body>
+      </div>
+      <script src="../svp/lib/jquery/jquery-2.2.0.min.js"></script>
+      <script src="../svp/lib/video.min.js"></script>
+      <script src="../svp/lib/adobelib.min.js"></script>	
+      <script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
+      
+      <script src="../svp/app/application.min.js"></script>
+      <script>
+      
+      $(document).ready(function(){setImage($(window).width());}); 
+	   
+	    $(window).resize(function(){
+	    	setImage($(window).width());
+		});
+         (function(i, s, o, g, r, a, m) {
+         	i['GoogleAnalyticsObject'] = r;
+         	i[r] = i[r] || function() {
+         		(i[r].q = i[r].q || []).push(arguments)
+         	}, i[r].l = 1 * new Date();
+         	a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+         	a.async = 1;
+         	a.src = g;
+         	m.parentNode.insertBefore(a, m)
+         })(window, document, 'script',
+         		'https://www.google-analytics.com/analytics.js', 'ga');
+         
+         ga('create', 'UA-79023609-1', 'auto');
+         //ga('send', 'pageview');
+         var canvas, stage, exportRoot;
+         var lib, images, createjs, seekedTime;
+         function init() {
+         canvas = document.getElementById("canvas");
+         images = images||{};
+         
+         var loader = new createjs.LoadQueue(false);
+         loader.installPlugin(createjs.Sound);
+         loader.addEventListener("fileload", handleFileLoad);
+         loader.addEventListener("complete", handleComplete);
+         loader.loadManifest(lib.properties.manifest);
+         }
+         
+         function handleFileLoad(evt) {
+         if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+         }
+         
+         function handleComplete() {
+         	exportRoot = new lib.video_canvas();
+         
+         stage = new createjs.Stage(canvas);
+         stage.addChild(exportRoot);
+         playVideo();
+         stage.update();
+         
+         createjs.Ticker.setFPS(lib.properties.fps);
+         createjs.Ticker.addEventListener("tick", stage);
+         	createjs.Ticker.addEventListener("tick", handleTick);
+         }
+         function playVideo(){
+         videojs = videojs("canvasAudio", {
+         "controls" : true,
+         "autoplay" : true,
+         "preload" : "auto",
+         "html5": {
+             nativeTextTracks: false
+         }
+         },function() {
+        	 this.ga();
+         });
+         $('#canvas').insertBefore($('.vjs-tech')); 
+      
+         
+         
+         videojs.on('play', function(e) {
+         
+         // createjs.Ticker.addEventListener("tick", stage);
+         createjs.Ticker.paused = false;
+         });
+         videojs.on('pause', function(e) {
+         createjs.Ticker.paused = true;
+         
+         });
+         videojs.on("seeked", function() {
+         seekedTime = this.currentTime();
+         
+         });
+         }
+         function playSound(id, loop) {
+         	//createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+         }
+         function handleTick(event) {
+         	//console.log("TICKER TIME :" +createjs.Ticker.getTime());
+         	if (createjs.Ticker.paused) {
+         		// console.log("PAUSED: "+event.paused);
+         		createjs.Ticker.removeEventListener("tick", stage);
+         	} else {
+         		//console.log("PAUSED: "+event.paused);
+         		createjs.Ticker.addEventListener("tick", stage);
+         	}
+         	if (seekedTime != undefined) {
+         
+         		stage.getChildAt(0).gotoAndPlay(
+         				Math.round((seekedTime * 1000) / 48));
+         		stage.update();
+         		// console.log('Moved to ' + Math.round((seekedTime*1000)/lib.properties.fps));
+         		seekedTime = undefined;
+         	}
+         }
+         
+     	
+ 		function setImage(size){
+ 			if (size <= 768){	
+ 				$('#imgHeader').attr('src','/svp/assets/images/background_mobile_header.png');
+ 				$('#imgFooter').attr('src','/svp/assets/images/background_mobile_footer.png');
+ 			}else if (size >= 769 && size <= 992){	
+ 				$('#imgHeader').attr('src','/svp/assets/images/background_769_header.png');
+ 				$('#imgFooter').attr('src','/svp/assets/images/background_769_footer.png');
+ 			}else if (size >= 991 && size <= 1199){	
+ 				$('#imgHeader').attr('src','/svp/assets/images/background_992_header.png');
+ 				$('#imgFooter').attr('src','/svp/assets/images/background_992_footer.png');
+ 			}else{
+ 				$('#imgHeader').attr('src','/svp/assets/images/background_1280_header.png');
+ 				$('#imgFooter').attr('src','/svp/assets/images/background_1280_footer.png');
+ 			}
+ 		}
+      </script>
+   </body>
 </html>
-
