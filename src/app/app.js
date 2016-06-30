@@ -82,7 +82,7 @@ function setPlayerReady(data){
 	if (navigator.userAgent.indexOf('safari') != -1)
 		{
 		audioPath="app/template/homesolution/audio/vo9.mp3";
-		audioType1="audio/mp3";
+		audioType="audio/mp3";
 		}
 	
 	$('audio').append('<source id="audioSource" src="'+audioPath+'" type="'+audioType+'" />');
