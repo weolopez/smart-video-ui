@@ -77,27 +77,28 @@ function setPlayerReady(data){
 	var audioType="audio/mp4";
 	var audioPath1="app/template/homesolution/audio/vo9.mp3";
 	var audioType1="audio/mp3";
-	/*if(data.media!=undefined)
-	{
-		if(data.media.indexOf('.m4a')!=-1)
-		{
-			audioType="audio/mp4";
-		}
-		
-	}*/
+	
 	$('#videoViewport').append('<audio id="canvasAudio" class="video-js vjs-default-skin"  controls preload="auto" ></audio>');
 	
 	
 	$('audio').append('<source id="audioSource" src="'+audioPath+'" type="'+audioType+'" />');
 	$('audio').append('<source id="audioSource1" src="'+audioPath1+'" type="'+audioType1+'" />');
+	$('audio').load();
 	if ((data.closedCaption != undefined)&&(data.closedCaption != ""))
 		{
 		var ccpath=audioPath+videoId+'/'+data.closedCaption;
 		$('audio').append('<track id="cc" kind="captions" src="'+ccpath+'" srclang="en" label="Caption" default/>');
 		}
-	/*.append(
-			'  <track id="cc" kind="captions" src="" srclang="en" label="Caption" default><track id="subtit" kind="subtitles" src="" srclang="en" label="English" default><track id="chptr" kind="chapters" src="" srclang="en"></audio>');*/
-	
+	if ((data.chapter != undefined)&&(data.chapter != ""))
+	{
+		var chaptpath=audioPath+videoId+'/'+data.chapter;
+		$('audio').append('<track id="chptr" kind="chapters" src="'+chaptpath+'" srclang="en"/>');
+	}
+	if ((data.subtitle != undefined)&&(data.subtitle != ""))
+	{
+		var subtPath=audioPath+videoId+'/'+data.subtitle;
+		$('audio').append('<track id="subtit" kind="subtitles" src="'+subtPath+'" srclang="en" label="English" default/>');
+	}
 }
 
 	
