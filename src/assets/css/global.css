@@ -121,7 +121,11 @@ a {
     position: relative;
     padding:2%;
 }
-
+.video-js .vjs-big-play-button{
+	left: 40% !important;
+    top: 46% !important;
+    background-color:#0574ac !important;
+}
 .video-js .vjs-control-bar{
 	background-color:#0574ac !important;
 }
