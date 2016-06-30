@@ -7,5 +7,5 @@
   'dataPath':'rest/api/data/'
 });*/
 
-const  audioPath='media/audio/';
-const dataPath='rest/api/data/';
+var  audioPath='media/audio/';
+var dataPath='rest/api/data/';
