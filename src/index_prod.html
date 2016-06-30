@@ -32,7 +32,7 @@
       <script src="../svp/lib/video.min.js"></script>
       <script src="../svp/lib/adobelib.min.js"></script>	
       <script src="../svp/lib/popcorn/popcorn-complete.min.js"></script>
-      
+     
       <script src="../svp/app/application.min.js"></script>
       <script>
       
@@ -83,11 +83,12 @@
          createjs.Ticker.setFPS(lib.properties.fps);
          createjs.Ticker.addEventListener("tick", stage);
          	createjs.Ticker.addEventListener("tick", handleTick);
+         	createjs.Ticker.paused = true;
          }
          function playVideo(){
          videojs = videojs("canvasAudio", {
          "controls" : true,
-         "autoplay" : true,
+         "autoplay" : false,
          "preload" : "auto",
          "html5": {
              nativeTextTracks: false

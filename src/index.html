@@ -84,11 +84,12 @@
          createjs.Ticker.setFPS(lib.properties.fps);
          createjs.Ticker.addEventListener("tick", stage);
          	createjs.Ticker.addEventListener("tick", handleTick);
+         	createjs.Ticker.paused = true;
          }
          function playVideo(){
          videojs = videojs("canvasAudio", {
          "controls" : true,
-         "autoplay" : true,
+         "autoplay" : false,
          "preload" : "auto",
          "html5": {
              nativeTextTracks: false
