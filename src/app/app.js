@@ -71,21 +71,25 @@ function setPlayerReady(data){
 		$("#canvas").hide();
 		}
 	var audioPath=audioPath+videoId+'/'+data.media;
-	var audioType="audio/mp3";
 	
-	audioPath="app/template/homesolution/audio/vo9.mp3";
-	if(data.media!=undefined)
+	
+	audioPath="app/template/homesolution/audio/output.m4a";
+	var audioType="audio/mp4";
+	var audioPath1="app/template/homesolution/audio/vo9.mp3";
+	var audioType1="audio/mp3";
+	/*if(data.media!=undefined)
 	{
 		if(data.media.indexOf('.m4a')!=-1)
 		{
 			audioType="audio/mp4";
 		}
 		
-	}
+	}*/
 	$('#videoViewport').append('<audio id="canvasAudio" class="video-js vjs-default-skin"  controls preload="auto" ></audio>');
 	
 	
 	$('audio').append('<source id="audioSource" src="'+audioPath+'" type="'+audioType+'" />');
+	$('audio').append('<source id="audioSource1" src="'+audioPath1+'" type="'+audioType1+'" />');
 	if ((data.closedCaption != undefined)&&(data.closedCaption != ""))
 		{
 		var ccpath=audioPath+videoId+'/'+data.closedCaption;

@@ -14,8 +14,8 @@ var endTime=videoData.endTime;
 
 									// library properties:
 									lib.properties = {
-										width: 627,
-										height: 352,
+										width: 720,
+										height: 405,
 										fps: 24,
 										color: "#FFFFFF",
 										manifest: [
